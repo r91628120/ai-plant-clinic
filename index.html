@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="zh-Hant">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>AI植物診療師｜植物CSI教學平台</title>
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   AI植物診療師｜植物CSI教學平台
+  </title>
   <style>
-    :root{
+   :root{
       --green:#2f7d32;--green2:#43a047;--deep:#073b22;--ink:#17251c;--muted:#637267;
       --line:#dfe8df;--soft:#f6faf5;--white:#fff;--shadow:0 18px 45px rgba(25,61,38,.10);
       --max:1320px;
@@ -44,87 +46,536 @@
     @media(max-width:1050px){.nav-links{display:none}.steps,.feature-grid,.badges{grid-template-columns:1fr 1fr}.step:not(:last-child)::after{display:none}.hero-content{padding:58px 32px}.start-card{align-items:flex-start;flex-direction:column}.weather-layout{grid-template-columns:1fr}}
     @media(max-width:720px){.container{padding:0 18px}.hero-wrap{padding:10px}.hero{border-radius:14px}.hero-content{padding:48px 24px}.hero h1{font-size:42px}.steps,.feature-grid,.badges,.form-grid{grid-template-columns:1fr}.wide{grid-column:auto}.start-card,.panel{padding:24px}.topbar{position:relative}}
   </style>
-</head>
-<body>
+ </head>
+ <body>
+  <!-- ========================= 導覽列 Navbar ========================= -->
   <header class="topbar">
-    <div class="container nav">
-      <a class="brand" href="#top"><span class="logo">🌱</span><span>AI植物診療師｜植物CSI教學平台</span></a>
-      <nav class="nav-links" aria-label="主選單">
-        <a class="active" href="#top">首頁</a><a href="#diagnosis">問診表單</a><a href="#weather">氣象資料</a><a href="#photo">拍照引導</a><a href="#gpt">GPT助理</a><a href="#resources">教學資源</a><a href="#about">關於我們</a>
-      </nav>
-      <a class="nav-cta" href="#diagnosis">🩺 開始診療</a>
-    </div>
+   <div class="container nav">
+    <a class="brand" href="#top">
+     <span class="logo">
+      🌱
+     </span>
+     <span>
+      AI植物診療師｜植物CSI教學平台
+     </span>
+    </a>
+    <nav aria-label="主選單" class="nav-links">
+     <a class="active" href="#top">
+      首頁
+     </a>
+     <a href="#diagnosis">
+      問診表單
+     </a>
+     <a href="#weather">
+      氣象資料
+     </a>
+     <a href="#photo">
+      拍照引導
+     </a>
+     <a href="#gpt">
+      GPT助理
+     </a>
+     <a href="#resources">
+      教學資源
+     </a>
+     <a href="#about">
+      關於我們
+     </a>
+    </nav>
+    <a class="nav-cta" href="#diagnosis">
+     🩺 開始診療
+    </a>
+   </div>
   </header>
-
-  <section id="top" class="hero-wrap">
-    <div class="hero">
-      <div class="hero-content">
-        <p class="kicker">觀察・推理・診斷・學習</p>
-        <h1>AI植物診療師<br>植物CSI教學平台</h1>
-        <p class="desc">整合症狀問診、環境資料與AI助理分析，<br>讓學生像植物偵探一樣，精準診斷植物問題。</p>
-        <div class="hero-actions"><a class="btn primary" href="#diagnosis">🩺 開始診療</a><a class="btn ghost" href="#workflow">了解平台</a></div>
-      </div>
+  <!-- ========================= Hero 主視覺 ========================= -->
+  <section class="hero-wrap" id="top">
+   <div class="hero">
+    <div class="hero-content">
+     <p class="kicker">
+      觀察・推理・診斷・學習
+     </p>
+     <h1>
+      AI植物診療師
+      <br/>
+      植物CSI教學平台
+     </h1>
+     <p class="desc">
+      整合症狀問診、環境資料與AI助理分析，
+      <br/>
+      讓學生像植物偵探一樣，精準診斷植物問題。
+     </p>
+     <div class="hero-actions">
+      <a class="btn primary" href="#diagnosis">
+       🩺 開始診療
+      </a>
+      <a class="btn ghost" href="#workflow">
+       了解平台
+      </a>
+     </div>
     </div>
+   </div>
   </section>
-
+  <!-- ========================= 主內容 Main ========================= -->
   <main>
-    <section id="workflow" class="section">
-      <div class="container">
-        <div class="section-title"><div class="leaf-mark">⌁</div><h2>診療流程</h2><p>五大步驟，輕鬆完成植物問題診斷</p></div>
-        <div class="steps">
-          <article class="step"><span class="num">01</span><div class="icon">📋</div><h3>症狀問診</h3><p>填寫作物、症狀、發生時間與管理紀錄</p></article>
-          <article class="step"><span class="num">02</span><div class="icon">🌦️</div><h3>查詢環境</h3><p>查看所在地位置的氣象與環境數據</p></article>
-          <article class="step"><span class="num">03</span><div class="icon">📷</div><h3>拍照上傳</h3><p>依拍照引導上傳清晰的植物照片</p></article>
-          <article class="step"><span class="num">04</span><div class="icon">🧠</div><h3>AI 助理分析</h3><p>由 GPT 助理分析資料，推理可能原因</p></article>
-          <article class="step"><span class="num">05</span><div class="icon">🛡️</div><h3>診斷建議</h3><p>獲得診斷結果與處理建議，記錄學習重點</p></article>
-        </div>
-        <div class="start-card"><div class="start-left"><div class="start-icon">📋🌿</div><div><h2>馬上開始問診</h2><p>透過完整問診表單，提供AI更準確的分析依據</p></div></div><a class="btn primary" href="#diagnosis">填寫問診表單 →</a></div>
+   <section class="section" id="workflow">
+    <div class="container">
+     <div class="section-title">
+      <div class="leaf-mark">
+       ⌁
       </div>
-    </section>
-
-    <section id="resources" class="features">
-      <div class="container">
-        <div class="section-title"><div class="leaf-mark">⌁</div><h2>資料整合・專業分析</h2><p>結合多方資料來源，提供更全面的植物診斷服務</p></div>
-        <div class="feature-grid">
-          <article class="feature"><div class="big-icon">🌦️</div><div><h3>氣象資料整合</h3><p>整合中央氣象署與農業氣象站資料，提供溫度、濕度、降雨等環境數據</p><a href="#weather">查看氣象資料 →</a></div></article>
-          <article class="feature"><div class="big-icon">🌿</div><div><h3>植物照片引導</h3><p>專業拍照指引，幫助你拍出最有助於診斷的植物照片</p><a href="#photo">拍照引導說明 →</a></div></article>
-          <article class="feature"><div class="big-icon">🤖</div><div><h3>GPT 助理分析</h3><p>結合植物醫學知識與AI推理能力，提供專業診斷建議</p><a href="#gpt">使用GPT助理 →</a></div></article>
-        </div>
-        <div class="badges"><div class="badge"><i>⚕️</i><div><strong>專業可靠</strong><span>基於植物醫學知識</span></div></div><div class="badge"><i>🛡️</i><div><strong>隱私安全</strong><span>資料僅用於學習分析</span></div></div><div class="badge"><i>🎓</i><div><strong>教育導向</strong><span>培養觀察與推理能力</span></div></div><div class="badge"><i>📈</i><div><strong>持續更新</strong><span>不斷優化診斷準確度</span></div></div></div>
+      <h2>
+       診療流程
+      </h2>
+      <p>
+       五大步驟，輕鬆完成植物問題診斷
+      </p>
+     </div>
+     <div class="steps">
+      <article class="step">
+       <span class="num">
+        01
+       </span>
+       <div class="icon">
+        📋
+       </div>
+       <h3>
+        症狀問診
+       </h3>
+       <p>
+        填寫作物、症狀、發生時間與管理紀錄
+       </p>
+      </article>
+      <article class="step">
+       <span class="num">
+        02
+       </span>
+       <div class="icon">
+        🌦️
+       </div>
+       <h3>
+        查詢環境
+       </h3>
+       <p>
+        查看所在地位置的氣象與環境數據
+       </p>
+      </article>
+      <article class="step">
+       <span class="num">
+        03
+       </span>
+       <div class="icon">
+        📷
+       </div>
+       <h3>
+        拍照上傳
+       </h3>
+       <p>
+        依拍照引導上傳清晰的植物照片
+       </p>
+      </article>
+      <article class="step">
+       <span class="num">
+        04
+       </span>
+       <div class="icon">
+        🧠
+       </div>
+       <h3>
+        AI 助理分析
+       </h3>
+       <p>
+        由 GPT 助理分析資料，推理可能原因
+       </p>
+      </article>
+      <article class="step">
+       <span class="num">
+        05
+       </span>
+       <div class="icon">
+        🛡️
+       </div>
+       <h3>
+        診斷建議
+       </h3>
+       <p>
+        獲得診斷結果與處理建議，記錄學習重點
+       </p>
+      </article>
+     </div>
+     <div class="start-card">
+      <div class="start-left">
+       <div class="start-icon">
+        📋🌿
+       </div>
+       <div>
+        <h2>
+         馬上開始問診
+        </h2>
+        <p>
+         透過完整問診表單，提供AI更準確的分析依據
+        </p>
+       </div>
       </div>
-    </section>
-
-    <section id="diagnosis" class="panel">
-      <div class="panel-title"><small>Questionnaire</small><h2>症狀問診表單</h2><p>填寫越完整，AI 診療越接近現場判斷。</p></div>
-      <form id="diagnosisForm" class="form-grid">
-        <label>作物名稱<input name="crop" placeholder="例：番茄、蝴蝶蘭、萵苣"></label><label>栽培地區<input name="location" placeholder="例：嘉義縣民雄鄉"></label>
-        <label>栽培環境<select name="environment"><option>露天</option><option>溫室</option><option>網室</option><option>盆栽</option><option>水耕</option><option>其他</option></select></label>
-        <label>發病部位<select name="part"><option>葉片</option><option>莖部</option><option>根部</option><option>果實</option><option>花朵</option><option>全株</option></select></label>
-        <label>主要症狀<select name="symptom"><option>黃化</option><option>斑點</option><option>萎凋</option><option>腐爛</option><option>捲葉</option><option>白粉</option><option>缺刻/蟲咬</option><option>生長停滯</option></select></label>
-        <label>發生時間<input name="time" placeholder="例：3天前、上週下雨後"></label>
-        <label class="wide">近期天氣與氣象資料<textarea name="weather" placeholder="例：連續降雨、高濕、白天高溫、夜間低溫"></textarea></label>
-        <label class="wide">管理紀錄<textarea name="management" placeholder="例：澆水頻率、施肥種類、用藥紀錄、換盆、修剪"></textarea></label>
-        <label class="wide">照片觀察說明<textarea name="photoNote" placeholder="例：葉背有白色粉狀物、病斑邊緣褐色、根部有腐爛味"></textarea></label>
-      </form>
-    </section>
-
-    <section id="weather" class="panel">
-      <div class="panel-title"><small>Weather Data</small><h2>氣象站資料顯示</h2><p>第一版先以官方資料連結與自建測站網址欄位呈現，未來可再串接 API。</p></div>
-      <div class="weather-layout"><div class="resource-card"><h3>官方氣象資料</h3><ul><li><a href="https://agr.cwa.gov.tw/" target="_blank" rel="noopener">農業氣象觀測網監測系統</a></li><li><a href="https://opendata.cwa.gov.tw/" target="_blank" rel="noopener">中央氣象署開放資料平臺</a></li><li><a href="https://codis.cwa.gov.tw/StationData" target="_blank" rel="noopener">CODiS 氣候觀測資料查詢服務</a></li></ul></div><div class="resource-card"><h3>自建氣象站資料</h3><label>校內氣象站網址<input id="stationUrl" placeholder="貼上 ThingSpeak、Blynk、Google Sheet 或自架網站網址"></label><button class="btn primary" id="openStation" type="button">開啟自建測站</button><p class="hint">建議學生記錄：溫度、濕度、降雨、光照、土壤濕度、EC、pH。</p></div></div>
-    </section>
-
-    <section id="photo" class="panel">
-      <div class="panel-title"><small>Photo Guide</small><h2>植物照片上傳引導</h2></div>
-      <div class="checklist"><label><input type="checkbox"> 拍攝整株，包含生長環境。</label><label><input type="checkbox"> 拍攝病斑近照，畫面清楚不模糊。</label><label><input type="checkbox"> 拍攝葉背，確認是否有蟲卵、粉狀物或黴層。</label><label><input type="checkbox"> 拍攝土壤、盆面或根部狀態。</label><label><input type="checkbox"> 放入尺、硬幣或手指作為比例參考。</label></div>
-    </section>
-
-    <section id="gpt" class="panel">
-      <div class="panel-title"><small>GPT Assistant</small><h2>產生 GPT 植物診療提示詞</h2><p>按下按鈕後，平台會把問診資料整理成適合貼給 GPT 助理的格式。</p></div>
-      <div class="prompt-box"><div class="prompt-actions"><button class="btn primary" id="generatePrompt" type="button">產生診療提示詞</button><button class="btn light" id="copyPrompt" type="button">複製提示詞</button><a class="btn dark" href="https://chatgpt.com/" target="_blank" rel="noopener">開啟 GPT 助理</a></div><textarea id="promptOutput" readonly placeholder="產生後會出現在這裡"></textarea></div>
-    </section>
+      <a class="btn primary" href="#diagnosis">
+       填寫問診表單 →
+      </a>
+     </div>
+    </div>
+   </section>
+   <section class="features" id="resources">
+    <div class="container">
+     <div class="section-title">
+      <div class="leaf-mark">
+       ⌁
+      </div>
+      <h2>
+       資料整合・專業分析
+      </h2>
+      <p>
+       結合多方資料來源，提供更全面的植物診斷服務
+      </p>
+     </div>
+     <div class="feature-grid">
+      <article class="feature">
+       <div class="big-icon">
+        🌦️
+       </div>
+       <div>
+        <h3>
+         氣象資料整合
+        </h3>
+        <p>
+         整合中央氣象署與農業氣象站資料，提供溫度、濕度、降雨等環境數據
+        </p>
+        <a href="#weather">
+         查看氣象資料 →
+        </a>
+       </div>
+      </article>
+      <article class="feature">
+       <div class="big-icon">
+        🌿
+       </div>
+       <div>
+        <h3>
+         植物照片引導
+        </h3>
+        <p>
+         專業拍照指引，幫助你拍出最有助於診斷的植物照片
+        </p>
+        <a href="#photo">
+         拍照引導說明 →
+        </a>
+       </div>
+      </article>
+      <article class="feature">
+       <div class="big-icon">
+        🤖
+       </div>
+       <div>
+        <h3>
+         GPT 助理分析
+        </h3>
+        <p>
+         結合植物醫學知識與AI推理能力，提供專業診斷建議
+        </p>
+        <a href="#gpt">
+         使用GPT助理 →
+        </a>
+       </div>
+      </article>
+     </div>
+     <div class="badges">
+      <div class="badge">
+       <i>
+        ⚕️
+       </i>
+       <div>
+        <strong>
+         專業可靠
+        </strong>
+        <span>
+         基於植物醫學知識
+        </span>
+       </div>
+      </div>
+      <div class="badge">
+       <i>
+        🛡️
+       </i>
+       <div>
+        <strong>
+         隱私安全
+        </strong>
+        <span>
+         資料僅用於學習分析
+        </span>
+       </div>
+      </div>
+      <div class="badge">
+       <i>
+        🎓
+       </i>
+       <div>
+        <strong>
+         教育導向
+        </strong>
+        <span>
+         培養觀察與推理能力
+        </span>
+       </div>
+      </div>
+      <div class="badge">
+       <i>
+        📈
+       </i>
+       <div>
+        <strong>
+         持續更新
+        </strong>
+        <span>
+         不斷優化診斷準確度
+        </span>
+       </div>
+      </div>
+     </div>
+    </div>
+   </section>
+   <section class="panel" id="diagnosis">
+    <div class="panel-title">
+     <small>
+      Questionnaire
+     </small>
+     <h2>
+      症狀問診表單
+     </h2>
+     <p>
+      填寫越完整，AI 診療越接近現場判斷。
+     </p>
+    </div>
+    <form class="form-grid" id="diagnosisForm">
+     <label>
+      作物名稱
+      <input name="crop" placeholder="例：番茄、蝴蝶蘭、萵苣"/>
+     </label>
+     <label>
+      栽培地區
+      <input name="location" placeholder="例：嘉義縣民雄鄉"/>
+     </label>
+     <label>
+      栽培環境
+      <select name="environment">
+       <option>
+        露天
+       </option>
+       <option>
+        溫室
+       </option>
+       <option>
+        網室
+       </option>
+       <option>
+        盆栽
+       </option>
+       <option>
+        水耕
+       </option>
+       <option>
+        其他
+       </option>
+      </select>
+     </label>
+     <label>
+      發病部位
+      <select name="part">
+       <option>
+        葉片
+       </option>
+       <option>
+        莖部
+       </option>
+       <option>
+        根部
+       </option>
+       <option>
+        果實
+       </option>
+       <option>
+        花朵
+       </option>
+       <option>
+        全株
+       </option>
+      </select>
+     </label>
+     <label>
+      主要症狀
+      <select name="symptom">
+       <option>
+        黃化
+       </option>
+       <option>
+        斑點
+       </option>
+       <option>
+        萎凋
+       </option>
+       <option>
+        腐爛
+       </option>
+       <option>
+        捲葉
+       </option>
+       <option>
+        白粉
+       </option>
+       <option>
+        缺刻/蟲咬
+       </option>
+       <option>
+        生長停滯
+       </option>
+      </select>
+     </label>
+     <label>
+      發生時間
+      <input name="time" placeholder="例：3天前、上週下雨後"/>
+     </label>
+     <label class="wide">
+      近期天氣與氣象資料
+      <textarea name="weather" placeholder="例：連續降雨、高濕、白天高溫、夜間低溫"></textarea>
+     </label>
+     <label class="wide">
+      管理紀錄
+      <textarea name="management" placeholder="例：澆水頻率、施肥種類、用藥紀錄、換盆、修剪"></textarea>
+     </label>
+     <label class="wide">
+      照片觀察說明
+      <textarea name="photoNote" placeholder="例：葉背有白色粉狀物、病斑邊緣褐色、根部有腐爛味"></textarea>
+     </label>
+    </form>
+   </section>
+   <section class="panel" id="weather">
+    <div class="panel-title">
+     <small>
+      Weather Data
+     </small>
+     <h2>
+      氣象站資料顯示
+     </h2>
+     <p>
+      第一版先以官方資料連結與自建測站網址欄位呈現，未來可再串接 API。
+     </p>
+    </div>
+    <div class="weather-layout">
+     <div class="resource-card">
+      <h3>
+       官方氣象資料
+      </h3>
+      <ul>
+       <li>
+        <a href="https://agr.cwa.gov.tw/" rel="noopener" target="_blank">
+         農業氣象觀測網監測系統
+        </a>
+       </li>
+       <li>
+        <a href="https://opendata.cwa.gov.tw/" rel="noopener" target="_blank">
+         中央氣象署開放資料平臺
+        </a>
+       </li>
+       <li>
+        <a href="https://codis.cwa.gov.tw/StationData" rel="noopener" target="_blank">
+         CODiS 氣候觀測資料查詢服務
+        </a>
+       </li>
+      </ul>
+     </div>
+     <div class="resource-card">
+      <h3>
+       自建氣象站資料
+      </h3>
+      <label>
+       校內氣象站網址
+       <input id="stationUrl" placeholder="貼上 ThingSpeak、Blynk、Google Sheet 或自架網站網址"/>
+      </label>
+      <button class="btn primary" id="openStation" type="button">
+       開啟自建測站
+      </button>
+      <p class="hint">
+       建議學生記錄：溫度、濕度、降雨、光照、土壤濕度、EC、pH。
+      </p>
+     </div>
+    </div>
+   </section>
+   <section class="panel" id="photo">
+    <div class="panel-title">
+     <small>
+      Photo Guide
+     </small>
+     <h2>
+      植物照片上傳引導
+     </h2>
+    </div>
+    <div class="checklist">
+     <label>
+      <input type="checkbox"/>
+      拍攝整株，包含生長環境。
+     </label>
+     <label>
+      <input type="checkbox"/>
+      拍攝病斑近照，畫面清楚不模糊。
+     </label>
+     <label>
+      <input type="checkbox"/>
+      拍攝葉背，確認是否有蟲卵、粉狀物或黴層。
+     </label>
+     <label>
+      <input type="checkbox"/>
+      拍攝土壤、盆面或根部狀態。
+     </label>
+     <label>
+      <input type="checkbox"/>
+      放入尺、硬幣或手指作為比例參考。
+     </label>
+    </div>
+   </section>
+   <section class="panel" id="gpt">
+    <div class="panel-title">
+     <small>
+      GPT Assistant
+     </small>
+     <h2>
+      產生 GPT 植物診療提示詞
+     </h2>
+     <p>
+      按下按鈕後，平台會把問診資料整理成適合貼給 GPT 助理的格式。
+     </p>
+    </div>
+    <div class="prompt-box">
+     <div class="prompt-actions">
+      <button class="btn primary" id="generatePrompt" type="button">
+       產生診療提示詞
+      </button>
+      <button class="btn light" id="copyPrompt" type="button">
+       複製提示詞
+      </button>
+      <button class="btn light" id="clearPrompt" type="button">
+       一鍵清除提示詞
+      </button>
+      <a class="btn dark" href="https://chatgpt.com/" rel="noopener" target="_blank">
+       開啟 GPT 助理
+      </a>
+     </div>
+     <textarea id="promptOutput" placeholder="產生後會出現在這裡" readonly=""></textarea>
+    </div>
+   </section>
   </main>
-
-  <footer id="about">AI植物診療師｜植物CSI教學平台 © 2025 All Rights Reserved.</footer>
-  <script src="script.js"></script>
-</body>
+  <!-- ========================= 頁尾 Footer ========================= -->
+  <footer id="about">
+   AI植物診療師｜植物CSI教學平台 © 2025 All Rights Reserved.
+  </footer>
+  <!-- JavaScript -->
+  <script src="script.js">
+  </script>
+ </body>
 </html>
