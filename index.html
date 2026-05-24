@@ -3,6 +3,8 @@
  <head>
   <meta charset="utf-8"/>
   <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <link rel="icon" href="assets/logo.png">
+
   <title>
    AI植物診療師｜植物CSI教學平台
   </title>
@@ -20,8 +22,28 @@
 
     .topbar{position:sticky;top:0;z-index:20;background:#fff;border-bottom:1px solid #eef2ee;box-shadow:0 4px 18px rgba(0,0,0,.04)}
     .nav{height:76px;display:flex;align-items:center;justify-content:space-between;gap:28px}
-    .brand{display:flex;align-items:center;gap:12px;font-size:20px;font-weight:900;color:#081b10;white-space:nowrap}
-    .brand .logo{font-size:28px}.nav-links{display:flex;align-items:center;gap:34px;font-weight:800;font-size:15px}
+    .brand{
+      display:flex;
+      align-items:center;
+      gap:14px;
+      font-size:20px;
+      font-weight:900;
+      color:#081b10;
+      white-space:nowrap;
+   }
+      /* =========================
+         Navbar Logo
+         ========================= */
+
+    .navbar-logo{
+       width:58px;
+       height:58px;
+       object-fit:contain;
+       border-radius:50%;
+   }
+
+
+    .nav-links{display:flex;align-items:center;gap:34px;font-weight:800;font-size:15px}
     .nav-links a{position:relative;padding:26px 0;color:#111}.nav-links a.active{color:var(--green)}
     .nav-links a.active:after{content:"";position:absolute;left:0;right:0;bottom:0;height:4px;border-radius:999px;background:var(--green)}
     .nav-cta,.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;border-radius:999px;font-weight:900;border:0;cursor:pointer;transition:.2s ease}
@@ -52,9 +74,11 @@
   <header class="topbar">
    <div class="container nav">
     <a class="brand" href="https://r91628120.github.io/ai-agri-education/#home">
-     <span class="logo">
-      🌱
-     </span>
+     <img 
+       src="assets/logo.png" 
+       alt="AI植物診療師 Logo"
+       class="navbar-logo"
+      />
      <span>
       AI植物診療師｜植物CSI教學平台
      </span>
