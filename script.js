@@ -8,7 +8,17 @@ const clearBtn = document.getElementById("clearPrompt");
 
 if (clearBtn) {
   clearBtn.addEventListener("click", () => {
-    document.getElementById("promptOutput").value = "";
+
+    const output = document.getElementById("promptOutput");
+
+    output.removeAttribute("readonly");
+
+    output.value = "";
+
+    output.setAttribute("readonly", true);
+
+    output.placeholder = "提示詞已清除";
+
   });
 }
 
