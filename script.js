@@ -3,232 +3,106 @@
    script.js
 ========================================= */
 
-
-/* =========================================
-   DOM 元件
-========================================= */
-
 const form = document.querySelector("#diagnosisForm");
-
 const promptOutput = document.querySelector("#promptOutput");
-
 const generateBtn = document.querySelector("#generatePrompt");
-
 const copyBtn = document.querySelector("#copyPrompt");
-
 const clearBtn = document.querySelector("#clearPrompt");
-
 const openStationBtn = document.querySelector("#openStation");
+const modeInput = document.querySelector("#diagnosisMode");
+const modeCards = document.querySelectorAll(".mode-card");
+const modePanels = document.querySelectorAll(".mode-fields");
 
-
-/* =========================================
-   取得表單資料
-========================================= */
+const modeInfo = {
+  disease: {
+    title: "病害診斷模式",
+    role: "你是一位 AI植物診療師，擅長判讀植物病害、真菌/細菌/病毒性問題，並能用教學口吻引導學生觀察。",
+    focus: "請優先分析病斑、腐爛、黴層、白粉、萎凋、發病部位與環境條件，但也要提醒可能與蟲害或生理障礙混淆。",
+    extra: () => `病斑型態：${getValue("diseaseSpot")}\n是否有黴層或粉狀物：${getValue("diseaseMold")}`,
+    answer: `1. 可能病害或原因排序\n列出 3 個最可能原因，包含病害、蟲害、生理障礙或管理因素。\n\n2. 判斷理由\n說明哪些症狀與環境資料支持你的推論。\n\n3. 還需要補充觀察\n列出學生下一步應拍攝或記錄的重點。\n\n4. 初步改善建議\n提供安全、教育用途的管理方向。\n\n5. 植物CSI學習重點\n用 3 個問題引導學生推理。\n\n6. 注意事項\n提醒勿直接用藥，需依作物、地區與法規確認。`
+  },
+  pest: {
+    title: "蟲害偵查模式",
+    role: "你是一位 AI植物診療師與農業害蟲偵查教學助理，擅長根據蟲體、卵、蛻皮、蟲糞、咬痕、蜜露與蛛絲進行初步判讀。",
+    focus: "請優先分析害蟲種類或危害類型，例如刺吸式、咀嚼式、潛葉性、蛀食性或蟎類危害；若照片不足，請明確要求補拍。",
+    extra: () => `是否看到蟲體：${getValue("pestVisible")}\n蟲體大小與顏色：${getValue("pestBody")}\n受害型態：${getValue("pestDamage")}\n蟲害痕跡：${getValue("pestTrace")}`,
+    answer: `1. 最可能的害蟲或危害類型\n請列出可能性排序，並說明是刺吸式、咀嚼式、潛葉性、蛀食性或蟎類危害。\n\n2. 照片與症狀判斷依據\n說明你看到哪些蟲體、卵、咬痕、蟲糞、蜜露、蛛絲或葉片變化。\n\n3. 需要補拍的照片\n請告訴學生還要補拍葉背、蟲體近照、卵、蛀孔、果實或整株哪一類照片。\n\n4. 初步非農藥管理方法\n提供移除受害葉、清潔、隔離、誘捕、物理防治或環境管理建議。\n\n5. 是否可能誤判\n提醒是否可能是病害、生理障礙或藥害造成。\n\n6. 用藥注意事項\n若需要藥劑，提醒查詢合法登記藥劑、安全採收期與學校實作安全規範。\n\n7. 植物CSI學習重點\n用 3 個問題引導學生觀察害蟲生活史與危害痕跡。`
+  },
+  physiology: {
+    title: "生理障礙診斷模式",
+    role: "你是一位 AI植物診療師與植物生理教學助理，擅長判斷缺素、水分逆境、肥傷、鹽害、日燒、寒害、藥害與土壤環境問題。",
+    focus: "請優先分析症狀分布、老葉或新葉、葉緣或葉脈間、土壤 pH、EC、濕度、溫度與管理紀錄，不要直接判定為病蟲害。",
+    extra: () => `疑似逆境來源：${getValue("physioStress")}\n症狀分布：${getValue("physioDistribution")}`,
+    answer: `1. 最可能的生理障礙排序\n列出 3 個可能原因，例如缺素、水分逆境、肥傷/鹽害、日燒、寒害或藥害。\n\n2. 判斷理由\n請根據症狀分布、土壤 pH、EC、濕度、溫度與管理紀錄說明。\n\n3. 與病蟲害的區別\n說明哪些地方不像病害或蟲害，哪些地方仍需確認。\n\n4. 建議補充檢測\n列出可再測量的項目，例如 pH、EC、土壤濕度、根系、施肥量與光照。\n\n5. 初步改善建議\n提供安全且適合教學現場的調整方向。\n\n6. 植物CSI學習重點\n用 3 個問題引導學生理解環境與植物生理的關係。`
+  }
+};
 
 function getValue(name) {
-
-  return (
-    new FormData(form).get(name)?.trim() || "未填寫"
-  );
-
+  return new FormData(form).get(name)?.trim() || "未填寫";
 }
 
-
-/* =========================================
-   建立 GPT 提示詞
-========================================= */
-
-function buildPrompt() {
-
-  return `你是一位「AI植物診療師」與農業教學助理。
-
-請根據以下問診資料，
-協助學生進行植物病害、生理障礙、
-或環境逆境的初步判斷。
-
-請用教學口吻回答，
-避免直接下絕對診斷，
-並提醒仍需現場確認。
-
-
-
-【一、基本資料】
-
-作物名稱：
-${getValue("crop")}
-
-栽培地區：
-${getValue("location")}
-
-栽培環境：
-${getValue("environment")}
-
-
-
-【二、症狀資料】
-
-發病部位：
-${getValue("part")}
-
-主要症狀：
-${getValue("symptom")}
-
-發生時間：
-${getValue("time")}
-
-
-
-【三、環境與管理】
-
-近期天氣與氣象資料：
-${getValue("weather")}
-
-土壤溫度：
-${getValue("soilTemp")} °C
-
-土壤濕度：
-${getValue("soilMoisture")} %
-
-土壤 pH 值：
-${getValue("soilPH")}
-
-土壤 EC 值：
-${getValue("soilEC")} mS/cm
-
-管理紀錄：
-${getValue("management")}
-
-
-
-【四、照片觀察】
-
-照片說明：
-${getValue("photoNote")}
-
-
-
-請依照以下格式回答：
-
-1. 可能原因排序
-列出 3 個最可能原因，
-包含病害、蟲害、生理障礙或管理因素。
-
-2. 判斷理由
-說明哪些症狀與環境資料支持你的推論。
-
-3. 還需要補充觀察
-列出學生下一步應拍攝或記錄的重點。
-
-4. 初步改善建議
-提供安全、教育用途的管理方向。
-
-5. 植物CSI學習重點
-用 3 個問題引導學生推理。
-
-6. 注意事項
-提醒勿直接用藥，
-需依作物、地區與法規確認。`;
-
+function getMode() {
+  return modeInput?.value || "disease";
 }
 
+function setMode(mode) {
+  if (!modeInfo[mode]) return;
+  modeInput.value = mode;
 
-/* =========================================
-   產生 GPT 提示詞
-========================================= */
-
-generateBtn.addEventListener("click", () => {
-
-  promptOutput.value = buildPrompt();
-
-  promptOutput.focus();
-
-});
-
-
-/* =========================================
-   複製提示詞
-========================================= */
-
-copyBtn.addEventListener("click", async () => {
-
-  if (!promptOutput.value) {
-
-    promptOutput.value = buildPrompt();
-
-  }
-
-  await navigator.clipboard.writeText(
-    promptOutput.value
-  );
-
-  copyBtn.textContent = "已複製！";
-
-  setTimeout(() => {
-
-    copyBtn.textContent = "複製提示詞";
-
-  }, 1600);
-
-});
-
-
-/* =========================================
-   清除提示詞
-========================================= */
-
-if (clearBtn) {
-
-  clearBtn.addEventListener("click", () => {
-
-    promptOutput.removeAttribute("readonly");
-
-    promptOutput.value = "";
-
-    promptOutput.setAttribute(
-      "readonly",
-      true
-    );
-
-    promptOutput.placeholder =
-      "提示詞已清除";
-
-    clearBtn.textContent = "已清除！";
-
-    setTimeout(() => {
-
-      clearBtn.textContent =
-        "一鍵清除提示詞";
-
-    }, 1500);
-
+  modeCards.forEach((card) => {
+    const active = card.dataset.mode === mode;
+    card.classList.toggle("active", active);
+    card.setAttribute("aria-selected", active ? "true" : "false");
   });
 
+  modePanels.forEach((panel) => {
+    panel.classList.toggle("active", panel.dataset.panel === mode);
+  });
+
+  promptOutput.placeholder = `目前選擇：${modeInfo[mode].title}。按下「產生診療提示詞」後會出現在這裡。`;
 }
 
+modeCards.forEach((card) => {
+  card.addEventListener("click", () => setMode(card.dataset.mode));
+});
 
-/* =========================================
-   開啟自建氣象站
-========================================= */
+function buildPrompt() {
+  const mode = modeInfo[getMode()];
+
+  return `${mode.role}\n\n${mode.focus}\n\n請根據以下問診資料，協助學生進行「${mode.title}」。\n請用教學口吻回答，避免直接下絕對診斷，並提醒仍需現場確認。\n\n【一、基本資料】\n作物名稱：\n${getValue("crop")}\n\n栽培地區：\n${getValue("location")}\n\n栽培環境：\n${getValue("environment")}\n\n【二、症狀資料】\n發病部位：\n${getValue("part")}\n\n主要症狀：\n${getValue("symptom")}\n\n發生時間：\n${getValue("time")}\n\n【三、環境與管理】\n近期天氣與氣象資料：\n${getValue("weather")}\n\n土壤溫度：\n${getValue("soilTemp")} °C\n\n土壤濕度：\n${getValue("soilMoisture")} %\n\n土壤 pH 值：\n${getValue("soilPH")}\n\n土壤 EC 值：\n${getValue("soilEC")} mS/cm\n\n管理紀錄：\n${getValue("management")}\n\n【四、照片觀察】\n照片說明：\n${getValue("photoNote")}\n\n【五、本模式補充觀察】\n${mode.extra()}\n\n請依照以下格式回答：\n\n${mode.answer}`;
+}
+
+generateBtn.addEventListener("click", () => {
+  promptOutput.value = buildPrompt();
+  promptOutput.focus();
+});
+
+copyBtn.addEventListener("click", async () => {
+  if (!promptOutput.value) promptOutput.value = buildPrompt();
+  await navigator.clipboard.writeText(promptOutput.value);
+  copyBtn.textContent = "已複製！";
+  setTimeout(() => { copyBtn.textContent = "複製提示詞"; }, 1600);
+});
+
+if (clearBtn) {
+  clearBtn.addEventListener("click", () => {
+    promptOutput.removeAttribute("readonly");
+    promptOutput.value = "";
+    promptOutput.setAttribute("readonly", true);
+    promptOutput.placeholder = "提示詞已清除";
+    clearBtn.textContent = "已清除！";
+    setTimeout(() => { clearBtn.textContent = "一鍵清除提示詞"; }, 1500);
+  });
+}
 
 openStationBtn.addEventListener("click", () => {
-
-  const url = document
-    .querySelector("#stationUrl")
-    .value
-    .trim();
-
+  const url = document.querySelector("#stationUrl").value.trim();
   if (!url) {
-
     alert("請先貼上自建氣象站網址");
-
     return;
-
   }
-
-  const finalUrl = url.startsWith("http")
-    ? url
-    : `https://${url}`;
-
+  const finalUrl = url.startsWith("http") ? url : `https://${url}`;
   window.open(finalUrl, "_blank");
-
 });
+
+setMode("disease");
