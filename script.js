@@ -4,6 +4,15 @@ const generateBtn = document.querySelector('#generatePrompt');
 const copyBtn = document.querySelector('#copyPrompt');
 const openStationBtn = document.querySelector('#openStation');
 
+const clearBtn = document.getElementById("clearPrompt");
+
+if (clearBtn) {
+  clearBtn.addEventListener("click", () => {
+    document.getElementById("promptOutput").value = "";
+  });
+}
+
+
 function getValue(name){ return new FormData(form).get(name)?.trim() || '未填寫'; }
 
 function buildPrompt(){
@@ -22,3 +31,4 @@ openStationBtn.addEventListener('click', () => {
   if(!url) return alert('請先貼上自建氣象站網址');
   window.open(url.startsWith('http') ? url : `https://${url}`, '_blank');
 });
+
