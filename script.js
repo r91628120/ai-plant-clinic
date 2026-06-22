@@ -20,7 +20,7 @@ const fillWeatherBtn = document.querySelector("#fillWeatherBtn");
 const weatherLocationInput = document.querySelector("#weatherLocationInput");
 
 let latestWeatherData = null;
-
+let townshipData = {};
 
 
 const modeInfo = {
@@ -79,7 +79,7 @@ modeCards.forEach((card) => {
 function buildPrompt() {
   const mode = modeInfo[getMode()];
 
-  return `${mode.role}\n\n${mode.focus}\n\n請根據以下問診資料，協助學生進行「${mode.title}」。\n請用教學口吻回答，避免直接下絕對診斷，並提醒仍需現場確認。\n\n【一、基本資料】\n作物名稱：\n${getValue("crop")}\n\n栽培地區：\n${getValue("location")}\n\n栽培環境：\n${getValue("environment")}\n\n【二、症狀資料】\n發病部位：\n${getValue("part")}\n\n主要症狀：\n${getValue("symptom")}\n\n發生時間：\n${getValue("time")}\n\n【三、環境與管理】\n近期天氣與氣象資料：\n${getValue("weather")}\n\n土壤溫度：\n${getValue("soilTemp")} °C\n\n土壤濕度：\n${getValue("soilMoisture")} %\n\n土壤 pH 值：\n${getValue("soilPH")}\n\n土壤 EC 值：\n${getValue("soilEC")} mS/cm\n\n管理紀錄：\n${getValue("management")}\n\n【四、照片觀察】\n照片說明：\n${getValue("photoNote")}\n\n【五、本模式補充觀察】\n${mode.extra()}\n\n請依照以下格式回答：\n\n${mode.answer}`;
+  return `${mode.role}\n\n${mode.focus}\n\n請根據以下問診資料，協助學生進行「${mode.title}」。\n請用教學口吻回答，避免直接下絕對診斷，並提醒仍需現場確認。\n\n【一、基本資料】\n作物名稱：\n${getValue("crop")}\n\n栽培地區：${getValue("clinicCounty")} ${getValue("clinicTown")}\n\n栽培環境：\n${getValue("environment")}\n\n【二、症狀資料】\n發病部位：\n${getValue("part")}\n\n主要症狀：\n${getValue("symptom")}\n\n發生時間：\n${getValue("time")}\n\n【三、環境與管理】\n近期天氣與氣象資料：\n${getValue("weather")}\n\n土壤溫度：\n${getValue("soilTemp")} °C\n\n土壤濕度：\n${getValue("soilMoisture")} %\n\n土壤 pH 值：\n${getValue("soilPH")}\n\n土壤 EC 值：\n${getValue("soilEC")} mS/cm\n\n管理紀錄：\n${getValue("management")}\n\n【四、照片觀察】\n照片說明：\n${getValue("photoNote")}\n\n【五、本模式補充觀察】\n${mode.extra()}\n\n請依照以下格式回答：\n\n${mode.answer}`;
 }
 
 generateBtn.addEventListener("click", () => {
@@ -105,15 +105,22 @@ if (clearBtn) {
   });
 }
 
-openStationBtn.addEventListener("click", () => {
-  const url = document.querySelector("#stationUrl").value.trim();
-  if (!url) {
-    alert("請先貼上自建氣象站網址");
-    return;
-  }
-  const finalUrl = url.startsWith("http") ? url : `https://${url}`;
-  window.open(finalUrl, "_blank");
-});
+if (openStationBtn) {
+  openStationBtn.addEventListener("click", () => {
+    const stationInput = document.querySelector("#stationUrl");
+    if (!stationInput) return;
+
+    const url = stationInput.value.trim();
+    if (!url) {
+      alert("請先貼上自建氣象站網址");
+      return;
+    }
+
+    const finalUrl = url.startsWith("http") ? url : `https://${url}`;
+    window.open(finalUrl, "_blank");
+  });
+}
+
 
 setMode("disease");
 
@@ -169,8 +176,15 @@ function updateWeatherCard(data) {
 }
 
 async function fetchWeatherData() {
-  const formLocation = document.querySelector('[name="location"]').value.trim();
-  const inputLocation = weatherLocationInput.value.trim();
+  const clinicCounty = document.querySelector("#clinicCounty")?.value || "";
+  const clinicTown = document.querySelector("#clinicTown")?.value || "";
+
+  const weatherCounty = document.querySelector("#weatherCounty")?.value || "";
+  const weatherTown = document.querySelector("#weatherTown")?.value || "";
+
+  const formLocation = `${clinicCounty} ${clinicTown}`.trim();
+  const inputLocation = `${weatherCounty} ${weatherTown}`.trim();
+
   const locationName = inputLocation || formLocation;
 
   if (!locationName) {
@@ -178,7 +192,7 @@ async function fetchWeatherData() {
     return;
   }
 
-  weatherLocationInput.value = locationName;
+ 
   document.querySelector("#weatherStatus").textContent = "氣象資料讀取中...";
 
   try {
@@ -220,3 +234,81 @@ if (fetchWeatherBtn) {
 if (fillWeatherBtn) {
   fillWeatherBtn.addEventListener("click", fillWeatherToForm);
 }
+
+async function loadTownshipsForClinic() {
+  try {
+    const res = await fetch("townships.json");
+    townshipData = await res.json();
+
+    setupTownshipSelect("clinicCounty", "clinicTown");
+    setupTownshipSelect("weatherCounty", "weatherTown");
+
+    setDefaultTownship("屏東縣", "枋山鄉");
+
+  } catch (error) {
+    console.error("townships.json 讀取失敗：", error);
+    alert("townships.json 讀取失敗，請確認檔案是否與 index.html 放在同一層。");
+  }
+}
+
+function setupTownshipSelect(countyId, townId) {
+  const countySelect = document.querySelector(`#${countyId}`);
+  const townSelect = document.querySelector(`#${townId}`);
+  if (!countySelect || !townSelect) return;
+
+  countySelect.innerHTML = "";
+
+  Object.keys(townshipData).forEach((county) => {
+  const option = document.createElement("option");
+  option.value = county;
+  option.textContent = county;
+  countySelect.appendChild(option);
+  });
+
+  countySelect.addEventListener("change", () => {
+    updateTownshipOptions(countyId, townId);
+  });
+
+  updateTownshipOptions(countyId, townId);
+}
+
+function updateTownshipOptions(countyId, townId) {
+  const countySelect = document.querySelector(`#${countyId}`);
+  const townSelect = document.querySelector(`#${townId}`);
+  if (!countySelect || !townSelect) return;
+
+  const county = countySelect.value;
+  const towns = townshipData[county] || [];
+
+  townSelect.innerHTML = "";
+
+  towns.forEach(town => {
+    const option = document.createElement("option");
+    option.value = town;
+    option.textContent = town;
+    townSelect.appendChild(option);
+  });
+}
+
+function setDefaultTownship(county, town) {
+  ["clinicCounty", "weatherCounty"].forEach(countyId => {
+    const countySelect = document.querySelector(`#${countyId}`);
+    if (countySelect && townshipData[county]) {
+      countySelect.value = county;
+    }
+  });
+
+  updateTownshipOptions("clinicCounty", "clinicTown");
+  updateTownshipOptions("weatherCounty", "weatherTown");
+
+  ["clinicTown", "weatherTown"].forEach(townId => {
+    const townSelect = document.querySelector(`#${townId}`);
+    if (townSelect && [...townSelect.options].some(opt => opt.value === town)) {
+      townSelect.value = town;
+    }
+  });
+}
+
+loadTownshipsForClinic();
+
+

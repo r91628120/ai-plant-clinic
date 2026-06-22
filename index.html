@@ -508,14 +508,21 @@
     </div>
     <form class="form-grid" id="diagnosisForm">
      <input id="diagnosisMode" name="diagnosisMode" type="hidden" value="disease"/>
-     <label>
-      作物名稱
-      <input name="crop" placeholder="例：番茄、蝴蝶蘭、萵苣"/>
-     </label>
-     <label>
-      栽培地區
-      <input name="location" placeholder="例：嘉義縣民雄鄉"/>
-     </label>
+        <label>
+          作物名稱
+          <input name="crop" placeholder="例：番茄、蝴蝶蘭、萵苣"/>
+        </label>
+     
+        <label>
+          栽培縣市
+          <select id="clinicCounty" name="clinicCounty"></select>
+        </label>
+
+        <label>
+           栽培鄉鎮市區
+          <select id="clinicTown" name="clinicTown"></select>
+        </label>
+     
      <label>
       栽培環境
       <select name="environment">
@@ -770,8 +777,13 @@
       <h3>🌦️ 查詢農業氣象</h3>
 
       <label>
-        查詢地區
-        <input id="weatherLocationInput" placeholder="例：屏東縣 枋山鄉、嘉義縣 民雄鄉"/>
+        查詢縣市
+         <select id="weatherCounty"></select>
+      </label>
+
+      <label>
+          查詢鄉鎮市區
+          <select id="weatherTown"></select>
       </label>
 
       <button class="btn primary" id="fetchWeatherBtn" type="button">
