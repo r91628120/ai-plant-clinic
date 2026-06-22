@@ -13,6 +13,16 @@ const modeInput = document.querySelector("#diagnosisMode");
 const modeCards = document.querySelectorAll(".mode-card");
 const modePanels = document.querySelectorAll(".mode-fields");
 
+const WEATHER_API_URL = "https://script.google.com/macros/s/AKfycbw7zj9FmzzzciRlE2oGmrHsJhx5WjOFzjzwUvZXBocKnyFMF4o9YacQAZTwVUfit_Kh/exec";
+
+const fetchWeatherBtn = document.querySelector("#fetchWeatherBtn");
+const fillWeatherBtn = document.querySelector("#fillWeatherBtn");
+const weatherLocationInput = document.querySelector("#weatherLocationInput");
+
+let latestWeatherData = null;
+
+
+
 const modeInfo = {
   disease: {
     title: "病害診斷模式",
@@ -106,3 +116,107 @@ openStationBtn.addEventListener("click", () => {
 });
 
 setMode("disease");
+
+function buildWeatherText(data) {
+  return `【即時農業氣象資料】
+最近農業氣象站：${data.stationName || data.stationId || "--"}
+觀測時間：${data.obsTime || "--"}
+氣溫：${data.temp || "--"} ℃
+相對濕度：${data.humidity || "--"} %
+實測雨量：${data.rainMm || data.rain || "--"} mm
+風速：${data.windSpeed || data.wind || "--"} m/s
+日照時數：${data.sunshine || "--"} hr
+土壤溫度10cm：${data.soil10 || "--"} ℃
+降雨風險：${data.rain || "--"}
+風速風險：${data.wind || "--"}
+
+【植物診療提醒】
+請將以上氣象資料納入病害、蟲害與生理障礙判斷，特別注意高濕、連續降雨、高溫、強風與日照不足對植物健康的影響。`;
+}
+
+function updateWeatherCard(data) {
+  document.querySelector("#weatherStatus").textContent = "已成功讀取氣象資料";
+
+  document.querySelector("#wStation").textContent =
+    data.stationName || data.stationId || "--";
+
+  document.querySelector("#wObsTime").textContent =
+    data.obsTime || "--";
+
+  document.querySelector("#wTemp").textContent =
+    `${data.temp || "--"} ℃`;
+
+  document.querySelector("#wHumidity").textContent =
+    `${data.humidity || "--"} %`;
+
+  document.querySelector("#wRain").textContent =
+    `${data.rainMm || data.rain || "--"} mm`;
+
+  document.querySelector("#wWind").textContent =
+    `${data.windSpeed || data.wind || "--"} m/s`;
+
+  document.querySelector("#wSunshine").textContent =
+    `${data.sunshine || "--"} hr`;
+
+  const humidity = Number(data.humidity);
+  const rain = Number(data.rainMm || data.rain || 0);
+
+  let diseaseRisk = "低";
+  if (humidity >= 85 || rain >= 10) diseaseRisk = "高";
+  else if (humidity >= 75 || rain >= 3) diseaseRisk = "中";
+
+  document.querySelector("#wDiseaseRisk").textContent = diseaseRisk;
+}
+
+async function fetchWeatherData() {
+  const formLocation = document.querySelector('[name="location"]').value.trim();
+  const inputLocation = weatherLocationInput.value.trim();
+  const locationName = inputLocation || formLocation;
+
+  if (!locationName) {
+    alert("請先輸入栽培地區，例如：屏東縣 枋山鄉");
+    return;
+  }
+
+  weatherLocationInput.value = locationName;
+  document.querySelector("#weatherStatus").textContent = "氣象資料讀取中...";
+
+  try {
+    const url = WEATHER_API_URL + "?location=" + encodeURIComponent(locationName);
+    const res = await fetch(url);
+    const data = await res.json();
+
+    if (!data.success) {
+      document.querySelector("#weatherStatus").textContent =
+        data.message || "讀取失敗，請確認 GAS API 是否正常";
+      return;
+    }
+
+    latestWeatherData = data;
+    updateWeatherCard(data);
+
+  } catch (error) {
+    document.querySelector("#weatherStatus").textContent =
+      "讀取失敗：" + error.message;
+  }
+}
+
+function fillWeatherToForm() {
+  if (!latestWeatherData) {
+    alert("請先按「讀取最近農業氣象站資料」");
+    return;
+  }
+
+  const weatherText = buildWeatherText(latestWeatherData);
+  document.querySelector('[name="weather"]').value = weatherText;
+
+  alert("已將氣象資料帶入症狀問診表單！");
+}
+
+if (fetchWeatherBtn) {
+  fetchWeatherBtn.addEventListener("click", fetchWeatherData);
+}
+
+if (fillWeatherBtn) {
+  fillWeatherBtn.addEventListener("click", fillWeatherToForm);
+}

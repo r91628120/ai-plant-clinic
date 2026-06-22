@@ -114,6 +114,53 @@
       }
 }
   
+    .weather-result-card{
+  background:linear-gradient(180deg,#ffffff,#f3fbf6);
+}
+
+.weather-status{
+  margin-bottom:16px;
+  padding:12px 14px;
+  border-radius:14px;
+  background:#ecfdf5;
+  color:#14532d;
+  font-weight:800;
+  border:1px solid #bbf7d0;
+}
+
+.weather-grid{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:12px;
+}
+
+.weather-grid div{
+  border:1px solid #dfe8df;
+  border-radius:14px;
+  padding:14px;
+  background:#fff;
+}
+
+.weather-grid span{
+  display:block;
+  color:#637267;
+  font-size:14px;
+  font-weight:700;
+}
+
+.weather-grid strong{
+  display:block;
+  margin-top:4px;
+  color:#073b22;
+  font-size:18px;
+}
+
+@media(max-width:720px){
+  .weather-grid{
+    grid-template-columns:1fr;
+  }
+}
+
   </style>
  
 </head>
@@ -707,58 +754,99 @@
      </label>
     </form>
    </section>
+
    <section class="panel" id="weather">
-    <div class="panel-title">
-     <small>
-      Weather Data
-     </small>
-     <h2>
-      氣象站資料顯示
-     </h2>
-     <p>
-      目前以官方資料連結與自建測站網址欄位呈現，未來將串接 API。
-     </p>
-    </div>
-    <div class="weather-layout">
-     <div class="resource-card">
-      <h3>
-       官方氣象資料
-      </h3>
-      <ul>
-       <li>
-        <a href="https://agr.cwa.gov.tw/" rel="noopener" target="_blank">
-         農業氣象觀測網監測系統
-        </a>
-       </li>
-       <li>
-        <a href="https://opendata.cwa.gov.tw/" rel="noopener" target="_blank">
-         中央氣象署開放資料平臺
-        </a>
-       </li>
-       <li>
-        <a href="https://codis.cwa.gov.tw/StationData" rel="noopener" target="_blank">
-         CODiS 氣候觀測資料查詢服務
-        </a>
-       </li>
-      </ul>
-     </div>
-     <div class="resource-card">
-      <h3>
-       自建氣象站資料
-      </h3>
+  <div class="panel-title">
+    <small>Weather Data</small>
+    <h2>即時農業氣象資料</h2>
+    <p>
+      輸入栽培地區後，可讀取最近農業氣象站資料，並自動帶入植物診療問診表。
+    </p>
+  </div>
+
+  <div class="weather-layout">
+
+    <div class="resource-card">
+      <h3>🌦️ 查詢農業氣象</h3>
+
       <label>
-       校內氣象站網址
-       <input id="stationUrl" placeholder="貼上 ThingSpeak、Blynk、Google Sheet 或自架網站網址"/>
+        查詢地區
+        <input id="weatherLocationInput" placeholder="例：屏東縣 枋山鄉、嘉義縣 民雄鄉"/>
       </label>
-      <button class="btn primary" id="openStation" type="button">
-       開啟自建測站
+
+      <button class="btn primary" id="fetchWeatherBtn" type="button">
+        讀取最近農業氣象站資料
       </button>
+
+      <button class="btn light" id="fillWeatherBtn" type="button">
+        帶入問診表單
+      </button>
+
       <p class="hint">
-       建議學生記錄：溫度、濕度、降雨、光照、土壤濕度、EC、pH。
+        小提醒：可先在「症狀問診表單」填寫栽培地區，再按讀取氣象資料。
       </p>
-     </div>
+
+      <ul>
+        <li>
+          <a href="https://agr.cwa.gov.tw/" rel="noopener" target="_blank">
+            農業部農業氣象服務網
+          </a>
+        </li>
+        <li>
+          <a href="https://opendata.cwa.gov.tw/" rel="noopener" target="_blank">
+            中央氣象署開放資料平臺
+          </a>
+        </li>
+      </ul>
     </div>
-   </section>
+
+    <div class="resource-card weather-result-card">
+      <h3>📍 最近氣象站資料</h3>
+
+      <div class="weather-status" id="weatherStatus">
+        尚未讀取氣象資料
+      </div>
+
+      <div class="weather-grid">
+        <div>
+          <span>最近測站</span>
+          <strong id="wStation">--</strong>
+        </div>
+        <div>
+          <span>觀測時間</span>
+          <strong id="wObsTime">--</strong>
+        </div>
+        <div>
+          <span>氣溫</span>
+          <strong id="wTemp">-- ℃</strong>
+        </div>
+        <div>
+          <span>相對濕度</span>
+          <strong id="wHumidity">-- %</strong>
+        </div>
+        <div>
+          <span>實測雨量</span>
+          <strong id="wRain">-- mm</strong>
+        </div>
+        <div>
+          <span>實測風速</span>
+          <strong id="wWind">-- m/s</strong>
+        </div>
+        <div>
+          <span>日照時數</span>
+          <strong id="wSunshine">-- hr</strong>
+        </div>
+        <div>
+          <span>病害氣象風險</span>
+          <strong id="wDiseaseRisk">--</strong>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
    <section class="panel" id="photo">
     <div class="panel-title">
      <small>
