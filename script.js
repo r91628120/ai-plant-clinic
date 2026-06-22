@@ -24,18 +24,32 @@ let townshipData = {};
 
 const WEATHER_STATION_BY_TOWN = {
   "屏東縣": {
-    "枋山鄉": { id: "72S590", name: "畜試南區分所" },
-    "枋寮鄉": { id: "72S590", name: "畜試南區分所" },
-    "佳冬鄉": { id: "72S590", name: "畜試南區分所" },
-    "車城鄉": { id: "72S590", name: "畜試南區分所" },
-    "恆春鎮": { id: "72S590", name: "畜試南區分所" }
+    "屏東市": { id: "C2R970", name: "屏科大" },
+    "內埔鄉": { id: "C2R970", name: "屏科大" },
+    "長治鄉": { id: "B2Q810", name: "畜試南區分所" },
+    "麟洛鄉": { id: "C2R970", name: "屏科大" },
+    "萬丹鄉": { id: "C2R970", name: "屏科大" },
+    "潮州鎮": { id: "B2Q810", name: "畜試南區分所" },
+    "新埤鄉": { id: "B2Q810", name: "畜試南區分所" },
+    "佳冬鄉": { id: "B2Q810", name: "畜試南區分所" },
+    "枋寮鄉": { id: "B2Q810", name: "畜試南區分所" },
+    "枋山鄉": { id: "B2Q810", name: "畜試南區分所" },
+    "車城鄉": { id: "B2Q810", name: "畜試南區分所" },
+    "恆春鎮": { id: "B2Q810", name: "畜試南區分所" }
+  },
+
+  "臺東縣": {
+    "臺東市": { id: "72S590", name: "東改賓朗果園" },
+    "卑南鄉": { id: "72S590", name: "東改賓朗果園" },
+    "池上鄉": { id: "72S200", name: "東改班鳩分場" },
+    "關山鎮": { id: "72S200", name: "東改班鳩分場" }
   }
 };
 
 function getMatchedWeatherStation(county, town) {
   return (
     WEATHER_STATION_BY_TOWN[county]?.[town] ||
-    { id: "72S590", name: "畜試南區分所" }
+    { id: "B2Q810", name: "畜試南區分所" }
   );
 }
 
