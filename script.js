@@ -237,7 +237,7 @@ if (fillWeatherBtn) {
 
 async function loadTownshipsForClinic() {
   try {
-    const res = await fetch("townships.json");
+    const res = await fetch("./townships.json?v=20260622");
     townshipData = await res.json();
 
     setupTownshipSelect("clinicCounty", "clinicTown");
