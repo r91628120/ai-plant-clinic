@@ -22,6 +22,23 @@ const weatherLocationInput = document.querySelector("#weatherLocationInput");
 let latestWeatherData = null;
 let townshipData = {};
 
+const WEATHER_STATION_BY_TOWN = {
+  "屏東縣": {
+    "枋山鄉": { id: "72S590", name: "畜試南區分所" },
+    "枋寮鄉": { id: "72S590", name: "畜試南區分所" },
+    "佳冬鄉": { id: "72S590", name: "畜試南區分所" },
+    "車城鄉": { id: "72S590", name: "畜試南區分所" },
+    "恆春鎮": { id: "72S590", name: "畜試南區分所" }
+  }
+};
+
+function getMatchedWeatherStation(county, town) {
+  return (
+    WEATHER_STATION_BY_TOWN[county]?.[town] ||
+    { id: "72S590", name: "畜試南區分所" }
+  );
+}
+
 
 const modeInfo = {
   disease: {
@@ -185,20 +202,31 @@ async function fetchWeatherData() {
   const formLocation = `${clinicCounty} ${clinicTown}`.trim();
   const inputLocation = `${weatherCounty} ${weatherTown}`.trim();
 
-  const locationName = inputLocation || formLocation;
+  const county = weatherCounty || clinicCounty;
+  const town = weatherTown || clinicTown;
+  const locationName = `${county} ${town}`.trim();
+
+  const matchedStation = getMatchedWeatherStation(county, town);
 
   if (!locationName) {
-    alert("請先輸入栽培地區，例如：屏東縣 枋山鄉");
-    return;
+      alert("請先選擇栽培地區");
+  return;
   }
 
- 
-  document.querySelector("#weatherStatus").textContent = "氣象資料讀取中...";
+document.querySelector("#weatherStatus").textContent = "氣象資料讀取中...";
 
-  try {
-    const url = WEATHER_API_URL + "?location=" + encodeURIComponent(locationName);
+try {
+  const url =
+    WEATHER_API_URL +
+    "?location=" + encodeURIComponent(matchedStation.id) +
+    "&locationName=" + encodeURIComponent(locationName);
     const res = await fetch(url);
     const data = await res.json();
+
+    data.stationName = data.stationName || matchedStation.name;
+    data.stationId = data.stationId || matchedStation.id;
+
+
 
     if (!data.success) {
       document.querySelector("#weatherStatus").textContent =
