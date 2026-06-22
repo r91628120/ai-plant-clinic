@@ -22,36 +22,74 @@ const weatherLocationInput = document.querySelector("#weatherLocationInput");
 let latestWeatherData = null;
 let townshipData = {};
 
-const WEATHER_STATION_BY_TOWN = {
-  "屏東縣": {
-    "屏東市": { id: "C2R970", name: "屏科大" },
-    "內埔鄉": { id: "C2R970", name: "屏科大" },
-    "長治鄉": { id: "B2Q810", name: "畜試南區分所" },
-    "麟洛鄉": { id: "C2R970", name: "屏科大" },
-    "萬丹鄉": { id: "C2R970", name: "屏科大" },
-    "潮州鎮": { id: "B2Q810", name: "畜試南區分所" },
-    "新埤鄉": { id: "B2Q810", name: "畜試南區分所" },
-    "佳冬鄉": { id: "B2Q810", name: "畜試南區分所" },
-    "枋寮鄉": { id: "B2Q810", name: "畜試南區分所" },
-    "枋山鄉": { id: "B2Q810", name: "畜試南區分所" },
-    "車城鄉": { id: "B2Q810", name: "畜試南區分所" },
-    "恆春鎮": { id: "B2Q810", name: "畜試南區分所" }
-  },
 
-  "臺東縣": {
-    "臺東市": { id: "72S590", name: "東改賓朗果園" },
-    "卑南鄉": { id: "72S590", name: "東改賓朗果園" },
-    "池上鄉": { id: "72S200", name: "東改班鳩分場" },
-    "關山鎮": { id: "72S200", name: "東改班鳩分場" }
-  }
+const AGRI_STATIONS = [
+  { id: "C2C410", name: "中央大學", lat: 24.9680, lng: 121.1950 },
+  { id: "72C440", name: "桃園農改", lat: 24.9500, lng: 121.0300 },
+  { id: "82A750", name: "茶改北部分場", lat: 24.9100, lng: 121.7000 },
+  { id: "72D680", name: "桃改新埔分場", lat: 24.8300, lng: 121.0700 },
+  { id: "K2E360", name: "苗栗農改", lat: 24.5600, lng: 120.8200 },
+  { id: "G2F820", name: "農業試驗所", lat: 24.0300, lng: 120.6900 },
+  { id: "72G600", name: "臺中農改", lat: 24.0000, lng: 120.5300 },
+  { id: "72HA00", name: "中改埔里分場", lat: 23.9700, lng: 120.9700 },
+  { id: "U2H480", name: "臺大溪頭", lat: 23.6740, lng: 120.7950 },
+  { id: "A2K630", name: "臺大雲林校區", lat: 23.7000, lng: 120.5300 },
+  { id: "C2M910", name: "嘉義大學", lat: 23.4630, lng: 120.4840 },
+  { id: "72N100", name: "臺南農改", lat: 23.0500, lng: 120.3300 },
+  { id: "72Q010", name: "高雄農改", lat: 22.9000, lng: 120.5300 },
+  { id: "G2P820", name: "農試鳳山分所", lat: 22.6300, lng: 120.3500 },
+  { id: "C2R970", name: "屏科大", lat: 22.6408, lng: 120.5960 },
+  { id: "B2Q810", name: "畜試南區分所", lat: 22.5400, lng: 120.5300 },
+  { id: "72S590", name: "東改賓朗果園", lat: 22.7900, lng: 121.0900 },
+  { id: "72T250", name: "花蓮農改", lat: 23.9700, lng: 121.5900 },
+  { id: "72U480", name: "花改蘭陽分場", lat: 24.7500, lng: 121.7500 }
+];
+
+const COUNTY_FALLBACK_COORDS = {
+  "臺北市": { lat: 25.0330, lng: 121.5654 },
+  "新北市": { lat: 25.0169, lng: 121.4628 },
+  "桃園市": { lat: 24.9936, lng: 121.3010 },
+  "臺中市": { lat: 24.1477, lng: 120.6736 },
+  "臺南市": { lat: 22.9999, lng: 120.2270 },
+  "高雄市": { lat: 22.6273, lng: 120.3014 },
+  "屏東縣": { lat: 22.5519, lng: 120.5488 },
+  "臺東縣": { lat: 22.7972, lng: 121.0714 },
+  "花蓮縣": { lat: 23.9872, lng: 121.6015 }
 };
 
 function getMatchedWeatherStation(county, town) {
-  return (
-    WEATHER_STATION_BY_TOWN[county]?.[town] ||
-    { id: "B2Q810", name: "畜試南區分所" }
-  );
+  const pos = COUNTY_FALLBACK_COORDS[county] || { lat: 23.6978, lng: 120.9605 };
+  return findNearestStation(pos.lat, pos.lng);
 }
+
+function findNearestStation(lat, lng) {
+  let best = null;
+
+  AGRI_STATIONS.forEach(station => {
+    const distanceKm = getDistanceKm(lat, lng, station.lat, station.lng);
+    if (!best || distanceKm < best.distanceKm) {
+      best = { ...station, distanceKm };
+    }
+  });
+
+  return best;
+}
+
+function getDistanceKm(lat1, lng1, lat2, lng2) {
+  const R = 6371;
+  const dLat = toRad(lat2 - lat1);
+  const dLng = toRad(lng2 - lng1);
+  const a =
+    Math.sin(dLat / 2) ** 2 +
+    Math.cos(toRad(lat1)) * Math.cos(toRad(lat2)) *
+    Math.sin(dLng / 2) ** 2;
+  return R * 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
+}
+
+function toRad(value) {
+  return value * Math.PI / 180;
+}
+
 
 
 const modeInfo = {
