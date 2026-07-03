@@ -21,6 +21,27 @@ const weatherLocationInput = document.querySelector("#weatherLocationInput");
 
 let latestWeatherData = null;
 let townshipData = {};
+let AIAKOS_APP = null;
+
+async function initAIAKOSCore() {
+  try {
+    AIAKOS_APP = new AIAgricultureApp();
+
+    await AIAKOS_APP.init({
+      weatherApi: WEATHER_API_URL,
+      stationJson: "https://r91628120.github.io/ai-agriculture-core/data/stations.json?v=20260703",
+      cropJson: "https://r91628120.github.io/ai-agriculture-core/data/crops.json?v=20260703",
+      diseaseJson: "https://r91628120.github.io/ai-agriculture-core/data/diseases.json?v=20260703"
+    });
+
+    console.log("AIAKOS Core 已成功接入 AI植物診療師");
+  } catch (error) {
+    console.error("AIAKOS Core 初始化失敗：", error);
+  }
+}
+
+
+
 
 
 const AGRI_STATIONS = [
@@ -194,21 +215,51 @@ if (openStationBtn) {
 setMode("disease");
 
 function buildWeatherText(data) {
-  return `【即時農業氣象資料】
-最近農業氣象站：${data.stationName || data.stationId || "--"}
-觀測時間：${data.obsTime || "--"}
-氣溫：${data.temp || "--"} ℃
-相對濕度：${data.humidity || "--"} %
-實測雨量：${data.rainMm || data.rain || "--"} mm
-風速：${data.windSpeed || data.wind || "--"} m/s
-日照時數：${data.sunshine || "--"} hr
-土壤溫度10cm：${data.soil10 || "--"} ℃
-降雨風險：${data.rain || "--"}
-風速風險：${data.wind || "--"}
+ return `【AIAKOS 三站融合農業氣象資料】
+    融合測站：${data.stationName || "--"}
+    融合測站數：${data.stationCount || "--"} 站
+    AI可信度：${data.confidence || "--"}%
+    觀測時間：${data.obsTime || "--"}
+    氣溫：${data.temp || "--"} ℃
+    相對濕度：${data.humidity || "--"} %
+    實測雨量：${data.rainMm || "--"} mm
+    風速：${data.windSpeed || "--"} m/s
+    日照時數：${data.sunshine || "--"} hr
+    土壤溫度10cm：${data.soil10 || "--"} ℃
+    降雨風險：${data.rain || "--"}
+    風速風險：${data.wind || "--"}
+    病害氣象風險：${data.diseaseRisk || "--"}
 
-【植物診療提醒】
-請將以上氣象資料納入病害、蟲害與生理障礙判斷，特別注意高濕、連續降雨、高溫、強風與日照不足對植物健康的影響。`;
+   【植物診療提醒】
+    請將以上 AIAKOS 三站融合氣象資料納入病害、蟲害與生理障礙判斷，特別注意高濕、連續降雨、高溫、強風與日照不足對植物健康的影響。`;
 }
+
+function getRainRiskLevel(rainMm) {
+  const n = Number(rainMm);
+  if (Number.isNaN(n)) return "--";
+  if (n >= 20) return "高";
+  if (n >= 5) return "中";
+  return "低";
+}
+
+function getWindRiskLevel(windSpeed) {
+  const n = Number(windSpeed);
+  if (Number.isNaN(n)) return "--";
+  if (n >= 8) return "高";
+  if (n >= 4) return "中";
+  return "低";
+}
+
+function getDiseaseWeatherRisk(data) {
+  const humidity = Number(data.humidity);
+  const rain = Number(data.rainMm || 0);
+
+  if (humidity >= 85 || rain >= 10) return "高";
+  if (humidity >= 75 || rain >= 3) return "中";
+  return "低";
+}
+
+
 
 function updateWeatherCard(data) {
   document.querySelector("#weatherStatus").textContent = "已成功讀取氣象資料";
@@ -251,49 +302,75 @@ async function fetchWeatherData() {
   const weatherCounty = document.querySelector("#weatherCounty")?.value || "";
   const weatherTown = document.querySelector("#weatherTown")?.value || "";
 
-  const formLocation = `${clinicCounty} ${clinicTown}`.trim();
-  const inputLocation = `${weatherCounty} ${weatherTown}`.trim();
-
   const county = weatherCounty || clinicCounty;
   const town = weatherTown || clinicTown;
-  const locationName = `${county} ${town}`.trim();
+  const crop = getValue("crop") || "未填寫作物";
 
-  const matchedStation = getMatchedWeatherStation(county, town);
-
-  if (!locationName) {
-      alert("請先選擇栽培地區");
-  return;
+  if (!county || !town) {
+    alert("請先選擇栽培地區");
+    return;
   }
 
-document.querySelector("#weatherStatus").textContent = "氣象資料讀取中...";
+  if (!AIAKOS_APP) {
+    document.querySelector("#weatherStatus").textContent =
+      "AIAKOS Core 尚未初始化完成，請稍候再試。";
+    return;
+  }
 
-try {
-  const url =
-    WEATHER_API_URL +
-    "?location=" + encodeURIComponent(matchedStation.id) +
-    "&locationName=" + encodeURIComponent(locationName);
-    const res = await fetch(url);
-    const data = await res.json();
+  document.querySelector("#weatherStatus").textContent =
+    "正在呼叫 AIAKOS Core 進行三站融合分析...";
 
-    data.stationName = data.stationName || matchedStation.name;
-    data.stationId = data.stationId || matchedStation.id;
+  try {
+    const pos = COUNTY_FALLBACK_COORDS[county] || { lat: 23.6978, lng: 120.9605 };
 
+    const response = await AIAKOS_APP.analyzeFarmDecision({
+      cropName: crop,
+      stage: "植物診療",
+      county,
+      township: town,
+      lat: pos.lat,
+      lng: pos.lng
+    });
 
-
-    if (!data.success) {
+    if (!response.success || !response.result || response.result.success !== true) {
       document.querySelector("#weatherStatus").textContent =
-        data.message || "讀取失敗，請確認 GAS API 是否正常";
+        response.error || "AIAKOS Core 分析失敗";
+      console.log(response);
       return;
     }
 
-    latestWeatherData = data;
-    updateWeatherCard(data);
+    const result = response.result;
+    const weather = result.weather || {};
+    const fusion = result.fusion || {};
+    const stations = fusion.stations || [];
+
+    latestWeatherData = {
+      stationName: "AIAKOS 三站融合",
+      stationId: stations.map(s => s.id || s.stationId).join(" / "),
+      obsTime: weather.obsTime || "--",
+      temp: weather.temp,
+      humidity: weather.humidity,
+      rainMm: weather.rainMm,
+      windSpeed: weather.windSpeed,
+      sunshine: weather.sunshine,
+      soil10: weather.soil10,
+      rain: getRainRiskLevel(weather.rainMm),
+      wind: getWindRiskLevel(weather.windSpeed),
+      diseaseRisk: getDiseaseWeatherRisk(weather),
+      confidence: fusion.quality?.confidence || "--",
+      stationCount: fusion.stationCount || stations.length,
+      stations
+    };
+
+    updateWeatherCard(latestWeatherData);
 
   } catch (error) {
     document.querySelector("#weatherStatus").textContent =
       "讀取失敗：" + error.message;
+    console.error(error);
   }
 }
+
 
 function fillWeatherToForm() {
   if (!latestWeatherData) {
@@ -389,6 +466,9 @@ function setDefaultTownship(county, town) {
   });
 }
 
-loadTownshipsForClinic();
+document.addEventListener("DOMContentLoaded", async () => {
+  await initAIAKOSCore();
+  await loadTownshipsForClinic();
+});
 
 
