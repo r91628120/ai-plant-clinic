@@ -1,0 +1,639 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AI植物病害資料庫建立器｜diseases.json Maker</title>
+  <style>
+    :root{
+      --green:#1f7a4d;
+      --green2:#43a047;
+      --deep:#073b22;
+      --mint:#ecfdf5;
+      --blue:#eff6ff;
+      --line:#dfe8df;
+      --ink:#17251c;
+      --muted:#637267;
+      --paper:#fbfefb;
+      --danger:#dc2626;
+      --warn:#ca8a04;
+      --shadow:0 18px 45px rgba(25,61,38,.10);
+    }
+
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      font-family:-apple-system,BlinkMacSystemFont,"Noto Sans TC","Microsoft JhengHei","Segoe UI",sans-serif;
+      color:var(--ink);
+      background:linear-gradient(135deg,#f6fff8,#eef8ff);
+      line-height:1.7;
+    }
+
+    header{
+      padding:34px 20px 28px;
+      background:linear-gradient(135deg,#073b22,#1f7a4d);
+      color:#fff;
+      text-align:center;
+    }
+
+    header h1{
+      margin:0 0 8px;
+      font-size:clamp(2rem,4vw,3.2rem);
+      font-weight:1000;
+    }
+
+    header p{
+      margin:0;
+      color:rgba(255,255,255,.86);
+      font-weight:700;
+    }
+
+    main{
+      max-width:1280px;
+      margin:0 auto;
+      padding:28px 20px 60px;
+    }
+
+    .notice{
+      margin-bottom:20px;
+      padding:16px 18px;
+      border-radius:18px;
+      background:#fff;
+      border:1px solid var(--line);
+      box-shadow:var(--shadow);
+      color:#14532d;
+      font-weight:800;
+    }
+
+    .layout{
+      display:grid;
+      grid-template-columns:1.08fr .92fr;
+      gap:22px;
+      align-items:start;
+    }
+
+    .card{
+      background:#fff;
+      border:1px solid var(--line);
+      border-radius:24px;
+      padding:24px;
+      box-shadow:var(--shadow);
+    }
+
+    .card h2{
+      margin:0 0 16px;
+      color:var(--deep);
+      font-size:1.45rem;
+    }
+
+    .grid{
+      display:grid;
+      grid-template-columns:repeat(2,1fr);
+      gap:16px;
+    }
+
+    .wide{grid-column:1/-1}
+
+    label{
+      display:flex;
+      flex-direction:column;
+      gap:7px;
+      font-weight:900;
+      color:#17321f;
+    }
+
+    input,textarea,select{
+      width:100%;
+      border:1px solid #cfe0d2;
+      border-radius:14px;
+      padding:12px 14px;
+      font:inherit;
+      background:#fff;
+      color:var(--ink);
+    }
+
+    textarea{min-height:96px;resize:vertical}
+
+    small{
+      color:var(--muted);
+      font-weight:700;
+    }
+
+    .button-row{
+      display:flex;
+      flex-wrap:wrap;
+      gap:10px;
+      margin-top:18px;
+    }
+
+    button{
+      border:0;
+      border-radius:999px;
+      padding:12px 20px;
+      font:inherit;
+      font-weight:950;
+      cursor:pointer;
+      transition:.18s ease;
+    }
+
+    button:hover{transform:translateY(-2px)}
+
+    .primary{background:linear-gradient(135deg,#55b947,var(--green));color:#fff}
+    .secondary{background:#ecfdf5;color:#14532d;border:1px solid #bbf7d0}
+    .dark{background:var(--deep);color:#fff}
+    .danger{background:#fee2e2;color:#991b1b;border:1px solid #fecaca}
+
+    .output-box{
+      min-height:470px;
+      font-family:"Consolas","Noto Sans Mono",monospace;
+      font-size:.92rem;
+      white-space:pre;
+      line-height:1.55;
+    }
+
+    .preview{
+      margin-top:16px;
+      padding:16px;
+      border-radius:18px;
+      background:linear-gradient(135deg,var(--mint),var(--blue));
+      border:1px solid #bbf7d0;
+    }
+
+    .preview strong{color:var(--deep)}
+
+    .pill-row{
+      display:flex;
+      flex-wrap:wrap;
+      gap:8px;
+      margin-top:8px;
+    }
+
+    .pill{
+      display:inline-flex;
+      padding:4px 10px;
+      border-radius:999px;
+      background:#ecfdf5;
+      color:#166534;
+      font-weight:900;
+      border:1px solid #bbf7d0;
+      font-size:.88rem;
+    }
+
+    .mini-title{
+      margin:18px 0 8px;
+      color:var(--deep);
+      font-weight:1000;
+    }
+
+    .helper-list{
+      margin:0;
+      padding-left:20px;
+      color:#3f5147;
+      font-weight:700;
+    }
+
+    .count-badge{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      min-width:34px;
+      height:34px;
+      border-radius:999px;
+      background:#dcfce7;
+      color:#166534;
+      font-weight:1000;
+      margin-left:6px;
+    }
+
+    .saved-list{
+      margin-top:14px;
+      display:grid;
+      gap:10px;
+      max-height:280px;
+      overflow:auto;
+      padding-right:4px;
+    }
+
+    .saved-item{
+      padding:12px;
+      border-radius:14px;
+      border:1px solid var(--line);
+      background:#fff;
+      display:flex;
+      justify-content:space-between;
+      gap:10px;
+      align-items:center;
+    }
+
+    .saved-item b{color:var(--deep)}
+    .saved-item button{padding:7px 11px;font-size:.86rem}
+
+    .two-col{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:14px;
+    }
+
+    footer{
+      text-align:center;
+      color:var(--muted);
+      font-weight:700;
+      padding:16px;
+    }
+
+    @media(max-width:980px){
+      .layout,.grid,.two-col{grid-template-columns:1fr}
+      .wide{grid-column:auto}
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>🌿 AI植物病害資料庫建立器</h1>
+    <p>diseases.json Maker｜AIAKOS v6.1 DiseaseEngine 專用格式</p>
+  </header>
+
+  <main>
+    <div class="notice">
+      ✅ 建議流程：填寫病害資料 → 產生單筆 JSON → 加入暫存清單 → 匯出完整 diseases.json → 覆蓋到 ai-agriculture-core/data/diseases.json。
+    </div>
+
+    <div class="layout">
+      <section class="card">
+        <h2>① 建立病害資料</h2>
+
+        <div class="grid">
+          <label>
+            作物名稱
+            <input id="crop" list="cropList" placeholder="例：葡萄、番茄、芒果、水稻" />
+            <datalist id="cropList">
+              <option value="葡萄"></option>
+              <option value="番茄"></option>
+              <option value="芒果"></option>
+              <option value="水稻"></option>
+              <option value="香蕉"></option>
+              <option value="草莓"></option>
+              <option value="茶葉"></option>
+              <option value="蓮霧"></option>
+              <option value="甜椒"></option>
+              <option value="小黃瓜"></option>
+            </datalist>
+          </label>
+
+          <label>
+            病害名稱
+            <input id="diseaseName" placeholder="例：露菌病、晚疫病、炭疽病" />
+          </label>
+
+          <label>
+            病害 ID
+            <input id="diseaseId" placeholder="可自動產生，例如 grape-downy-mildew" />
+            <small>可空白，系統會依作物與病名自動產生。</small>
+          </label>
+
+          <label>
+            病原／類型
+            <select id="pathogenType">
+              <option value="真菌性病害">真菌性病害</option>
+              <option value="細菌性病害">細菌性病害</option>
+              <option value="病毒性病害">病毒性病害</option>
+              <option value="卵菌類病害">卵菌類病害</option>
+              <option value="線蟲危害">線蟲危害</option>
+              <option value="生理障礙">生理障礙</option>
+              <option value="其他">其他</option>
+            </select>
+          </label>
+
+          <label>
+            易發最低溫（°C）
+            <input id="tempMin" type="number" step="0.1" placeholder="例：18" />
+          </label>
+
+          <label>
+            易發最高溫（°C）
+            <input id="tempMax" type="number" step="0.1" placeholder="例：28" />
+          </label>
+
+          <label>
+            濕度門檻（%）
+            <input id="humidityMin" type="number" step="1" placeholder="例：85" />
+          </label>
+
+          <label>
+            雨量門檻（mm）
+            <input id="rainMin" type="number" step="0.1" placeholder="例：5" />
+          </label>
+
+          <label>
+            是否受風影響擴散
+            <select id="windSensitive">
+              <option value="false">否</option>
+              <option value="true">是</option>
+            </select>
+          </label>
+
+          <label>
+            日照低於幾小時易發（選填）
+            <input id="sunshineMax" type="number" step="0.1" placeholder="例：3" />
+          </label>
+
+          <label class="wide">
+            敏感生育階段
+            <input id="sensitiveStages" placeholder="例：開花期、果實膨大期、採收後管理" />
+            <small>用頓號、逗號或換行分隔。</small>
+          </label>
+
+          <label class="wide">
+            風險因子
+            <input id="riskFactors" placeholder="例：高濕、連續降雨、通風不良、低日照" />
+          </label>
+
+          <label class="wide">
+            主要症狀
+            <textarea id="symptoms" placeholder="例：葉片出現淡黃色角斑，葉背有白色霜狀黴層，嚴重時葉片枯焦。"></textarea>
+          </label>
+
+          <label class="wide">
+            防治／管理建議
+            <textarea id="advice" placeholder="例：加強通風、避免葉面長時間潮濕，雨後加強巡田觀察，必要時查詢合法登記藥劑。"></textarea>
+          </label>
+
+          <label class="wide">
+            補充備註
+            <textarea id="notes" placeholder="例：多發生於高濕、晨露重或密植環境，教學時可提醒學生觀察葉背。"></textarea>
+          </label>
+        </div>
+
+        <div class="button-row">
+          <button class="primary" type="button" onclick="generateDiseaseJSON()">🧠 產生單筆 JSON</button>
+          <button class="secondary" type="button" onclick="addCurrentToList()">➕ 加入暫存清單</button>
+          <button class="dark" type="button" onclick="loadExample()">✨ 載入範例</button>
+          <button class="danger" type="button" onclick="clearForm()">🔄 清除表單</button>
+        </div>
+
+        <div class="preview" id="previewBox">
+          <strong>資料預覽</strong>
+          <div id="previewText">尚未產生資料。</div>
+        </div>
+      </section>
+
+      <aside class="card">
+        <h2>② JSON 輸出</h2>
+        <textarea id="singleOutput" class="output-box" readonly placeholder="單筆 JSON 會出現在這裡"></textarea>
+
+        <div class="button-row">
+          <button class="secondary" type="button" onclick="copySingle()">📋 複製單筆</button>
+          <button class="secondary" type="button" onclick="addCurrentToList()">➕ 加入清單</button>
+          <button class="danger" type="button" onclick="clearSingleOutput()">清除輸出</button>
+        </div>
+
+        <div class="mini-title">③ 暫存資料 <span class="count-badge" id="countBadge">0</span></div>
+        <div class="saved-list" id="savedList"></div>
+
+        <div class="button-row">
+          <button class="primary" type="button" onclick="exportFullJSON()">📦 匯出完整 diseases.json</button>
+          <button class="secondary" type="button" onclick="downloadJSON()">⬇️ 下載 JSON</button>
+          <button class="danger" type="button" onclick="clearAll()">🗑️ 清空清單</button>
+        </div>
+
+        <textarea id="fullOutput" class="output-box" style="min-height:260px;margin-top:14px" readonly placeholder="完整 diseases.json 會出現在這裡"></textarea>
+
+        <div class="mini-title">使用提醒</div>
+        <ul class="helper-list">
+          <li>目前格式已配合 AIAKOS v6.1 DiseaseEngine。</li>
+          <li>若病害沒有專屬資料，系統會退回一般病害風險推估。</li>
+          <li>新增資料後，請把輸出的 JSON 放到 <code>data/diseases.json</code>。</li>
+        </ul>
+      </aside>
+    </div>
+  </main>
+
+  <footer>
+    © 2026 AI植物診療師｜AIAKOS Disease Database Maker
+  </footer>
+
+  <script>
+    const STORAGE_KEY = "aiaikos_diseases_temp_v1";
+    let savedDiseases = loadSavedDiseases();
+    let currentDisease = null;
+
+    const translitMap = {
+      "葡萄":"grape", "番茄":"tomato", "芒果":"mango", "水稻":"rice", "香蕉":"banana",
+      "草莓":"strawberry", "茶葉":"tea", "茶":"tea", "蓮霧":"wax-apple", "甜椒":"sweet-pepper",
+      "小黃瓜":"cucumber", "炭疽病":"anthracnose", "白粉病":"powdery-mildew", "露菌病":"downy-mildew",
+      "晚疫病":"late-blight", "早疫病":"early-blight", "灰黴病":"gray-mold", "疫病":"blight",
+      "稻熱病":"blast", "黃葉病":"yellow-leaf", "軟腐病":"soft-rot", "黑星病":"black-spot",
+      "葉斑病":"leaf-spot", "根腐病":"root-rot", "褐斑病":"brown-spot"
+    };
+
+    function value(id){ return document.getElementById(id)?.value?.trim() || ""; }
+    function numberOrNull(id){
+      const raw = value(id);
+      if(raw === "") return null;
+      const n = Number(raw);
+      return Number.isFinite(n) ? n : null;
+    }
+    function splitList(text){
+      return (text || "")
+        .split(/[、,，\n]/)
+        .map(s => s.trim())
+        .filter(Boolean);
+    }
+    function show(v){ return v === null || v === undefined || v === "" ? "--" : v; }
+
+    function slugifyChinese(text){
+      let output = text;
+      Object.keys(translitMap).forEach(key => {
+        output = output.replaceAll(key, translitMap[key]);
+      });
+      output = output
+        .toLowerCase()
+        .replace(/[^a-z0-9]+/g,"-")
+        .replace(/^-+|-+$/g,"");
+      return output || `disease-${Date.now()}`;
+    }
+
+    function buildDiseaseObject(){
+      const crop = value("crop");
+      const name = value("diseaseName");
+      if(!crop || !name){
+        alert("請至少填寫：作物名稱、病害名稱");
+        return null;
+      }
+
+      const tempMin = numberOrNull("tempMin");
+      const tempMax = numberOrNull("tempMax");
+      const humidityMin = numberOrNull("humidityMin");
+      const rainMin = numberOrNull("rainMin");
+      const sunshineMax = numberOrNull("sunshineMax");
+
+      const conditions = {};
+      if(tempMin !== null && tempMax !== null) conditions.tempRange = [tempMin, tempMax];
+      if(humidityMin !== null) conditions.humidityMin = humidityMin;
+      if(rainMin !== null) conditions.rainMin = rainMin;
+      if(sunshineMax !== null) conditions.sunshineMax = sunshineMax;
+      conditions.windSensitive = value("windSensitive") === "true";
+
+      return {
+        id: value("diseaseId") || slugifyChinese(`${crop}-${name}`),
+        crop,
+        crops: [crop],
+        name,
+        pathogenType: value("pathogenType"),
+        conditions,
+        sensitiveStages: splitList(value("sensitiveStages")),
+        riskFactors: splitList(value("riskFactors")),
+        symptoms: splitList(value("symptoms")),
+        advice: value("advice") || "建議加強巡田觀察，必要時依照作物病害防治建議處理。",
+        notes: value("notes"),
+        source: "AI植物病害資料庫建立器",
+        updatedAt: new Date().toISOString().slice(0,10)
+      };
+    }
+
+    function generateDiseaseJSON(){
+      const obj = buildDiseaseObject();
+      if(!obj) return;
+      currentDisease = obj;
+      document.getElementById("singleOutput").value = JSON.stringify(obj, null, 2);
+      renderPreview(obj);
+    }
+
+    function renderPreview(obj){
+      const box = document.getElementById("previewText");
+      box.innerHTML = `
+        <div><strong>${obj.crop}｜${obj.name}</strong>（${obj.pathogenType || "--"}）</div>
+        <div>易發溫度：${obj.conditions.tempRange ? obj.conditions.tempRange.join("–") + " ℃" : "--"}</div>
+        <div>濕度門檻：${show(obj.conditions.humidityMin)} %｜雨量門檻：${show(obj.conditions.rainMin)} mm｜低日照：${show(obj.conditions.sunshineMax)} hr</div>
+        <div class="pill-row">
+          ${(obj.riskFactors || []).map(x => `<span class="pill">${x}</span>`).join("") || `<span class="pill">尚未填寫風險因子</span>`}
+        </div>
+      `;
+    }
+
+    function addCurrentToList(){
+      if(!currentDisease){
+        generateDiseaseJSON();
+      }
+      if(!currentDisease) return;
+
+      const index = savedDiseases.findIndex(d => d.id === currentDisease.id);
+      if(index >= 0){
+        if(!confirm("已有相同 ID，是否覆蓋？")) return;
+        savedDiseases[index] = currentDisease;
+      }else{
+        savedDiseases.push(currentDisease);
+      }
+      saveDiseases();
+      renderSavedList();
+      exportFullJSON();
+    }
+
+    function renderSavedList(){
+      const list = document.getElementById("savedList");
+      document.getElementById("countBadge").textContent = savedDiseases.length;
+      if(!savedDiseases.length){
+        list.innerHTML = `<div class="saved-item">尚未加入資料。</div>`;
+        return;
+      }
+      list.innerHTML = savedDiseases.map((d, i) => `
+        <div class="saved-item">
+          <div><b>${i+1}. ${d.crop}｜${d.name}</b><br><small>${d.id}</small></div>
+          <button class="danger" type="button" onclick="removeDisease(${i})">刪除</button>
+        </div>
+      `).join("");
+    }
+
+    function removeDisease(index){
+      savedDiseases.splice(index,1);
+      saveDiseases();
+      renderSavedList();
+      exportFullJSON();
+    }
+
+    function exportFullJSON(){
+      document.getElementById("fullOutput").value = JSON.stringify(savedDiseases, null, 2);
+    }
+
+    async function copySingle(){
+      const text = document.getElementById("singleOutput").value;
+      if(!text) return alert("目前沒有單筆 JSON 可複製");
+      await navigator.clipboard.writeText(text);
+      alert("已複製單筆 JSON");
+    }
+
+    function clearSingleOutput(){
+      document.getElementById("singleOutput").value = "";
+      currentDisease = null;
+      document.getElementById("previewText").textContent = "尚未產生資料。";
+    }
+
+    function clearAll(){
+      if(!confirm("確定要清空所有暫存資料嗎？")) return;
+      savedDiseases = [];
+      saveDiseases();
+      renderSavedList();
+      exportFullJSON();
+    }
+
+    function clearForm(){
+      ["crop","diseaseName","diseaseId","tempMin","tempMax","humidityMin","rainMin","sunshineMax","sensitiveStages","riskFactors","symptoms","advice","notes"].forEach(id => {
+        const el = document.getElementById(id);
+        if(el) el.value = "";
+      });
+      document.getElementById("pathogenType").value = "真菌性病害";
+      document.getElementById("windSensitive").value = "false";
+      clearSingleOutput();
+    }
+
+    function loadExample(){
+      document.getElementById("crop").value = "葡萄";
+      document.getElementById("diseaseName").value = "露菌病";
+      document.getElementById("diseaseId").value = "grape-downy-mildew";
+      document.getElementById("pathogenType").value = "卵菌類病害";
+      document.getElementById("tempMin").value = "18";
+      document.getElementById("tempMax").value = "28";
+      document.getElementById("humidityMin").value = "85";
+      document.getElementById("rainMin").value = "5";
+      document.getElementById("windSensitive").value = "false";
+      document.getElementById("sunshineMax").value = "3";
+      document.getElementById("sensitiveStages").value = "新梢生長期、開花期、果實膨大期";
+      document.getElementById("riskFactors").value = "高濕、連續降雨、低日照、通風不良";
+      document.getElementById("symptoms").value = "葉片出現淡黃色角斑，葉背可見白色霜狀黴層，嚴重時葉片枯焦早落。";
+      document.getElementById("advice").value = "加強通風與排水，避免葉面長時間潮濕，雨後加強巡園觀察，必要時查詢合法登記藥劑與安全採收期。";
+      document.getElementById("notes").value = "適合教學觀察葉背霜狀黴層，並比較高濕與低日照對病害發展的影響。";
+      generateDiseaseJSON();
+    }
+
+    function saveDiseases(){
+      localStorage.setItem(STORAGE_KEY, JSON.stringify(savedDiseases));
+    }
+
+    function loadSavedDiseases(){
+      try{
+        return JSON.parse(localStorage.getItem(STORAGE_KEY) || "[]");
+      }catch(e){
+        return [];
+      }
+    }
+
+    function downloadJSON(){
+      exportFullJSON();
+      const text = document.getElementById("fullOutput").value || "[]";
+      const blob = new Blob([text], {type:"application/json;charset=utf-8"});
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement("a");
+      a.href = url;
+      a.download = "diseases.json";
+      document.body.appendChild(a);
+      a.click();
+      a.remove();
+      URL.revokeObjectURL(url);
+    }
+
+    renderSavedList();
+    exportFullJSON();
+  </script>
+</body>
+</html>
