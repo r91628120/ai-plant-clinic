@@ -289,6 +289,68 @@
   color:rgba(255,255,255,.85);
 }
 
+  
+/* =========================
+   AIAKOS v6.2 Official Disease & Pest Center
+========================= */
+.official-data-panel{
+  background:linear-gradient(180deg,#ffffff,#f3fbf6);
+}
+.official-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:16px;
+}
+.official-card{
+  border:1px solid var(--line);
+  border-radius:18px;
+  background:#fff;
+  padding:22px;
+  box-shadow:0 10px 28px rgba(16,64,32,.05);
+}
+.official-icon{
+  width:54px;
+  height:54px;
+  border-radius:18px;
+  display:grid;
+  place-items:center;
+  background:#ecfdf5;
+  font-size:30px;
+  margin-bottom:12px;
+}
+.official-card h3{
+  margin:0 0 8px;
+  color:var(--deep);
+}
+.official-card p{
+  margin:0 0 14px;
+  color:var(--muted);
+  font-weight:700;
+}
+.official-verify-box{
+  margin-top:16px;
+  padding:16px;
+  border-radius:16px;
+  background:#fff;
+  border:1px solid #bbf7d0;
+  color:#14532d;
+  font-weight:800;
+}
+.aia-risk-pest{
+  border-left:5px solid #f59e0b;
+}
+.aia-risk-disease{
+  border-left:5px solid #22c55e;
+}
+.aia-risk-official{
+  border-left:5px solid #3b82f6;
+}
+@media(max-width:1050px){
+  .official-grid{
+    grid-template-columns:1fr;
+  }
+}
+
   </style>
  
 </head>
@@ -324,6 +386,9 @@
      </a>
      <a href="#gpt">
       GPT助理
+     </a>
+     <a href="#official-data">
+      官方資料
      </a>
      <a href="#resources">
       教學資源
@@ -980,10 +1045,14 @@
           <span>病害氣象風險</span>
           <strong id="wDiseaseRisk">--</strong>
         </div>
+        <div>
+          <span>蟲害偵查風險</span>
+          <strong id="wPestRisk">--</strong>
+        </div>
       </div>
 
       <div class="aia-diagnosis-panel" id="aiaDiagnosisPanel">
-       <h3>🌿 AIAKOS v6.1 病蟲害風險中心</h3>
+       <h3>🌿 AIAKOS v6.2 病蟲害風險中心</h3>
 
       <div class="aia-risk-summary" id="aiaRiskSummary">
           尚未產生病蟲害風險分析。
@@ -997,6 +1066,55 @@
   </div>
 </section>
 
+
+
+   <section class="panel official-data-panel" id="official-data">
+    <div class="panel-title">
+     <small>
+      Official Database
+     </small>
+     <h2>
+      官方病蟲害資料中心
+     </h2>
+     <p>
+      AI植物診療師先進行初步推論，再引導學生到農業試驗所官方資料交叉驗證，培養查證與比對能力。
+     </p>
+    </div>
+
+    <div class="official-grid">
+      <article class="official-card">
+        <div class="official-icon">🦠</div>
+        <h3>病害資料查詢</h3>
+        <p>查詢作物病害、危害症狀、圖片與防治資訊，適合搭配病害診斷模式使用。</p>
+        <button class="btn primary official-search-btn" type="button" data-type="disease">
+          依作物查詢病害
+        </button>
+      </article>
+
+      <article class="official-card">
+        <div class="official-icon">🐛</div>
+        <h3>蟲害資料查詢</h3>
+        <p>查詢害蟲、蟎類、危害方式、生活史與管理方法，適合搭配蟲害偵查模式使用。</p>
+        <button class="btn primary official-search-btn" type="button" data-type="pest">
+          依作物查詢蟲害
+        </button>
+      </article>
+
+      <article class="official-card">
+        <div class="official-icon">📖</div>
+        <h3>植物 CSI 交叉驗證</h3>
+        <p>建議流程：AI推論 → 官方資料查證 → 補拍照片 → 完成診療紀錄。</p>
+        <a class="btn light" href="https://azai.tari.gov.tw/search/bug" target="_blank" rel="noopener">
+          開啟官方資料中心
+        </a>
+      </article>
+    </div>
+
+    <div class="official-verify-box">
+      <strong>🔎 官方資料驗證建議：</strong>
+      <span id="officialVerifyText">請先輸入作物名稱並讀取氣象資料，系統會提供病害與蟲害交叉驗證方向。</span>
+    </div>
+   </section>
 
    <section class="panel" id="photo">
     <div class="panel-title">
@@ -1080,6 +1198,7 @@
         <h4>🔬 平台功能</h4>
         <a href="#diagnosis">症狀問診</a>
         <a href="#weather">農業氣象</a>
+        <a href="#official-data">官方病蟲害資料</a>
         <a href="#photo">拍照引導</a>
         <a href="#gpt">GPT診療助理</a>
       </div>
@@ -1114,7 +1233,8 @@
       <br>
       Powered by AI農業教育平台
       <br>
-      <a class="footer-admin-link" href="disease-json-maker.html" target="_blank" rel="noopener">資料庫維護</a>
+      <a class="footer-admin-link" href="disease-json-maker.html" target="_blank" rel="noopener">病害資料庫維護</a>
+      ｜ <a class="footer-admin-link" href="https://azai.tari.gov.tw/search/bug" target="_blank" rel="noopener">官方病蟲害資料</a>
     </div>
 
   </div>
@@ -1134,7 +1254,7 @@
    <script src="https://r91628120.github.io/ai-agriculture-core/modules/AnalysisModule.js?v=20260703"></script>
    <script src="https://r91628120.github.io/ai-agriculture-core/AIAKOS.js?v=20260703"></script>
 
-   <script src="script.js?v=20260703-v61"></script>
+   <script src="script.js?v=20260704-v62"></script>
 
 
 

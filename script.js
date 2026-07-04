@@ -1,6 +1,6 @@
 /* =========================================
    AI植物診療師｜植物CSI教學平台
-   AIAKOS v6.1 Stable
+   AIAKOS v6.2 Stable｜Disease + Pest Risk Center
 ========================================= */
 
 const form = document.querySelector("#diagnosisForm");
@@ -17,11 +17,13 @@ const fillWeatherBtn = document.querySelector("#fillWeatherBtn");
 
 const WEATHER_API_URL = "https://script.google.com/macros/s/AKfycbw7zj9FmzzzciRlE2oGmrHsJhx5WjOFzjzwUvZXBocKnyFMF4o9YacQAZTwVUfit_Kh/exec";
 const CORE_BASE = "https://r91628120.github.io/ai-agriculture-core";
-const CORE_VERSION = "20260703";
+const CORE_VERSION = "20260704";
+const OFFICIAL_AZAI_BUG_URL = "https://azai.tari.gov.tw/search/bug";
 
 let latestWeatherData = null;
 let townshipData = {};
 let AIAKOS_APP = null;
+let pestDatabase = [];
 
 const COUNTY_FALLBACK_COORDS = {
   "基隆市": { lat: 25.1283, lng: 121.7419 },
@@ -166,6 +168,109 @@ function getDiseaseWeatherRisk(data) {
   return "低";
 }
 
+function getPestWeatherRisk(data) {
+  const temp = toNumber(data?.temp, null);
+  const humidity = toNumber(data?.humidity, null);
+  const rain = toNumber(data?.rainMm, 0);
+  const wind = toNumber(data?.windSpeed, 0);
+  const mode = getMode();
+  const pestVisible = getValue("pestVisible");
+  const pestDamage = getValue("pestDamage");
+  const pestTrace = getValue("pestTrace");
+
+  let score = 0;
+  const reasons = [];
+
+  if (mode === "pest") {
+    score += 25;
+    reasons.push("目前使用蟲害偵查模式。");
+  }
+  if (pestVisible && !["未觀察", "沒有看到蟲體", "未填寫"].includes(pestVisible)) {
+    score += 35;
+    reasons.push(`已回報蟲體觀察：${pestVisible}。`);
+  }
+  if (pestDamage && !["未觀察", "未填寫"].includes(pestDamage)) {
+    score += 20;
+    reasons.push(`已回報受害型態：${pestDamage}。`);
+  }
+  if (pestTrace && !["未觀察", "沒有", "未填寫"].includes(pestTrace)) {
+    score += 20;
+    reasons.push(`已回報蟲害痕跡：${pestTrace}。`);
+  }
+  if (temp !== null && temp >= 24 && temp <= 34) {
+    score += 12;
+    reasons.push("目前溫度落在多數害蟲活躍區間。");
+  }
+  if (humidity !== null && humidity >= 60 && humidity <= 90) {
+    score += 8;
+    reasons.push("相對濕度適合部分害蟲活動與繁殖。");
+  }
+  if (rain >= 20) {
+    score -= 10;
+    reasons.push("較大雨量可能暫時降低部分小型害蟲活動。");
+  }
+  if (wind >= 8) {
+    score -= 5;
+    reasons.push("強風可能降低飛行性害蟲活動，但也可能造成傳播或傷口。");
+  }
+
+  if (score >= 60) return { level: "高", score: Math.min(score, 100), reasons };
+  if (score >= 30) return { level: "中", score: Math.max(score, 0), reasons };
+  return { level: "低", score: Math.max(score, 0), reasons: reasons.length ? reasons : ["目前未填寫明確蟲體、咬痕或蟲害痕跡，暫列低風險。"] };
+}
+
+async function loadPestDatabase() {
+  try {
+    const res = await fetch(`${CORE_BASE}/data/pests.json?v=${CORE_VERSION}`, { cache: "no-store" });
+    if (!res.ok) throw new Error(`HTTP ${res.status}`);
+    const json = await res.json();
+    pestDatabase = Array.isArray(json) ? json : (Array.isArray(json.pests) ? json.pests : []);
+    console.log(`pests.json 已讀取：${pestDatabase.length} 筆`);
+  } catch (error) {
+    pestDatabase = [];
+    console.warn("pests.json 尚未建立或讀取失敗，系統會先使用一般蟲害風險推估：", error.message);
+  }
+}
+
+function matchPestsByCrop(cropName) {
+  const crop = (cropName || "").trim();
+  if (!crop || crop === "未指定作物" || !pestDatabase.length) return [];
+  return pestDatabase.filter((p) => {
+    const crops = Array.isArray(p.crops) ? p.crops : [p.crop, p.host, p.hostCrop].filter(Boolean);
+    return crops.some((c) => String(c).includes(crop) || crop.includes(String(c)));
+  }).slice(0, 5);
+}
+
+function buildPestText(pestRisk) {
+  if (!pestRisk) return "尚未產生蟲害分析。";
+  const matched = Array.isArray(pestRisk.matchedPests) ? pestRisk.matchedPests : [];
+  const pestLines = matched.length
+    ? matched.map((p, i) => `- ${i + 1}. ${p.name || p.pestName || "未命名害蟲"}：${p.category || p.pestType || "蟲害"}。${p.advice || p.description || "請依官方資料與現場觀察確認。"}`).join("\n")
+    : "- pests.json 尚未建立此作物的專屬害蟲資料，系統先依蟲體觀察、受害型態、氣象條件進行一般蟲害風險推估。";
+  const reasons = Array.isArray(pestRisk.reasons) ? pestRisk.reasons.map((r) => `- ${r}`).join("\n") : "- 尚無細項理由。";
+  return `蟲害偵查風險：${pestRisk.level || "--"}｜AI分數：${pestRisk.score ?? "--"}\n\n【判斷理由】\n${reasons}\n\n【可能相關害蟲】\n${pestLines}`;
+}
+
+function buildOfficialSearchUrl(type = "all") {
+  const crop = getValue("crop");
+  // AZAI 搜尋頁主要由站內搜尋框處理；為避免錯誤參數，先開啟官方病蟲害查詢入口。
+  return OFFICIAL_AZAI_BUG_URL;
+}
+
+function openOfficialAzai(type = "all") {
+  window.open(buildOfficialSearchUrl(type), "_blank", "noopener");
+}
+
+function updateOfficialVerifyText(data) {
+  const box = document.querySelector("#officialVerifyText");
+  if (!box) return;
+  const crop = getValue("crop");
+  const cropText = crop === "未填寫" ? "目前未指定作物" : `目前作物：${crop}`;
+  const diseaseText = data?.diseaseRisk ? `病害氣象風險 ${data.diseaseRisk}` : "病害風險尚未讀取";
+  const pestText = data?.pestRisk?.level ? `蟲害偵查風險 ${data.pestRisk.level}` : "蟲害風險尚未讀取";
+  box.textContent = `${cropText}｜${diseaseText}｜${pestText}。建議點選上方官方資料中心，查詢作物對應病害與蟲害資料。`;
+}
+
 function normalizeWeather(raw = {}) {
   const rainMm = toNumber(raw.rainMm ?? raw.rainfall ?? raw.precipitation ?? raw.rain, 0);
   const windSpeed = toNumber(raw.windSpeed ?? raw.wind_speed ?? raw.wind, null);
@@ -211,10 +316,11 @@ async function initAIAKOSCore() {
       weatherApi: WEATHER_API_URL,
       stationJson: `${CORE_BASE}/data/stations.json?v=${CORE_VERSION}`,
       cropJson: `${CORE_BASE}/data/crops.json?v=${CORE_VERSION}`,
-      diseaseJson: `${CORE_BASE}/data/diseases.json?v=${CORE_VERSION}`
+      diseaseJson: `${CORE_BASE}/data/diseases.json?v=${CORE_VERSION}`,
+      pestJson: `${CORE_BASE}/data/pests.json?v=${CORE_VERSION}`
     });
 
-    console.log("AIAKOS v6.1 Core 已成功接入 AI植物診療師");
+    console.log("AIAKOS v6.2 Core 已成功接入 AI植物診療師（含 pests.json）");
   } catch (error) {
     console.error("AIAKOS Core 初始化失敗：", error);
     if (status) status.textContent = `AIAKOS Core 初始化失敗：${error.message}`;
@@ -223,7 +329,7 @@ async function initAIAKOSCore() {
 
 function buildPrompt() {
   const mode = modeInfo[getMode()];
-  const aiaText = latestWeatherData ? `\n\n【六、AIAKOS v6.1 農業氣象與病害風險分析】\n${buildWeatherText(latestWeatherData)}` : "";
+  const aiaText = latestWeatherData ? `\n\n【六、AIAKOS v6.2 農業氣象與病蟲害風險分析】\n${buildWeatherText(latestWeatherData)}` : "";
 
   return `${mode.role}\n\n${mode.focus}\n\n請根據以下問診資料，協助學生進行「${mode.title}」。\n請用教學口吻回答，避免直接下絕對診斷，並提醒仍需現場確認。\n\n【一、基本資料】\n作物名稱：\n${getValue("crop")}\n\n栽培地區：${getValue("clinicCounty")} ${getValue("clinicTown")}\n\n栽培環境：\n${getValue("environment")}\n\n【二、症狀資料】\n發病部位：\n${getValue("part")}\n\n主要症狀：\n${getValue("symptom")}\n\n發生時間：\n${getValue("time")}\n\n【三、環境與管理】\n近期天氣與氣象資料：\n${getValue("weather")}\n\n土壤溫度：\n${getValue("soilTemp")} °C\n\n土壤濕度：\n${getValue("soilMoisture")} %\n\n土壤 pH 值：\n${getValue("soilPH")}\n\n土壤 EC 值：\n${getValue("soilEC")} mS/cm\n\n管理紀錄：\n${getValue("management")}\n\n【四、照片觀察】\n照片說明：\n${getValue("photoNote")}\n\n【五、本模式補充觀察】\n${mode.extra()}${aiaText}\n\n請依照以下格式回答：\n\n${mode.answer}`;
 }
@@ -254,12 +360,12 @@ function buildWeatherText(data) {
     .map((s, i) => `${i + 1}. ${s.name}（${s.id}，約 ${formatNumber(s.distanceKm)} km）`)
     .join("\n") || "--";
 
-  return `【AIAKOS v6.1 三站融合農業氣象資料】\n融合測站：${data.stationName || "AIAKOS 三站融合"}\n融合測站數：${data.stationCount || "--"} 站\nAI可信度：${data.confidence || "--"}%\n觀測時間：${data.obsTime || "--"}\n\n【最近三個測站】\n${stationText}\n\n【融合後氣象資料】\n氣溫：${formatNumber(data.temp)} ℃\n相對濕度：${formatNumber(data.humidity)} %\n實測雨量：${formatNumber(data.rainMm)} mm\n風速：${formatNumber(data.windSpeed)} m/s\n日照時數：${formatNumber(data.sunshine)} hr\n土壤溫度10cm：${formatNumber(data.soil10)} ℃\n降雨風險：${data.rainRisk || "--"}\n風速風險：${data.windRisk || "--"}\n病害氣象風險：${data.diseaseRisk || "--"}\n\n【可能病害分析】\n${buildDiseaseText(data.rawDiseaseRisk)}\n\n【AI農事建議】\n${buildDecisionText(data.rawDecision)}\n\n【植物診療提醒】\n請將以上 AIAKOS 三站融合氣象資料納入病害、蟲害與生理障礙判斷，特別注意高濕、連續降雨、高溫、強風與日照不足對植物健康的影響。`;
+  return `【AIAKOS v6.2 三站融合農業氣象資料】\n融合測站：${data.stationName || "AIAKOS 三站融合"}\n融合測站數：${data.stationCount || "--"} 站\nAI可信度：${data.confidence || "--"}%\n觀測時間：${data.obsTime || "--"}\n\n【最近三個測站】\n${stationText}\n\n【融合後氣象資料】\n氣溫：${formatNumber(data.temp)} ℃\n相對濕度：${formatNumber(data.humidity)} %\n實測雨量：${formatNumber(data.rainMm)} mm\n風速：${formatNumber(data.windSpeed)} m/s\n日照時數：${formatNumber(data.sunshine)} hr\n土壤溫度10cm：${formatNumber(data.soil10)} ℃\n降雨風險：${data.rainRisk || "--"}\n風速風險：${data.windRisk || "--"}\n病害氣象風險：${data.diseaseRisk || "--"}\n蟲害偵查風險：${data.pestRisk?.level || "--"}｜AI分數：${data.pestRisk?.score ?? "--"}\n\n【可能病害分析】\n${buildDiseaseText(data.rawDiseaseRisk)}\n\n【可能蟲害分析】\n${buildPestText(data.pestRisk)}\n\n【AI農事建議】\n${buildDecisionText(data.rawDecision)}\n\n【植物診療提醒】\n請將以上 AIAKOS 三站融合氣象資料納入病害、蟲害與生理障礙判斷，特別注意高濕、連續降雨、高溫、強風與日照不足對植物健康的影響。`;
 }
 
 function updateWeatherCard(data) {
   document.querySelector("#weatherStatus").textContent =
-    `已成功讀取 AIAKOS v6.1 三站融合資料｜AI可信度 ${data.confidence || "--"}%`;
+    `已成功讀取 AIAKOS v6.2 三站融合資料｜AI可信度 ${data.confidence || "--"}%`;
 
   document.querySelector("#wStation").innerHTML = renderStationSummary(data.stations);
   document.querySelector("#wObsTime").textContent = data.obsTime || "--";
@@ -269,6 +375,11 @@ function updateWeatherCard(data) {
   document.querySelector("#wWind").innerHTML = `${formatNumber(data.windSpeed)} m/s<br><small>${riskIcon(data.windRisk)} 風速風險：${data.windRisk}</small>`;
   document.querySelector("#wSunshine").textContent = `${formatNumber(data.sunshine)} hr`;
   document.querySelector("#wDiseaseRisk").innerHTML = `${riskIcon(data.diseaseRisk)} ${data.diseaseRisk}`;
+  const pestRiskEl = document.querySelector("#wPestRisk");
+  if (pestRiskEl) {
+    pestRiskEl.innerHTML = `${riskIcon(data.pestRisk?.level)} ${data.pestRisk?.level || "--"}<br><small>AI分數：${data.pestRisk?.score ?? "--"}</small>`;
+  }
+  updateOfficialVerifyText(data);
 }
 
 function renderStationSummary(stations = []) {
@@ -285,11 +396,13 @@ function renderAIAKOSDiagnosis(result, data) {
   const decision = result?.decision || {};
   const diseases = Array.isArray(diseaseRisk.diseases) ? diseaseRisk.diseases : [];
   const diseaseLevel = diseaseRisk.level || data?.diseaseRisk || "--";
+  const pestRisk = data?.pestRisk || { level: "--", score: "--", reasons: [] };
 
   summaryBox.innerHTML = `
     <div><strong>整體病害風險：</strong><span class="${riskClassName(diseaseLevel)}">${riskIcon(diseaseLevel)} ${diseaseLevel}</span></div>
+    <div><strong>蟲害偵查風險：</strong><span class="${riskClassName(pestRisk.level)}">${riskIcon(pestRisk.level)} ${pestRisk.level || "--"}</span>｜AI分數：${pestRisk.score ?? "--"}</div>
     <div><strong>AI可信度：</strong>${decision.confidenceScore ?? data?.confidence ?? "--"}%</div>
-    <div><strong>摘要：</strong>${diseaseRisk.summary || "目前採一般氣象條件進行病害風險推估。"}</div>
+    <div><strong>摘要：</strong>${diseaseRisk.summary || "目前採一般氣象條件進行病害風險推估；蟲害則依 pests.json、蟲體觀察與氣象條件推估。"}</div>
   `;
 
   const stationHtml = (data?.stations || []).length ? `
@@ -315,6 +428,29 @@ function renderAIAKOSDiagnosis(result, data) {
     </div>
   `;
 
+  const matchedPests = Array.isArray(pestRisk.matchedPests) ? pestRisk.matchedPests : [];
+  const pestHtml = matchedPests.length ? matchedPests.map((p, index) => `
+    <div class="aia-risk-item aia-risk-pest">
+      <strong>🐛 ${index + 1}. ${p.name || p.pestName || "未命名害蟲"}</strong><br>
+      類型：${p.category || p.pestType || "蟲害"}｜目前偵查風險：<span class="${riskClassName(pestRisk.level)}">${riskIcon(pestRisk.level)} ${pestRisk.level}</span><br>
+      <small>${p.description || p.advice || "建議搭配官方病蟲害資料與現場照片確認。"}</small>
+    </div>
+  `).join("") : `
+    <div class="aia-risk-item aia-risk-pest">
+      <strong>🐛 一般蟲害偵查風險推估</strong><br>
+      目前 pests.json 尚未建立此作物專屬害蟲資料，系統先依蟲體觀察、受害型態、蟲害痕跡與氣象條件推估。<br>
+      <small>${Array.isArray(pestRisk.reasons) ? pestRisk.reasons.join("<br>") : "建議補充蟲體照片、葉背、卵、蟲糞、蜜露、蛛絲與受害部位。"}</small>
+    </div>
+  `;
+
+  const officialHtml = `
+    <div class="aia-risk-item aia-risk-official">
+      <strong>🔎 官方資料交叉驗證</strong><br>
+      建議到農業試驗所「農業病蟲害智慧管理決策系統」查詢作物病蟲害資料。<br>
+      <button class="btn light" type="button" onclick="openOfficialAzai('all')">開啟官方病蟲害資料中心</button>
+    </div>
+  `;
+
   const decisionHtml = `
     <div class="aia-risk-item">
       <strong>🌾 AI農事建議</strong><br>
@@ -322,7 +458,7 @@ function renderAIAKOSDiagnosis(result, data) {
     </div>
   `;
 
-  listBox.innerHTML = stationHtml + diseaseHtml + decisionHtml;
+  listBox.innerHTML = stationHtml + diseaseHtml + pestHtml + officialHtml + decisionHtml;
 }
 
 async function fetchWeatherData() {
@@ -370,6 +506,8 @@ async function fetchWeatherData() {
     const fusion = result.fusion || {};
     const stations = normalizeStations(fusion.stations || []);
     const confidence = fusion.quality?.confidence ?? result.decision?.confidenceScore ?? "--";
+    const pestRisk = getPestWeatherRisk(weather);
+    pestRisk.matchedPests = matchPestsByCrop(crop);
 
     latestWeatherData = {
       stationName: "AIAKOS 三站融合",
@@ -384,6 +522,7 @@ async function fetchWeatherData() {
       rainRisk: getRainRiskLevel(weather.rainMm),
       windRisk: getWindRiskLevel(weather.windSpeed),
       diseaseRisk: result.diseaseRisk?.level || getDiseaseWeatherRisk(weather),
+      pestRisk,
       confidence,
       stationCount: fusion.stationCount || stations.length,
       stations,
@@ -406,7 +545,7 @@ function fillWeatherToForm() {
     return;
   }
   document.querySelector('[name="weather"]').value = buildWeatherText(latestWeatherData);
-  alert("已將 AIAKOS v6.1 氣象與病害風險資料帶入症狀問診表單！");
+  alert("已將 AIAKOS v6.2 氣象與病蟲害風險資料帶入症狀問診表單！");
 }
 
 async function loadTownshipsForClinic() {
@@ -513,6 +652,10 @@ function bindEvents() {
     });
   }
 
+  document.querySelectorAll(".official-search-btn").forEach((btn) => {
+    btn.addEventListener("click", () => openOfficialAzai(btn.dataset.type || "all"));
+  });
+
   if (fetchWeatherBtn) fetchWeatherBtn.addEventListener("click", fetchWeatherData);
   if (fillWeatherBtn) fillWeatherBtn.addEventListener("click", fillWeatherToForm);
 }
@@ -521,5 +664,6 @@ document.addEventListener("DOMContentLoaded", async () => {
   bindEvents();
   setMode("disease");
   await initAIAKOSCore();
+  await loadPestDatabase();
   await loadTownshipsForClinic();
 });
