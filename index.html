@@ -60,33 +60,40 @@
     .container{max-width:var(--max);margin:auto;padding:0 28px}
 
     .topbar{position:sticky;top:0;z-index:20;background:#fff;border-bottom:1px solid #eef2ee;box-shadow:0 4px 18px rgba(0,0,0,.04)}
-    .nav{height:76px;display:flex;align-items:center;justify-content:space-between;gap:28px}
+    .nav{height:76px;display:flex;align-items:center;justify-content:space-between;gap:18px;flex-wrap:nowrap}
     .brand{
       display:flex;
       align-items:center;
-      gap:14px;
-      font-size:20px;
+      gap:12px;
+      font-size:18px;
       font-weight:900;
       color:#081b10;
       white-space:nowrap;
+      flex:0 0 auto;
    }
       /* =========================
          Navbar Logo
          ========================= */
 
     .navbar-logo{
-       width:58px;
-       height:58px;
+       width:50px;
+       height:50px;
        object-fit:contain;
        border-radius:50%;
    }
 
 
-    .nav-links{display:flex;align-items:center;gap:34px;font-weight:800;font-size:15px}
-    .nav-links a{position:relative;padding:26px 0;color:#111}.nav-links a.active{color:var(--green)}
+    .nav-links{display:flex;align-items:center;gap:18px;font-weight:800;font-size:14px;white-space:nowrap;flex:1 1 auto;justify-content:flex-end;min-width:0}
+    .nav-links a{position:relative;padding:26px 0;color:#111;white-space:nowrap}.nav-links a.active{color:var(--green)}
     .nav-links a.active:after{content:"";position:absolute;left:0;right:0;bottom:0;height:4px;border-radius:999px;background:var(--green)}
+    .nav-more{position:relative;display:flex;align-items:center}
+    .nav-more-btn{border:0;background:transparent;color:#111;font:inherit;font-weight:900;cursor:pointer;padding:26px 0;white-space:nowrap}
+    .nav-more-menu{position:absolute;right:0;top:62px;min-width:210px;background:#fff;border:1px solid var(--line);border-radius:18px;padding:10px;box-shadow:0 18px 45px rgba(25,61,38,.16);opacity:0;visibility:hidden;transform:translateY(8px);transition:.18s ease;z-index:99}
+    .nav-more:hover .nav-more-menu,.nav-more:focus-within .nav-more-menu{opacity:1;visibility:visible;transform:translateY(0)}
+    .nav-more-menu a{display:block;padding:10px 12px;border-radius:12px;color:#17321f}
+    .nav-more-menu a:hover{background:#ecfdf5;text-decoration:none;color:var(--green)}
     .nav-cta,.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;border-radius:999px;font-weight:900;border:0;cursor:pointer;transition:.2s ease}
-    .nav-cta{background:linear-gradient(135deg,var(--green2),var(--green));color:#fff;padding:13px 24px;box-shadow:0 8px 18px rgba(47,125,50,.22)}
+    .nav-cta{background:linear-gradient(135deg,var(--green2),var(--green));color:#fff;padding:12px 20px;box-shadow:0 8px 18px rgba(47,125,50,.22);white-space:nowrap;flex:0 0 auto}
     .btn{padding:13px 30px}.btn.primary{background:linear-gradient(135deg,#55b947,var(--green));color:#fff}.btn.ghost{border:1.5px solid #53a64b;color:#fff;background:rgba(0,0,0,.06)}
     .btn.light{background:#fff;color:var(--deep);border:1px solid var(--line)}.btn:hover,.nav-cta:hover{transform:translateY(-2px)}
 
@@ -106,7 +113,8 @@
 
 
     .mode-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.mode-card{text-align:left;border:1.5px solid var(--line);border-radius:18px;background:#fff;padding:22px;cursor:pointer;transition:.2s ease;box-shadow:0 10px 28px rgba(16,64,32,.04)}.mode-card:hover{transform:translateY(-3px)}.mode-card.active{border-color:var(--green);background:linear-gradient(180deg,#f3fbf2,#fff);box-shadow:0 14px 34px rgba(47,125,50,.14)}.mode-icon{font-size:38px;display:block;margin-bottom:8px}.mode-card strong{display:block;font-size:20px;color:#12351e}.mode-card small{display:block;color:var(--muted);font-weight:700;line-height:1.5}.mode-fields{display:none;border:1px dashed #b8d6bd;border-radius:16px;background:#fbfefb;padding:18px}.mode-fields.active{display:block}.mode-fields h3{margin:0 0 14px;color:var(--deep)}.inner-grid{margin:0}.diagnosis-note{margin-top:12px;color:var(--muted);font-weight:700}
-    @media(max-width:1050px){.nav-links{display:none}.steps,.feature-grid,.badges{grid-template-columns:1fr 1fr}.step:not(:last-child)::after{display:none}.hero-content{padding:58px 32px}.start-card{align-items:flex-start;flex-direction:column}.weather-layout{grid-template-columns:1fr}}
+    @media(max-width:1050px){.brand span{font-size:16px}.nav-links{gap:12px;font-size:13px}.nav-cta{padding:10px 16px}.steps,.feature-grid,.badges{grid-template-columns:1fr 1fr}.step:not(:last-child)::after{display:none}.hero-content{padding:58px 32px}.start-card{align-items:flex-start;flex-direction:column}.weather-layout{grid-template-columns:1fr}}
+    @media(max-width:900px){.nav{height:auto;min-height:76px;align-items:flex-start;padding:10px 0;flex-wrap:wrap}.nav-links{order:3;width:100%;justify-content:flex-start;overflow-x:auto;padding-bottom:4px}.nav-links a,.nav-more-btn{padding:10px 0}.nav-more-menu{left:0;right:auto;top:42px}.nav-cta{margin-left:auto}}
     @media(max-width:720px){.mode-grid{grid-template-columns:1fr}.container{padding:0 18px}.hero-wrap{padding:10px}.hero{border-radius:14px}.hero-content{padding:48px 24px}.hero h1{font-size:42px}.steps,.feature-grid,.badges,.form-grid{grid-template-columns:1fr}.wide{grid-column:auto}.start-card,.panel{padding:24px}.topbar{position:relative}}
     @media(max-width:720px){
       .nav-cta{
@@ -369,33 +377,24 @@
      </span>
     </a>
     <nav aria-label="主選單" class="nav-links">
-     <a class="active" href="#top">
-      首頁
-     </a>
-     <a href="#modes">
-      診斷模式
-     </a>
-     <a href="#diagnosis">
-      問診表單
-     </a>
-     <a href="#weather">
-      氣象資料
-     </a>
-     <a href="#photo">
-      拍照引導
-     </a>
-     <a href="#gpt">
-      GPT助理
-     </a>
-     <a href="#official-data">
-      官方資料
-     </a>
-     <a href="#resources">
-      教學資源
-     </a>
-     <a href="#about">
-      關於我們
-     </a>
+     <a class="active" href="#top">首頁</a>
+     <a href="#modes">診斷</a>
+     <a href="#diagnosis">問診</a>
+     <a href="#weather">氣象</a>
+     <a href="#official-data">官方資料</a>
+     <a href="#gpt">GPT助理</a>
+
+     <div class="nav-more">
+      <button class="nav-more-btn" type="button" aria-haspopup="true" aria-expanded="false">
+       更多 ▾
+      </button>
+      <div class="nav-more-menu" role="menu">
+       <a href="#photo" role="menuitem">📷 拍照引導</a>
+       <a href="#resources" role="menuitem">📚 教學資源</a>
+       <a href="#about" role="menuitem">ℹ️ 關於我們</a>
+       <a href="disease-json-maker.html" target="_blank" rel="noopener" role="menuitem">🧩 病害資料庫維護</a>
+      </div>
+     </div>
     </nav>
     <a class="nav-cta" href="#diagnosis">
      🩺 開始診療
