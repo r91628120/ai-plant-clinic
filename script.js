@@ -23,6 +23,7 @@ const OFFICIAL_AZAI_BUG_URL = "https://azai.tari.gov.tw/search/bug";
 let latestWeatherData = null;
 let townshipData = {};
 let AIAKOS_APP = null;
+let diseaseDatabase = [];
 let pestDatabase = [];
 
 const COUNTY_FALLBACK_COORDS = {
@@ -219,17 +220,41 @@ function getPestWeatherRisk(data) {
   return { level: "低", score: Math.max(score, 0), reasons: reasons.length ? reasons : ["目前未填寫明確蟲體、咬痕或蟲害痕跡，暫列低風險。"] };
 }
 
-async function loadPestDatabase() {
+async function loadJsonDatabase(fileName) {
+  const res = await fetch(`./${fileName}?v=${Date.now()}`, { cache: "no-store" });
+  if (!res.ok) throw new Error(`${fileName} 讀取失敗：HTTP ${res.status}`);
+  const json = await res.json();
+
+  if (Array.isArray(json)) return json;
+  if (Array.isArray(json.diseases)) return json.diseases;
+  if (Array.isArray(json.pests)) return json.pests;
+
+  return [];
+}
+
+async function loadPlantDatabases() {
+  const statusBox = document.querySelector("#dbStatusBox");
+
   try {
-    const res = await fetch(`${CORE_BASE}/data/pests.json?v=${CORE_VERSION}`, { cache: "no-store" });
-    if (!res.ok) throw new Error(`HTTP ${res.status}`);
-    const json = await res.json();
-    pestDatabase = Array.isArray(json) ? json : (Array.isArray(json.pests) ? json.pests : []);
-    console.log(`pests.json 已讀取：${pestDatabase.length} 筆`);
+    diseaseDatabase = await loadJsonDatabase("diseases.json");
+  } catch (error) {
+    diseaseDatabase = [];
+    console.warn(error.message);
+  }
+
+  try {
+    pestDatabase = await loadJsonDatabase("pests.json");
   } catch (error) {
     pestDatabase = [];
-    console.warn("pests.json 尚未建立或讀取失敗，系統會先使用一般蟲害風險推估：", error.message);
+    console.warn(error.message);
   }
+
+  if (statusBox) {
+    statusBox.textContent = `已讀取 diseases.json：${diseaseDatabase.length} 筆｜pests.json：${pestDatabase.length} 筆`;
+  }
+
+  console.log(`diseases.json：${diseaseDatabase.length} 筆`);
+  console.log(`pests.json：${pestDatabase.length} 筆`);
 }
 
 function matchPestsByCrop(cropName) {
@@ -240,6 +265,128 @@ function matchPestsByCrop(cropName) {
     return crops.some((c) => String(c).includes(crop) || crop.includes(String(c)));
   }).slice(0, 5);
 }
+
+function normalizeText(text) {
+  return String(text || "").trim().toLowerCase();
+}
+
+function getItemCrops(item) {
+  return Array.isArray(item.crops)
+    ? item.crops
+    : [item.crop, item.host, item.hostCrop].filter(Boolean);
+}
+
+function itemMatchesKeyword(item, cropKeyword, problemKeyword) {
+  const crops = getItemCrops(item).map(String);
+  const name = String(item.name || item.pestName || item.diseaseName || "");
+  const id = String(item.id || "");
+  const symptoms = Array.isArray(item.symptoms) ? item.symptoms.join(" ") : String(item.symptoms || "");
+  const riskFactors = Array.isArray(item.riskFactors) ? item.riskFactors.join(" ") : "";
+
+  const cropText = normalizeText(crops.join(" "));
+  const problemText = normalizeText(`${name} ${id} ${symptoms} ${riskFactors}`);
+
+  const cropOk = !cropKeyword || cropText.includes(cropKeyword);
+  const problemOk = !problemKeyword || problemText.includes(problemKeyword);
+
+  return cropOk && problemOk;
+}
+
+function searchPlantDatabase() {
+  const cropKeyword = normalizeText(document.querySelector("#dbCropInput")?.value);
+  const problemKeyword = normalizeText(document.querySelector("#dbProblemInput")?.value);
+  const resultBox = document.querySelector("#databaseResults");
+
+  if (!resultBox) return;
+
+  if (!cropKeyword && !problemKeyword) {
+    resultBox.innerHTML = `<div class="database-empty">請至少輸入「作物名稱」或「病害／蟲害名稱」。</div>`;
+    return;
+  }
+
+  const diseaseResults = diseaseDatabase
+    .filter((item) => itemMatchesKeyword(item, cropKeyword, problemKeyword))
+    .map((item) => ({ ...item, databaseType: "disease" }));
+
+  const pestResults = pestDatabase
+    .filter((item) => itemMatchesKeyword(item, cropKeyword, problemKeyword))
+    .map((item) => ({ ...item, databaseType: "pest" }));
+
+  const results = [...diseaseResults, ...pestResults].slice(0, 60);
+
+  if (!results.length) {
+    resultBox.innerHTML = `
+      <div class="database-empty">
+        查無符合資料。可改用較短關鍵字，例如「番茄」、「炭疽」、「露菌」、「秋行軍」。
+      </div>
+    `;
+    return;
+  }
+
+  resultBox.innerHTML = `
+    <div class="database-empty">
+      共找到 ${diseaseResults.length + pestResults.length} 筆資料，目前顯示前 ${results.length} 筆。
+    </div>
+    ${results.map(renderDatabaseResultCard).join("")}
+  `;
+}
+
+function renderDatabaseResultCard(item) {
+  const type = item.databaseType === "pest" ? "pest" : "disease";
+  const typeLabel = type === "pest" ? "🐛 蟲害" : "🦠 病害";
+  const name = item.name || item.pestName || item.diseaseName || "未命名資料";
+  const crops = getItemCrops(item).join("、") || "未標示作物";
+  const pathogenType = item.pathogenType || item.category || item.pestType || item.type || "未標示類型";
+  const symptoms = Array.isArray(item.symptoms) && item.symptoms.length
+    ? `<ul>${item.symptoms.slice(0, 5).map((s) => `<li>${s}</li>`).join("")}</ul>`
+    : `<p>症狀／危害描述：${item.description || item.damage || "尚未建立完整描述。"}</p>`;
+
+  const riskFactors = Array.isArray(item.riskFactors) && item.riskFactors.length
+    ? `<p><strong>風險因子：</strong>${item.riskFactors.join("、")}</p>`
+    : "";
+
+  const advice = item.advice || item.management || item.control || "建議搭配官方資料與現場照片進一步確認。";
+  const sourceUrl = item.sourceUrl || OFFICIAL_AZAI_BUG_URL;
+
+  return `
+    <article class="database-result-card ${type}">
+      <div class="database-result-top">
+        <span class="database-tag">${typeLabel}</span>
+        <span class="database-tag">${pathogenType}</span>
+      </div>
+
+      <h3>${crops}｜${name}</h3>
+
+      ${symptoms}
+      ${riskFactors}
+
+      <p><strong>初步建議：</strong>${advice}</p>
+
+      <div class="database-source">
+        來源：${item.source || "AIAKOS Database"}
+        ｜ <a href="${sourceUrl}" target="_blank" rel="noopener">查看官方資料</a>
+      </div>
+    </article>
+  `;
+}
+
+function clearPlantDatabaseSearch() {
+  const cropInput = document.querySelector("#dbCropInput");
+  const problemInput = document.querySelector("#dbProblemInput");
+  const resultBox = document.querySelector("#databaseResults");
+
+  if (cropInput) cropInput.value = "";
+  if (problemInput) problemInput.value = "";
+
+  if (resultBox) {
+    resultBox.innerHTML = `<div class="database-empty">尚未查詢。請輸入作物名稱或病害／蟲害名稱。</div>`;
+  }
+}
+
+
+
+
+
 
 function buildPestText(pestRisk) {
   if (!pestRisk) return "尚未產生蟲害分析。";
@@ -640,6 +787,7 @@ function bindEvents() {
     });
   }
 
+
   if (openStationBtn) {
     openStationBtn.addEventListener("click", () => {
       const stationInput = document.querySelector("#stationUrl");
@@ -652,9 +800,30 @@ function bindEvents() {
     });
   }
 
-  document.querySelectorAll(".official-search-btn").forEach((btn) => {
-    btn.addEventListener("click", () => openOfficialAzai(btn.dataset.type || "all"));
-  });
+ const searchDatabaseBtn = document.querySelector("#searchDatabaseBtn");
+const clearDatabaseBtn = document.querySelector("#clearDatabaseBtn");
+
+if (searchDatabaseBtn) {
+  searchDatabaseBtn.addEventListener("click", searchPlantDatabase);
+}
+
+if (clearDatabaseBtn) {
+  clearDatabaseBtn.addEventListener("click", clearPlantDatabaseSearch);
+}
+
+["#dbCropInput", "#dbProblemInput"].forEach((selector) => {
+  const input = document.querySelector(selector);
+  if (input) {
+    input.addEventListener("keydown", (event) => {
+      if (event.key === "Enter") {
+        event.preventDefault();
+        searchPlantDatabase();
+      }
+    });
+  }
+});
+
+
 
   if (fetchWeatherBtn) fetchWeatherBtn.addEventListener("click", fetchWeatherData);
   if (fillWeatherBtn) fillWeatherBtn.addEventListener("click", fillWeatherToForm);
@@ -664,6 +833,6 @@ document.addEventListener("DOMContentLoaded", async () => {
   bindEvents();
   setMode("disease");
   await initAIAKOSCore();
-  await loadPestDatabase();
+  await loadPlantDatabases();
   await loadTownshipsForClinic();
 });

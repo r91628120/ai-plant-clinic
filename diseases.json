@@ -1,0 +1,6323 @@
+[
+  {
+    "id": "basil-downy-mildew",
+    "crop": "九層塔",
+    "crops": [
+      "九層塔"
+    ],
+    "name": "露菌病",
+    "conditions": {
+      "tempRange": [
+        18,
+        28
+      ],
+      "humidityMin": 85,
+      "rainMin": 3,
+      "windSensitive": false
+    },
+    "sensitiveStages": [
+      "葉片生長期"
+    ],
+    "riskFactors": [
+      "高濕",
+      "葉面潮濕",
+      "通風不良"
+    ],
+    "advice": "加強田間巡查，改善通風與排水，避免葉面長時間潮濕；若需用藥，請依作物、地區與合法登記藥劑確認。"
+  },
+  {
+    "id": "squash-virus-complex",
+    "crop": "南瓜",
+    "crops": [
+      "南瓜"
+    ],
+    "name": "病毒病複合徵",
+    "conditions": {
+      "tempRange": [
+        20,
+        35
+      ],
+      "humidityMin": 60,
+      "rainMin": 0,
+      "windSensitive": false
+    },
+    "sensitiveStages": [
+      "苗期",
+      "蔓生期"
+    ],
+    "riskFactors": [
+      "蚜蟲傳播",
+      "高溫",
+      "雜草寄主"
+    ],
+    "advice": "注意葉片嵌紋、畸形與矮化，並加強媒介昆蟲與雜草管理。"
+  },
+  {
+    "id": "coffee-leaf-rust",
+    "crop": "咖啡",
+    "crops": [
+      "咖啡"
+    ],
+    "name": "葉銹病",
+    "conditions": {
+      "tempRange": [
+        18,
+        28
+      ],
+      "humidityMin": 80,
+      "rainMin": 3,
+      "windSensitive": false
+    },
+    "sensitiveStages": [
+      "營養生長期",
+      "結果期"
+    ],
+    "riskFactors": [
+      "高濕",
+      "遮陰過重",
+      "葉面潮濕"
+    ],
+    "advice": "加強田間巡查，改善通風與排水，避免葉面長時間潮濕；若需用藥，請依作物、地區與合法登記藥劑確認。"
+  },
+  {
+    "id": "garlic-rust",
+    "crop": "大蒜",
+    "crops": [
+      "大蒜"
+    ],
+    "name": "銹病",
+    "conditions": {
+      "tempRange": [
+        15,
+        25
+      ],
+      "humidityMin": 75,
+      "rainMin": 0,
+      "windSensitive": false
+    },
+    "sensitiveStages": [
+      "營養生長期",
+      "鱗莖膨大期"
+    ],
+    "riskFactors": [
+      "高濕",
+      "晨露",
+      "通風不良"
+    ],
+    "advice": "加強田間巡查，改善通風與排水，避免葉面長時間潮濕；若需用藥，請依作物、地區與合法登記藥劑確認。"
+  },
+  {
+    "id": "soybean-rust",
+    "crop": "大豆",
+    "crops": [
+      "大豆"
+    ],
+    "name": "銹病",
+    "conditions": {
+      "tempRange": [
+        18,
+        28
+      ],
+      "humidityMin": 80,
+      "rainMin": 0,
+      "windSensitive": false
+    },
+    "sensitiveStages": [
+      "開花期",
+      "結莢期"
+    ],
+    "riskFactors": [
+      "高濕",
+      "晨露",
+      "風傳孢子"
+    ],
+    "advice": "加強田間巡查，改善通風與排水，避免葉面長時間潮濕；若需用藥，請依作物、地區與合法登記藥劑確認。"
+  },
+  {
+    "id": "cucumber-downy-mildew",
+    "crop": "小黃瓜",
+    "crops": [
+      "小黃瓜"
+    ],
+    "name": "露菌病",
+    "conditions": {
+      "tempRange": [
+        18,
+        28
+      ],
+      "humidityMin": 85,
+      "rainMin": 3,
+      "windSensitive": false
+    },
+    "sensitiveStages": [
+      "營養生長期",
+      "開花結果期"
+    ],
+    "riskFactors": [
+      "高濕",
+      "低日照",
+      "葉面潮濕"
+    ],
+    "advice": "加強田間巡查，改善通風與排水，避免葉面長時間潮濕；若需用藥，請依作物、地區與合法登記藥劑確認。"
+  },
+  {
+    "id": "cucumber-powdery-mildew",
+    "crop": "小黃瓜",
+    "crops": [
+      "小黃瓜"
+    ],
+    "name": "白粉病",
+    "conditions": {
+      "tempRange": [
+        20,
+        30
+      ],
+      "humidityMin": 70,
+      "rainMin": 0,
+      "windSensitive": false
+    },
+    "sensitiveStages": [
+      "營養生長期",
+      "開花結果期"
+    ],
+    "riskFactors": [
+      "乾濕變化",
+      "通風不良",
+      "密植"
+    ],
+    "advice": "加強田間巡查，改善通風與排水，避免葉面長時間潮濕；若需用藥，請依作物、地區與合法登記藥劑確認。"
+  },
+  {
+    "id": "papaya-anthracnose",
+    "crop": "木瓜",
+    "crops": [
+      "木瓜"
+    ],
+    "name": "炭疽病",
+    "conditions": {
+      "tempRange": [
+        24,
+        32
+      ],
+      "humidityMin": 80,
+      "rainMin": 5,
+      "windSensitive": false
+    },
+    "sensitiveStages": [
+      "結果期",
+      "採收期"
+    ],
+    "riskFactors": [
+      "高濕",
+      "降雨",
+      "果實成熟"
+    ],
+    "advice": "加強田間巡查，改善通風與排水，避免葉面長時間潮濕；若需用藥，請依作物、地區與合法登記藥劑確認。"
+  },
+  {
+    "id": "papaya-ringspot-virus",
+    "crop": "木瓜",
+    "crops": [
+      "木瓜"
+    ],
+    "name": "輪點病毒病",
+    "conditions": {
+      "tempRange": [
+        20,
+        35
+      ],
+      "humidityMin": 60,
+      "rainMin": 0,
+      "windSensitive": false
+    },
+    "sensitiveStages": [
+      "苗期",
+      "營養生長期"
+    ],
+    "riskFactors": [
+      "蚜蟲傳播",
+      "帶毒苗",
+      "雜草寄主"
+    ],
+    "advice": "注意葉片嵌紋、果實輪點與畸形，重點在健康苗與媒介昆蟲管理。"
+  },
+  {
+    "id": "citrus-canker",
+    "crop": "柑橘",
+    "crops": [
+      "柑橘"
+    ],
+    "name": "潰瘍病",
+    "conditions": {
+      "tempRange": [
+        25,
+        35
+      ],
+      "humidityMin": 80,
+      "rainMin": 5,
+      "windSensitive": true
+    },
+    "sensitiveStages": [
+      "新梢期",
+      "幼果期"
+    ],
+    "riskFactors": [
+      "風雨",
+      "傷口",
+      "新梢嫩葉"
+    ],
+    "advice": "颱風豪雨後注意葉片與果皮突起病斑，加強防風與田間衛生。"
+  },
+  {
+    "id": "citrus-greasy-spot",
+    "crop": "柑橘",
+    "crops": [
+      "柑橘"
+    ],
+    "name": "油斑病",
+    "conditions": {
+      "tempRange": [
+        24,
+        32
+      ],
+      "humidityMin": 85,
+      "rainMin": 3,
+      "windSensitive": false
+    },
+    "sensitiveStages": [
+      "夏梢期",
+      "秋梢期"
+    ],
+    "riskFactors": [
+      "高濕",
+      "落葉病原",
+      "通風不良"
+    ],
+    "advice": "加強田間巡查，改善通風與排水，避免葉面長時間潮濕；若需用藥，請依作物、地區與合法登記藥劑確認。"
+  },
+  {
+    "id": "rice-bacterial-leaf-blight",
+    "crop": "水稻",
+    "crops": [
+      "水稻"
+    ],
+    "name": "白葉枯病",
+    "conditions": {
+      "tempRange": [
+        25,
+        35
+      ],
+      "humidityMin": 80,
+      "rainMin": 10,
+      "windSensitive": true
+    },
+    "sensitiveStages": [
+      "分蘗期",
+      "抽穗期"
+    ],
+    "riskFactors": [
+      "颱風豪雨",
+      "強風",
+      "傷口感染"
+    ],
+    "advice": "風雨後注意葉緣水浸狀病斑，避免田間積水與機械傷口擴散。"
+  },
+  {
+    "id": "rice-blast",
+    "crop": "水稻",
+    "crops": [
+      "水稻"
+    ],
+    "name": "稻熱病",
+    "conditions": {
+      "tempRange": [
+        20,
+        28
+      ],
+      "humidityMin": 85,
+      "rainMin": 0,
+      "windSensitive": false
+    },
+    "sensitiveStages": [
+      "分蘗期",
+      "孕穗期",
+      "抽穗期"
+    ],
+    "riskFactors": [
+      "高濕",
+      "低日照",
+      "氮肥偏高"
+    ],
+    "advice": "高濕與低日照時加強巡田，避免氮肥過量，注意葉片梭形病斑。"
+  },
+  {
+    "id": "rice-sheath-blight",
+    "crop": "水稻",
+    "crops": [
+      "水稻"
+    ],
+    "name": "紋枯病",
+    "conditions": {
+      "tempRange": [
+        25,
+        32
+      ],
+      "humidityMin": 85,
+      "rainMin": 0,
+      "windSensitive": false
+    },
+    "sensitiveStages": [
+      "分蘗期",
+      "抽穗期",
+      "成熟期"
+    ],
+    "riskFactors": [
+      "高溫高濕",
+      "密植",
+      "通風不良"
+    ],
+    "advice": "加強田間巡查，改善通風與排水，避免葉面長時間潮濕；若需用藥，請依作物、地區與合法登記藥劑確認。"
+  },
+  {
+    "id": "onion-downy-mildew",
+    "crop": "洋蔥",
+    "crops": [
+      "洋蔥"
+    ],
+    "name": "露菌病",
+    "conditions": {
+      "tempRange": [
+        10,
+        22
+      ],
+      "humidityMin": 85,
+      "rainMin": 3,
+      "windSensitive": false
+    },
+    "sensitiveStages": [
+      "營養生長期",
+      "鱗莖膨大期"
+    ],
+    "riskFactors": [
+      "低溫高濕",
+      "晨露",
+      "密植"
+    ],
+    "advice": "加強田間巡查，改善通風與排水，避免葉面長時間潮濕；若需用藥，請依作物、地區與合法登記藥劑確認。"
+  },
+  {
+    "id": "dragonfruit-stem-canker",
+    "crop": "火龍果",
+    "crops": [
+      "火龍果"
+    ],
+    "name": "莖潰瘍病",
+    "conditions": {
+      "tempRange": [
+        24,
+        34
+      ],
+      "humidityMin": 80,
+      "rainMin": 5,
+      "windSensitive": false
+    },
+    "sensitiveStages": [
+      "營養生長期",
+      "開花結果期"
+    ],
+    "riskFactors": [
+      "高濕",
+      "降雨",
+      "莖部傷口"
+    ],
+    "advice": "加強田間巡查，改善通風與排水，避免葉面長時間潮濕；若需用藥，請依作物、地區與合法登記藥劑確認。"
+  },
+  {
+    "id": "corn-rust",
+    "crop": "玉米",
+    "crops": [
+      "玉米"
+    ],
+    "name": "銹病",
+    "conditions": {
+      "tempRange": [
+        18,
+        28
+      ],
+      "humidityMin": 75,
+      "rainMin": 0,
+      "windSensitive": false
+    },
+    "sensitiveStages": [
+      "營養生長期",
+      "抽雄期"
+    ],
+    "riskFactors": [
+      "高濕",
+      "晨露",
+      "通風不良"
+    ],
+    "advice": "加強田間巡查，改善通風與排水，避免葉面長時間潮濕；若需用藥，請依作物、地區與合法登記藥劑確認。"
+  },
+  {
+    "id": "corn-southern-leaf-blight",
+    "crop": "玉米",
+    "crops": [
+      "玉米"
+    ],
+    "name": "南方葉斑病",
+    "conditions": {
+      "tempRange": [
+        22,
+        32
+      ],
+      "humidityMin": 80,
+      "rainMin": 3,
+      "windSensitive": false
+    },
+    "sensitiveStages": [
+      "營養生長期",
+      "抽雄期"
+    ],
+    "riskFactors": [
+      "高濕",
+      "連續降雨",
+      "殘株病原"
+    ],
+    "advice": "加強田間巡查，改善通風與排水，避免葉面長時間潮濕；若需用藥，請依作物、地區與合法登記藥劑確認。"
+  },
+  {
+    "id": "rose-black-spot",
+    "crop": "玫瑰",
+    "crops": [
+      "玫瑰"
+    ],
+    "name": "黑斑病",
+    "conditions": {
+      "tempRange": [
+        20,
+        28
+      ],
+      "humidityMin": 85,
+      "rainMin": 3,
+      "windSensitive": false
+    },
+    "sensitiveStages": [
+      "新梢期",
+      "開花期"
+    ],
+    "riskFactors": [
+      "高濕",
+      "葉面潮濕",
+      "通風不良"
+    ],
+    "advice": "加強田間巡查，改善通風與排水，避免葉面長時間潮濕；若需用藥，請依作物、地區與合法登記藥劑確認。"
+  },
+  {
+    "id": "cabbage-black-rot",
+    "crop": "甘藍",
+    "crops": [
+      "甘藍"
+    ],
+    "name": "黑腐病",
+    "conditions": {
+      "tempRange": [
+        24,
+        32
+      ],
+      "humidityMin": 80,
+      "rainMin": 5,
+      "windSensitive": true
+    },
+    "sensitiveStages": [
+      "苗期",
+      "結球期"
+    ],
+    "riskFactors": [
+      "風雨",
+      "葉緣傷口",
+      "高濕"
+    ],
+    "advice": "加強田間巡查，改善通風與排水，避免葉面長時間潮濕；若需用藥，請依作物、地區與合法登記藥劑確認。"
+  },
+  {
+    "id": "sweetpotato-scab",
+    "crop": "甘藷",
+    "crops": [
+      "甘藷"
+    ],
+    "name": "瘡痂病",
+    "conditions": {
+      "tempRange": [
+        20,
+        28
+      ],
+      "humidityMin": 75,
+      "rainMin": 3,
+      "windSensitive": false
+    },
+    "sensitiveStages": [
+      "蔓生期",
+      "塊根膨大期"
+    ],
+    "riskFactors": [
+      "高濕",
+      "連續降雨",
+      "田間病原"
+    ],
+    "advice": "加強田間巡查，改善通風與排水，避免葉面長時間潮濕；若需用藥，請依作物、地區與合法登記藥劑確認。"
+  },
+  {
+    "id": "melon-powdery-mildew",
+    "crop": "甜瓜",
+    "crops": [
+      "甜瓜"
+    ],
+    "name": "白粉病",
+    "conditions": {
+      "tempRange": [
+        20,
+        30
+      ],
+      "humidityMin": 70,
+      "rainMin": 0,
+      "windSensitive": false
+    },
+    "sensitiveStages": [
+      "蔓生期",
+      "結果期"
+    ],
+    "riskFactors": [
+      "乾濕變化",
+      "密植",
+      "通風不良"
+    ],
+    "advice": "加強田間巡查，改善通風與排水，避免葉面長時間潮濕；若需用藥，請依作物、地區與合法登記藥劑確認。"
+  },
+  {
+    "id": "guava-anthracnose",
+    "crop": "番石榴",
+    "crops": [
+      "番石榴"
+    ],
+    "name": "炭疽病",
+    "conditions": {
+      "tempRange": [
+        24,
+        32
+      ],
+      "humidityMin": 80,
+      "rainMin": 5,
+      "windSensitive": false
+    },
+    "sensitiveStages": [
+      "結果期",
+      "採收期"
+    ],
+    "riskFactors": [
+      "高濕",
+      "降雨",
+      "果實傷口"
+    ],
+    "advice": "加強田間巡查，改善通風與排水，避免葉面長時間潮濕；若需用藥，請依作物、地區與合法登記藥劑確認。"
+  },
+  {
+    "id": "tomato-bacterial-wilt",
+    "crop": "番茄",
+    "crops": [
+      "番茄"
+    ],
+    "name": "青枯病",
+    "conditions": {
+      "tempRange": [
+        25,
+        35
+      ],
+      "humidityMin": 70,
+      "rainMin": 10,
+      "windSensitive": false
+    },
+    "sensitiveStages": [
+      "定植期",
+      "營養生長期",
+      "結果期"
+    ],
+    "riskFactors": [
+      "高溫",
+      "土壤濕度高",
+      "連作"
+    ],
+    "advice": "注意植株突然萎凋但葉片仍綠，避免帶病土壤與水流擴散。"
+  },
+  {
+    "id": "tomato-early-blight",
+    "crop": "番茄",
+    "crops": [
+      "番茄"
+    ],
+    "name": "早疫病",
+    "conditions": {
+      "tempRange": [
+        24,
+        30
+      ],
+      "humidityMin": 80,
+      "rainMin": 3,
+      "windSensitive": false
+    },
+    "sensitiveStages": [
+      "營養生長期",
+      "結果期"
+    ],
+    "riskFactors": [
+      "高濕",
+      "老葉衰弱",
+      "雨水飛濺"
+    ],
+    "advice": "加強田間巡查，改善通風與排水，避免葉面長時間潮濕；若需用藥，請依作物、地區與合法登記藥劑確認。"
+  },
+  {
+    "id": "tomato-late-blight",
+    "crop": "番茄",
+    "crops": [
+      "番茄"
+    ],
+    "name": "晚疫病",
+    "conditions": {
+      "tempRange": [
+        15,
+        25
+      ],
+      "humidityMin": 85,
+      "rainMin": 5,
+      "windSensitive": false
+    },
+    "sensitiveStages": [
+      "開花期",
+      "結果期",
+      "採收期"
+    ],
+    "riskFactors": [
+      "低溫高濕",
+      "連續降雨",
+      "通風不良"
+    ],
+    "advice": "低溫高濕或雨後需立即巡查葉背與果實，避免葉面潮濕累積。"
+  },
+  {
+    "id": "chinese-cabbage-soft-rot",
+    "crop": "白菜",
+    "crops": [
+      "白菜"
+    ],
+    "name": "軟腐病",
+    "conditions": {
+      "tempRange": [
+        25,
+        35
+      ],
+      "humidityMin": 80,
+      "rainMin": 10,
+      "windSensitive": false
+    },
+    "sensitiveStages": [
+      "結球期",
+      "採收期"
+    ],
+    "riskFactors": [
+      "高溫高濕",
+      "傷口",
+      "積水"
+    ],
+    "advice": "注意葉柄基部水浸狀腐敗與異味，避免採收傷口與田間積水。"
+  },
+  {
+    "id": "passionfruit-anthracnose",
+    "crop": "百香果",
+    "crops": [
+      "百香果"
+    ],
+    "name": "炭疽病",
+    "conditions": {
+      "tempRange": [
+        24,
+        32
+      ],
+      "humidityMin": 80,
+      "rainMin": 5,
+      "windSensitive": false
+    },
+    "sensitiveStages": [
+      "開花期",
+      "結果期"
+    ],
+    "riskFactors": [
+      "高濕",
+      "降雨",
+      "果實傷口"
+    ],
+    "advice": "加強田間巡查，改善通風與排水，避免葉面長時間潮濕；若需用藥，請依作物、地區與合法登記藥劑確認。"
+  },
+  {
+    "id": "water-spinach-white-rust",
+    "crop": "空心菜",
+    "crops": [
+      "空心菜"
+    ],
+    "name": "白銹病",
+    "conditions": {
+      "tempRange": [
+        20,
+        30
+      ],
+      "humidityMin": 85,
+      "rainMin": 3,
+      "windSensitive": false
+    },
+    "sensitiveStages": [
+      "葉片生長期"
+    ],
+    "riskFactors": [
+      "高濕",
+      "葉面潮濕",
+      "密植"
+    ],
+    "advice": "加強田間巡查，改善通風與排水，避免葉面長時間潮濕；若需用藥，請依作物、地區與合法登記藥劑確認。"
+  },
+  {
+    "id": "carrot-alternaria-leaf-blight",
+    "crop": "胡蘿蔔",
+    "crops": [
+      "胡蘿蔔"
+    ],
+    "name": "黑葉枯病",
+    "conditions": {
+      "tempRange": [
+        20,
+        30
+      ],
+      "humidityMin": 80,
+      "rainMin": 3,
+      "windSensitive": false
+    },
+    "sensitiveStages": [
+      "葉片生長期",
+      "根部膨大期"
+    ],
+    "riskFactors": [
+      "高濕",
+      "連續降雨",
+      "種子帶菌"
+    ],
+    "advice": "加強田間巡查，改善通風與排水，避免葉面長時間潮濕；若需用藥，請依作物、地區與合法登記藥劑確認。"
+  },
+  {
+    "id": "taro-leaf-blight",
+    "crop": "芋頭",
+    "crops": [
+      "芋頭"
+    ],
+    "name": "疫病",
+    "conditions": {
+      "tempRange": [
+        22,
+        30
+      ],
+      "humidityMin": 85,
+      "rainMin": 5,
+      "windSensitive": false
+    },
+    "sensitiveStages": [
+      "葉片生長期",
+      "球莖膨大期"
+    ],
+    "riskFactors": [
+      "高濕",
+      "降雨",
+      "排水不良"
+    ],
+    "advice": "加強田間巡查，改善通風與排水，避免葉面長時間潮濕；若需用藥，請依作物、地區與合法登記藥劑確認。"
+  },
+  {
+    "id": "mango-anthracnose",
+    "crop": "芒果",
+    "crops": [
+      "芒果"
+    ],
+    "name": "炭疽病",
+    "conditions": {
+      "tempRange": [
+        24,
+        32
+      ],
+      "humidityMin": 80,
+      "rainMin": 5,
+      "windSensitive": false
+    },
+    "sensitiveStages": [
+      "開花期",
+      "幼果期",
+      "採收期"
+    ],
+    "riskFactors": [
+      "高濕",
+      "降雨",
+      "通風不良"
+    ],
+    "advice": "開花與幼果期遇雨需加強巡園，注意花穗、葉片與果實黑褐斑。"
+  },
+  {
+    "id": "mango-powdery-mildew",
+    "crop": "芒果",
+    "crops": [
+      "芒果"
+    ],
+    "name": "白粉病",
+    "conditions": {
+      "tempRange": [
+        20,
+        30
+      ],
+      "humidityMin": 70,
+      "rainMin": 0,
+      "windSensitive": false
+    },
+    "sensitiveStages": [
+      "開花期",
+      "幼果期"
+    ],
+    "riskFactors": [
+      "乾濕變化",
+      "通風不良"
+    ],
+    "advice": "加強田間巡查，改善通風與排水，避免葉面長時間潮濕；若需用藥，請依作物、地區與合法登記藥劑確認。"
+  },
+  {
+    "id": "broccoli-downy-mildew",
+    "crop": "花椰菜",
+    "crops": [
+      "花椰菜"
+    ],
+    "name": "露菌病",
+    "conditions": {
+      "tempRange": [
+        10,
+        24
+      ],
+      "humidityMin": 85,
+      "rainMin": 3,
+      "windSensitive": false
+    },
+    "sensitiveStages": [
+      "苗期",
+      "花球形成期"
+    ],
+    "riskFactors": [
+      "低溫高濕",
+      "通風不良"
+    ],
+    "advice": "加強田間巡查，改善通風與排水，避免葉面長時間潮濕；若需用藥，請依作物、地區與合法登記藥劑確認。"
+  },
+  {
+    "id": "peanut-leaf-spot",
+    "crop": "花生",
+    "crops": [
+      "花生"
+    ],
+    "name": "葉斑病",
+    "conditions": {
+      "tempRange": [
+        22,
+        32
+      ],
+      "humidityMin": 80,
+      "rainMin": 3,
+      "windSensitive": false
+    },
+    "sensitiveStages": [
+      "開花期",
+      "結莢期"
+    ],
+    "riskFactors": [
+      "高濕",
+      "連續降雨",
+      "密植"
+    ],
+    "advice": "加強田間巡查，改善通風與排水，避免葉面長時間潮濕；若需用藥，請依作物、地區與合法登記藥劑確認。"
+  },
+  {
+    "id": "bittergourd-downy-mildew",
+    "crop": "苦瓜",
+    "crops": [
+      "苦瓜"
+    ],
+    "name": "露菌病",
+    "conditions": {
+      "tempRange": [
+        18,
+        28
+      ],
+      "humidityMin": 85,
+      "rainMin": 3,
+      "windSensitive": false
+    },
+    "sensitiveStages": [
+      "營養生長期",
+      "開花結果期"
+    ],
+    "riskFactors": [
+      "高濕",
+      "低日照",
+      "葉面潮濕"
+    ],
+    "advice": "加強田間巡查，改善通風與排水，避免葉面長時間潮濕；若需用藥，請依作物、地區與合法登記藥劑確認。"
+  },
+  {
+    "id": "eggplant-phomopsis-blight",
+    "crop": "茄子",
+    "crops": [
+      "茄子"
+    ],
+    "name": "褐紋病",
+    "conditions": {
+      "tempRange": [
+        24,
+        32
+      ],
+      "humidityMin": 80,
+      "rainMin": 5,
+      "windSensitive": false
+    },
+    "sensitiveStages": [
+      "結果期",
+      "採收期"
+    ],
+    "riskFactors": [
+      "高濕",
+      "降雨",
+      "果實傷口"
+    ],
+    "advice": "加強田間巡查，改善通風與排水，避免葉面長時間潮濕；若需用藥，請依作物、地區與合法登記藥劑確認。"
+  },
+  {
+    "id": "tea-anthracnose",
+    "crop": "茶",
+    "crops": [
+      "茶"
+    ],
+    "name": "炭疽病",
+    "conditions": {
+      "tempRange": [
+        24,
+        32
+      ],
+      "humidityMin": 80,
+      "rainMin": 3,
+      "windSensitive": false
+    },
+    "sensitiveStages": [
+      "生長期",
+      "採摘期"
+    ],
+    "riskFactors": [
+      "高濕",
+      "降雨",
+      "老葉病原"
+    ],
+    "advice": "加強田間巡查，改善通風與排水，避免葉面長時間潮濕；若需用藥，請依作物、地區與合法登記藥劑確認。"
+  },
+  {
+    "id": "tea-blister-blight",
+    "crop": "茶",
+    "crops": [
+      "茶"
+    ],
+    "name": "餅病",
+    "conditions": {
+      "tempRange": [
+        15,
+        25
+      ],
+      "humidityMin": 85,
+      "rainMin": 3,
+      "windSensitive": false
+    },
+    "sensitiveStages": [
+      "萌芽期",
+      "採摘期"
+    ],
+    "riskFactors": [
+      "低溫高濕",
+      "霧露",
+      "嫩葉"
+    ],
+    "advice": "高山茶區霧露多時加強嫩葉巡查，注意葉面膨起病斑。"
+  },
+  {
+    "id": "strawberry-gray-mold",
+    "crop": "草莓",
+    "crops": [
+      "草莓"
+    ],
+    "name": "灰黴病",
+    "conditions": {
+      "tempRange": [
+        15,
+        25
+      ],
+      "humidityMin": 85,
+      "rainMin": 3,
+      "windSensitive": false
+    },
+    "sensitiveStages": [
+      "開花期",
+      "結果期",
+      "採收期"
+    ],
+    "riskFactors": [
+      "低溫高濕",
+      "花瓣殘留",
+      "通風不良"
+    ],
+    "advice": "開花與採收期加強通風、清除病果與殘花，避免果面潮濕。"
+  },
+  {
+    "id": "strawberry-powdery-mildew",
+    "crop": "草莓",
+    "crops": [
+      "草莓"
+    ],
+    "name": "白粉病",
+    "conditions": {
+      "tempRange": [
+        18,
+        28
+      ],
+      "humidityMin": 70,
+      "rainMin": 0,
+      "windSensitive": false
+    },
+    "sensitiveStages": [
+      "營養生長期",
+      "開花結果期"
+    ],
+    "riskFactors": [
+      "乾濕變化",
+      "通風不良"
+    ],
+    "advice": "加強田間巡查，改善通風與排水，避免葉面長時間潮濕；若需用藥，請依作物、地區與合法登記藥劑確認。"
+  },
+  {
+    "id": "lychee-downy-blight",
+    "crop": "荔枝",
+    "crops": [
+      "荔枝"
+    ],
+    "name": "露疫病",
+    "conditions": {
+      "tempRange": [
+        20,
+        28
+      ],
+      "humidityMin": 85,
+      "rainMin": 5,
+      "windSensitive": false
+    },
+    "sensitiveStages": [
+      "開花期",
+      "幼果期",
+      "採收期"
+    ],
+    "riskFactors": [
+      "高濕",
+      "降雨",
+      "果穗潮濕"
+    ],
+    "advice": "加強田間巡查，改善通風與排水，避免葉面長時間潮濕；若需用藥，請依作物、地區與合法登記藥劑確認。"
+  },
+  {
+    "id": "chrysanthemum-white-rust",
+    "crop": "菊花",
+    "crops": [
+      "菊花"
+    ],
+    "name": "白銹病",
+    "conditions": {
+      "tempRange": [
+        15,
+        25
+      ],
+      "humidityMin": 85,
+      "rainMin": 3,
+      "windSensitive": false
+    },
+    "sensitiveStages": [
+      "營養生長期",
+      "花芽分化期"
+    ],
+    "riskFactors": [
+      "低溫高濕",
+      "密植",
+      "葉面潮濕"
+    ],
+    "advice": "加強田間巡查，改善通風與排水，避免葉面長時間潮濕；若需用藥，請依作物、地區與合法登記藥劑確認。"
+  },
+  {
+    "id": "spinach-downy-mildew",
+    "crop": "菠菜",
+    "crops": [
+      "菠菜"
+    ],
+    "name": "露菌病",
+    "conditions": {
+      "tempRange": [
+        8,
+        20
+      ],
+      "humidityMin": 85,
+      "rainMin": 3,
+      "windSensitive": false
+    },
+    "sensitiveStages": [
+      "葉片生長期"
+    ],
+    "riskFactors": [
+      "低溫高濕",
+      "通風不良"
+    ],
+    "advice": "加強田間巡查，改善通風與排水，避免葉面長時間潮濕；若需用藥，請依作物、地區與合法登記藥劑確認。"
+  },
+  {
+    "id": "lettuce-downy-mildew",
+    "crop": "萵苣",
+    "crops": [
+      "萵苣"
+    ],
+    "name": "露菌病",
+    "conditions": {
+      "tempRange": [
+        10,
+        22
+      ],
+      "humidityMin": 85,
+      "rainMin": 3,
+      "windSensitive": false
+    },
+    "sensitiveStages": [
+      "苗期",
+      "葉片生長期"
+    ],
+    "riskFactors": [
+      "低溫高濕",
+      "密植",
+      "葉面潮濕"
+    ],
+    "advice": "加強田間巡查，改善通風與排水，避免葉面長時間潮濕；若需用藥，請依作物、地區與合法登記藥劑確認。"
+  },
+  {
+    "id": "grape-downy-mildew",
+    "crop": "葡萄",
+    "crops": [
+      "葡萄"
+    ],
+    "name": "露菌病",
+    "conditions": {
+      "tempRange": [
+        18,
+        28
+      ],
+      "humidityMin": 85,
+      "rainMin": 3,
+      "windSensitive": false
+    },
+    "sensitiveStages": [
+      "新梢期",
+      "開花期",
+      "果實膨大期"
+    ],
+    "riskFactors": [
+      "高濕",
+      "降雨",
+      "葉面潮濕"
+    ],
+    "advice": "雨後注意葉背白色黴層與油斑，設施栽培加強通風。"
+  },
+  {
+    "id": "grape-powdery-mildew",
+    "crop": "葡萄",
+    "crops": [
+      "葡萄"
+    ],
+    "name": "白粉病",
+    "conditions": {
+      "tempRange": [
+        20,
+        30
+      ],
+      "humidityMin": 70,
+      "rainMin": 0,
+      "windSensitive": false
+    },
+    "sensitiveStages": [
+      "新梢期",
+      "開花期",
+      "果實膨大期"
+    ],
+    "riskFactors": [
+      "乾濕變化",
+      "通風不良"
+    ],
+    "advice": "加強田間巡查，改善通風與排水，避免葉面長時間潮濕；若需用藥，請依作物、地區與合法登記藥劑確認。"
+  },
+  {
+    "id": "lotus-leaf-spot",
+    "crop": "蓮藕",
+    "crops": [
+      "蓮藕"
+    ],
+    "name": "葉斑病",
+    "conditions": {
+      "tempRange": [
+        24,
+        32
+      ],
+      "humidityMin": 80,
+      "rainMin": 3,
+      "windSensitive": false
+    },
+    "sensitiveStages": [
+      "葉片生長期",
+      "地下莖膨大期"
+    ],
+    "riskFactors": [
+      "高濕",
+      "高溫",
+      "病殘體"
+    ],
+    "advice": "加強田間巡查，改善通風與排水，避免葉面長時間潮濕；若需用藥，請依作物、地區與合法登記藥劑確認。"
+  },
+  {
+    "id": "ginger-soft-rot",
+    "crop": "薑",
+    "crops": [
+      "薑"
+    ],
+    "name": "軟腐病",
+    "conditions": {
+      "tempRange": [
+        25,
+        35
+      ],
+      "humidityMin": 80,
+      "rainMin": 10,
+      "windSensitive": false
+    },
+    "sensitiveStages": [
+      "萌芽期",
+      "根莖膨大期"
+    ],
+    "riskFactors": [
+      "高溫高濕",
+      "排水不良",
+      "種薑帶菌"
+    ],
+    "advice": "注意基部軟化與腐敗味，避免田區積水並加強種薑健康管理。"
+  },
+  {
+    "id": "orchid-anthracnose",
+    "crop": "蘭花",
+    "crops": [
+      "蘭花"
+    ],
+    "name": "炭疽病",
+    "conditions": {
+      "tempRange": [
+        24,
+        32
+      ],
+      "humidityMin": 80,
+      "rainMin": 3,
+      "windSensitive": false
+    },
+    "sensitiveStages": [
+      "營養生長期",
+      "開花期"
+    ],
+    "riskFactors": [
+      "高濕",
+      "葉面潮濕",
+      "通風不良"
+    ],
+    "advice": "加強田間巡查，改善通風與排水，避免葉面長時間潮濕；若需用藥，請依作物、地區與合法登記藥劑確認。"
+  },
+  {
+    "id": "orchid-black-rot",
+    "crop": "蘭花",
+    "crops": [
+      "蘭花"
+    ],
+    "name": "黑腐病",
+    "conditions": {
+      "tempRange": [
+        24,
+        32
+      ],
+      "humidityMin": 85,
+      "rainMin": 5,
+      "windSensitive": false
+    },
+    "sensitiveStages": [
+      "苗期",
+      "營養生長期",
+      "開花期"
+    ],
+    "riskFactors": [
+      "高濕",
+      "積水",
+      "通風不良"
+    ],
+    "advice": "避免介質積水與葉心積水，設施內加強通風與清除病株。"
+  },
+  {
+    "id": "radish-downy-mildew",
+    "crop": "蘿蔔",
+    "crops": [
+      "蘿蔔"
+    ],
+    "name": "露菌病",
+    "conditions": {
+      "tempRange": [
+        10,
+        24
+      ],
+      "humidityMin": 85,
+      "rainMin": 3,
+      "windSensitive": false
+    },
+    "sensitiveStages": [
+      "苗期",
+      "根部膨大期"
+    ],
+    "riskFactors": [
+      "低溫高濕",
+      "葉面潮濕"
+    ],
+    "advice": "加強田間巡查，改善通風與排水，避免葉面長時間潮濕；若需用藥，請依作物、地區與合法登記藥劑確認。"
+  },
+  {
+    "id": "watermelon-anthracnose",
+    "crop": "西瓜",
+    "crops": [
+      "西瓜"
+    ],
+    "name": "炭疽病",
+    "conditions": {
+      "tempRange": [
+        24,
+        30
+      ],
+      "humidityMin": 85,
+      "rainMin": 5,
+      "windSensitive": false
+    },
+    "sensitiveStages": [
+      "蔓生期",
+      "結果期"
+    ],
+    "riskFactors": [
+      "高濕",
+      "降雨",
+      "通風不良"
+    ],
+    "advice": "加強田間巡查，改善通風與排水，避免葉面長時間潮濕；若需用藥，請依作物、地區與合法登記藥劑確認。"
+  },
+  {
+    "id": "pepper-anthracnose",
+    "crop": "辣椒",
+    "crops": [
+      "辣椒"
+    ],
+    "name": "炭疽病",
+    "conditions": {
+      "tempRange": [
+        24,
+        32
+      ],
+      "humidityMin": 80,
+      "rainMin": 5,
+      "windSensitive": false
+    },
+    "sensitiveStages": [
+      "結果期",
+      "採收期"
+    ],
+    "riskFactors": [
+      "高濕",
+      "降雨",
+      "果實傷口"
+    ],
+    "advice": "雨後注意果實凹陷病斑，採收期加強選果與田間衛生。"
+  },
+  {
+    "id": "pepper-bacterial-spot",
+    "crop": "辣椒",
+    "crops": [
+      "辣椒"
+    ],
+    "name": "細菌性斑點病",
+    "conditions": {
+      "tempRange": [
+        24,
+        32
+      ],
+      "humidityMin": 80,
+      "rainMin": 5,
+      "windSensitive": true
+    },
+    "sensitiveStages": [
+      "營養生長期",
+      "結果期"
+    ],
+    "riskFactors": [
+      "風雨",
+      "葉面潮濕",
+      "傷口"
+    ],
+    "advice": "加強田間巡查，改善通風與排水，避免葉面長時間潮濕；若需用藥，請依作物、地區與合法登記藥劑確認。"
+  },
+  {
+    "id": "avocado-anthracnose",
+    "crop": "酪梨",
+    "crops": [
+      "酪梨"
+    ],
+    "name": "炭疽病",
+    "conditions": {
+      "tempRange": [
+        24,
+        32
+      ],
+      "humidityMin": 80,
+      "rainMin": 5,
+      "windSensitive": false
+    },
+    "sensitiveStages": [
+      "結果期",
+      "採收期"
+    ],
+    "riskFactors": [
+      "高濕",
+      "降雨",
+      "果實傷口"
+    ],
+    "advice": "加強田間巡查，改善通風與排水，避免葉面長時間潮濕；若需用藥，請依作物、地區與合法登記藥劑確認。"
+  },
+  {
+    "id": "scallion-purple-blotch",
+    "crop": "青蔥",
+    "crops": [
+      "青蔥"
+    ],
+    "name": "紫斑病",
+    "conditions": {
+      "tempRange": [
+        20,
+        30
+      ],
+      "humidityMin": 80,
+      "rainMin": 3,
+      "windSensitive": false
+    },
+    "sensitiveStages": [
+      "營養生長期",
+      "採收前"
+    ],
+    "riskFactors": [
+      "高濕",
+      "雨後",
+      "葉片傷口"
+    ],
+    "advice": "加強田間巡查，改善通風與排水，避免葉面長時間潮濕；若需用藥，請依作物、地區與合法登記藥劑確認。"
+  },
+  {
+    "id": "gerbera-powdery-mildew",
+    "crop": "非洲菊",
+    "crops": [
+      "非洲菊"
+    ],
+    "name": "白粉病",
+    "conditions": {
+      "tempRange": [
+        18,
+        28
+      ],
+      "humidityMin": 70,
+      "rainMin": 0,
+      "windSensitive": false
+    },
+    "sensitiveStages": [
+      "營養生長期",
+      "開花期"
+    ],
+    "riskFactors": [
+      "乾濕變化",
+      "通風不良"
+    ],
+    "advice": "加強田間巡查，改善通風與排水，避免葉面長時間潮濕；若需用藥，請依作物、地區與合法登記藥劑確認。"
+  },
+  {
+    "id": "banana-sigatoka",
+    "crop": "香蕉",
+    "crops": [
+      "香蕉"
+    ],
+    "name": "葉斑病",
+    "conditions": {
+      "tempRange": [
+        24,
+        32
+      ],
+      "humidityMin": 85,
+      "rainMin": 3,
+      "windSensitive": false
+    },
+    "sensitiveStages": [
+      "營養生長期",
+      "抽穗期"
+    ],
+    "riskFactors": [
+      "高濕",
+      "降雨",
+      "葉面潮濕"
+    ],
+    "advice": "加強田間巡查，改善通風與排水，避免葉面長時間潮濕；若需用藥，請依作物、地區與合法登記藥劑確認。"
+  },
+  {
+    "id": "banana-yellow-leaf",
+    "crop": "香蕉",
+    "crops": [
+      "香蕉"
+    ],
+    "name": "黃葉病",
+    "conditions": {
+      "tempRange": [
+        25,
+        32
+      ],
+      "humidityMin": 70,
+      "rainMin": 0,
+      "windSensitive": false
+    },
+    "sensitiveStages": [
+      "營養生長期"
+    ],
+    "riskFactors": [
+      "土壤病原",
+      "排水不良",
+      "連作"
+    ],
+    "advice": "注意下位葉黃化與維管束褐變，避免病株與土壤傳播。"
+  },
+  {
+    "id": "potato-late-blight",
+    "crop": "馬鈴薯",
+    "crops": [
+      "馬鈴薯"
+    ],
+    "name": "晚疫病",
+    "conditions": {
+      "tempRange": [
+        12,
+        22
+      ],
+      "humidityMin": 85,
+      "rainMin": 5,
+      "windSensitive": false
+    },
+    "sensitiveStages": [
+      "營養生長期",
+      "塊莖膨大期"
+    ],
+    "riskFactors": [
+      "低溫高濕",
+      "霧露",
+      "連續降雨"
+    ],
+    "advice": "加強田間巡查，改善通風與排水，避免葉面長時間潮濕；若需用藥，請依作物、地區與合法登記藥劑確認。"
+  },
+  {
+    "id": "pineapple-heart-rot",
+    "crop": "鳳梨",
+    "crops": [
+      "鳳梨"
+    ],
+    "name": "心腐病",
+    "conditions": {
+      "tempRange": [
+        24,
+        32
+      ],
+      "humidityMin": 80,
+      "rainMin": 10,
+      "windSensitive": false
+    },
+    "sensitiveStages": [
+      "苗期",
+      "定植期"
+    ],
+    "riskFactors": [
+      "高濕",
+      "積水",
+      "排水不良"
+    ],
+    "advice": "注意心葉腐敗與惡臭，雨季前後加強排水與苗株健康管理。"
+  },
+  {
+    "id": "longan-witches-broom",
+    "crop": "龍眼",
+    "crops": [
+      "龍眼"
+    ],
+    "name": "叢枝病",
+    "conditions": {
+      "tempRange": [
+        20,
+        35
+      ],
+      "humidityMin": 60,
+      "rainMin": 0,
+      "windSensitive": false
+    },
+    "sensitiveStages": [
+      "新梢期",
+      "開花期"
+    ],
+    "riskFactors": [
+      "媒介害蟲",
+      "病枝殘留"
+    ],
+    "advice": "注意異常叢生小葉與花穗畸形，修除病枝並注意媒介管理。"
+  },
+  {
+    "id": "tomato-early-blight",
+    "crop": "番茄",
+    "crops": ["番茄"],
+    "name": "早疫病",
+    "pathogenType": "真菌性病害",
+    "conditions": {
+      "tempRange": [24, 30],
+      "humidityMin": 85,
+      "rainMin": 5,
+      "sunshineMax": 4,
+      "windSensitive": false
+    },
+    "sensitiveStages": ["營養生長期", "開花期", "結果期"],
+    "riskFactors": ["高溫高濕", "清晨露水", "通風不良"],
+    "symptoms": ["葉片出現褐色病斑", "病斑常有同心輪紋", "嚴重時葉片黃化枯萎"],
+    "advice": "潮濕或露水重時需加強巡田，保持通風並清除病葉；若需用藥，請查詢合法登記藥劑。",
+    "notes": "AZAI 提及早疫病菌喜潮濕，高濕有助孢子產生，高溫下易侵入；溫濕度數值為教學推估，需再查證。",
+    "source": "AZAI 農業病蟲害智能管理決策系統",
+    "sourceUrl": "https://azai.tari.gov.tw/search/bug/detail?id=480",
+    "updatedAt": "2026-07-04"
+  },
+  {
+    "id": "papaya-anthracnose",
+    "crop": "木瓜",
+    "crops": ["木瓜"],
+    "name": "炭疽病",
+    "pathogenType": "真菌性病害",
+    "conditions": {
+      "tempRange": [24, 30],
+      "humidityMin": 85,
+      "rainMin": 5,
+      "sunshineMax": 4,
+      "windSensitive": false
+    },
+    "sensitiveStages": ["結果期", "採收期", "採後貯運期"],
+    "riskFactors": ["高溫高濕", "連續降雨", "田間落果未清除"],
+    "symptoms": ["果實成熟後出現凹陷病斑", "葉片或果實可潛伏感染", "病斑擴大後腐敗"],
+    "advice": "清除田間落果與罹病果實，雨季及果實成熟期加強管理；若需用藥，請查詢合法登記藥劑。",
+    "notes": "AZAI 提及木瓜炭疽病於適溫高濕環境易發病；數值為教學推估，需再查證。",
+    "source": "AZAI 農業病蟲害智能管理決策系統",
+    "sourceUrl": "https://azai.tari.gov.tw/search/bug/detail?id=513",
+    "updatedAt": "2026-07-04"
+  },
+  {
+    "id": "guava-anthracnose",
+    "crop": "番石榴",
+    "crops": ["番石榴"],
+    "name": "炭疽病",
+    "pathogenType": "真菌性病害",
+    "conditions": {
+      "tempRange": [24, 30],
+      "humidityMin": 85,
+      "rainMin": 5,
+      "sunshineMax": 4,
+      "windSensitive": false
+    },
+    "sensitiveStages": ["新梢期", "結果期", "採收期"],
+    "riskFactors": ["陰雨", "梅雨季", "病組織未清除", "雨水飛濺"],
+    "symptoms": ["果實出現褐色至黑褐色病斑", "新梢嫩芽或葉片受害", "嚴重時果實腐敗"],
+    "advice": "梅雨及連續降雨期間加強田間衛生，減少病原傳播；若需用藥，請查詢合法登記藥劑。",
+    "notes": "AZAI 提及番石榴炭疽病與氣候相關，陰雨時分生孢子可藉雨水飛濺傳播；數值為教學推估，需再查證。",
+    "source": "AZAI 農業病蟲害智能管理決策系統",
+    "sourceUrl": "https://azai.tari.gov.tw/search/bug/detail?id=520",
+    "updatedAt": "2026-07-04"
+  },
+  {
+    "id": "asparagus-fusarium-crown-root-rot",
+    "crop": "蘆筍",
+    "crops": ["蘆筍"],
+    "name": "冠腐病",
+    "pathogenType": "真菌性病害",
+    "conditions": {
+      "tempRange": [24, 30],
+      "humidityMin": 75,
+      "rainMin": 5,
+      "sunshineMax": 6,
+      "windSensitive": false
+    },
+    "sensitiveStages": ["幼苗期", "營養生長期", "採收期"],
+    "riskFactors": ["土壤排水不良", "連作", "根冠部受傷", "土壤有機質不足"],
+    "symptoms": ["根冠部褐化腐敗", "植株生長衰弱", "嫩莖產量下降"],
+    "advice": "改善排水、添加有機堆肥並避免連作；必要時採水稻輪作或客土處理。",
+    "notes": "AZAI 提及病原為 Fusarium crown and root rot，並建議改良土壤、客土及水稻輪作；數值為教學推估，需再查證。",
+    "source": "AZAI 農業病蟲害智能管理決策系統",
+    "sourceUrl": "https://azai.tari.gov.tw/search/bug/detail?id=748",
+    "updatedAt": "2026-07-04"
+  },
+  {
+    "id": "sweet-potato-soft-rot",
+    "crop": "甘藷",
+    "crops": ["甘藷"],
+    "name": "軟腐病",
+    "pathogenType": "真菌性病害",
+    "conditions": {
+      "tempRange": [25, 32],
+      "humidityMin": 85,
+      "rainMin": 5,
+      "sunshineMax": 5,
+      "windSensitive": false
+    },
+    "sensitiveStages": ["生育期", "採收期", "採後貯運期"],
+    "riskFactors": ["高溫", "多雨", "排水不良", "植物殘體未清除"],
+    "symptoms": ["塊根軟化腐敗", "受害部位水浸狀", "採後貯藏期間腐敗擴大"],
+    "advice": "避免排水不良，清除殘體並與非寄主作物輪作；採收後保持通風乾燥。",
+    "notes": "AZAI 提及甘藷軟腐病田間或採後皆可能發生，高溫、多雨或排水不良易發生；數值為教學推估，需再查證。",
+    "source": "AZAI 農業病蟲害智能管理決策系統",
+    "sourceUrl": "https://azai.tari.gov.tw/search/bug/detail?id=1027",
+    "updatedAt": "2026-07-04"
+  },
+  {
+    "id": "tea-blister-blight",
+    "crop": "茶",
+    "crops": ["茶"],
+    "name": "餅病",
+    "pathogenType": "真菌性病害",
+    "conditions": {
+      "tempRange": [15, 22],
+      "humidityMin": 85,
+      "rainMin": 5,
+      "sunshineMax": 3,
+      "windSensitive": false
+    },
+    "sensitiveStages": ["新梢期", "採摘期"],
+    "riskFactors": ["冷涼多雨", "多霧", "日照不足"],
+    "symptoms": ["嫩葉出現淡色或膨起斑", "葉片形成餅狀病斑", "嚴重時新梢品質下降"],
+    "advice": "冷涼多霧與多雨季節加強巡園，維持茶園通風與適度修剪；若需用藥，請查詢合法登記藥劑。",
+    "notes": "AZAI 提及茶餅病適合冷涼、多霧、無太陽光照的季節；數值為教學推估，需再查證。",
+    "source": "AZAI 農業病蟲害智能管理決策系統",
+    "sourceUrl": "https://azai.tari.gov.tw/search/bug/detail?id=630",
+    "updatedAt": "2026-07-04"
+  },
+  {
+    "id": "tomato-early-blight",
+    "crop": "番茄",
+    "crops": ["番茄"],
+    "name": "早疫病",
+    "pathogenType": "真菌性病害",
+    "conditions": {
+      "tempRange": [24, 30],
+      "humidityMin": 85,
+      "rainMin": 5,
+      "sunshineMax": 4,
+      "windSensitive": false
+    },
+    "sensitiveStages": ["育苗期", "營養生長期", "開花期", "結果期"],
+    "riskFactors": ["雨水飛濺", "高濕", "植物殘體", "帶菌種子", "風媒傳播"],
+    "symptoms": [
+      "葉片出現褐色病斑",
+      "病斑具有同心輪紋",
+      "嚴重時葉片枯萎"
+    ],
+    "advice": "清除病株殘體、避免使用帶菌種子、降低葉面潮濕時間並維持良好通風；必要時依合法登記藥劑防治。",
+    "notes": "危害徵狀與傳播方式整理自 AZAI，環境數值為臺灣栽培經驗推估，需再查證。",
+    "source": "AZAI 農業病蟲害智能管理決策系統",
+    "sourceUrl": "https://azai.tari.gov.tw/search/bug",
+    "updatedAt": "2026-07-04"
+  },
+  {
+    "id": "guava-anthracnose",
+    "crop": "番石榴",
+    "crops": ["番石榴"],
+    "name": "炭疽病",
+    "pathogenType": "真菌性病害",
+    "conditions": {
+      "tempRange": [24, 30],
+      "humidityMin": 85,
+      "rainMin": 5,
+      "sunshineMax": 4,
+      "windSensitive": false
+    },
+    "sensitiveStages": ["新梢期", "結果期", "採收期"],
+    "riskFactors": ["雨水飛濺", "高濕", "病株殘體", "鄰近果園感染"],
+    "symptoms": [
+      "果實出現褐色病斑",
+      "病斑逐漸擴大腐敗",
+      "嫩梢亦可能受害"
+    ],
+    "advice": "清除病果與病枝，雨季注意巡園並保持通風，必要時依合法登記藥劑防治。",
+    "notes": "依 AZAI 整理。",
+    "source": "AZAI 農業病蟲害智能管理決策系統",
+    "sourceUrl": "https://azai.tari.gov.tw/search/bug",
+    "updatedAt": "2026-07-04"
+  },
+  {
+    "id": "rice-blast",
+    "crop": "水稻",
+    "crops": ["水稻"],
+    "name": "稻熱病",
+    "pathogenType": "真菌性病害",
+    "conditions": {
+      "tempRange": [20, 28],
+      "humidityMin": 90,
+      "rainMin": 5,
+      "sunshineMax": 3,
+      "windSensitive": true
+    },
+    "sensitiveStages": ["育苗期", "分蘗期", "抽穗期", "穗熟期"],
+    "riskFactors": [
+      "高濕",
+      "病稻草殘留",
+      "帶菌種子",
+      "氣流傳播",
+      "田間雜草"
+    ],
+    "symptoms": [
+      "葉片形成梭形病斑",
+      "穗頸感染造成白穗",
+      "病斑大量產孢"
+    ],
+    "advice": "使用健康種子、清除病殘體、避免偏施氮肥並依預警適時防治。",
+    "notes": "依 AZAI 整理，環境數值需再查證。",
+    "source": "AZAI 農業病蟲害智能管理決策系統",
+    "sourceUrl": "https://azai.tari.gov.tw/search/bug",
+    "updatedAt": "2026-07-04"
+  },
+  {
+    "id": "guava-phytophthora",
+    "crop": "番石榴",
+    "crops": ["番石榴"],
+    "name": "疫病",
+    "pathogenType": "卵菌類病害",
+    "conditions": {
+      "tempRange": [22, 28],
+      "humidityMin": 90,
+      "rainMin": 10,
+      "sunshineMax": 3,
+      "windSensitive": false
+    },
+    "sensitiveStages": ["新梢期", "結果期"],
+    "riskFactors": ["降雨", "積水", "土壤帶菌", "高濕"],
+    "symptoms": [
+      "果實腐敗",
+      "嫩梢受害",
+      "病組織可再次產生孢囊"
+    ],
+    "advice": "改善排水，避免積水並降低雨季感染機率。",
+    "notes": "依 AZAI 整理。",
+    "source": "AZAI 農業病蟲害智能管理決策系統",
+    "sourceUrl": "https://azai.tari.gov.tw/search/bug",
+    "updatedAt": "2026-07-04"
+  },
+  {
+    "id": "guava-wilt",
+    "crop": "番石榴",
+    "crops": ["番石榴"],
+    "name": "立枯病",
+    "pathogenType": "真菌性病害",
+    "conditions": {
+      "tempRange": [24, 30],
+      "humidityMin": 80,
+      "rainMin": 5,
+      "sunshineMax": 5,
+      "windSensitive": false
+    },
+    "sensitiveStages": ["幼苗期", "營養生長期"],
+    "riskFactors": ["連作", "病土", "鄰近果園"],
+    "symptoms": [
+      "植株萎凋",
+      "根部感染",
+      "全株枯死"
+    ],
+    "advice": "避免連作並改善土壤健康，清除病株。",
+    "notes": "依 AZAI 整理。",
+    "source": "AZAI 農業病蟲害智能管理決策系統",
+    "sourceUrl": "https://azai.tari.gov.tw/search/bug",
+    "updatedAt": "2026-07-04"
+  },
+  {
+    "id": "tomato-late-blight",
+    "crop": "番茄",
+    "crops": ["番茄"],
+    "name": "晚疫病",
+    "pathogenType": "卵菌類病害",
+    "conditions": {
+      "tempRange": [15, 25],
+      "humidityMin": 90,
+      "rainMin": 5,
+      "sunshineMax": 3,
+      "windSensitive": false
+    },
+    "sensitiveStages": ["開花期", "結果期"],
+    "riskFactors": ["低溫高濕", "降雨", "游走子傳播"],
+    "symptoms": [
+      "葉背出現白色黴層",
+      "葉片水浸狀病斑",
+      "果實腐敗"
+    ],
+    "advice": "避免葉面長時間潮濕並加強排水，必要時依合法登記藥劑防治。",
+    "notes": "依 AZAI 整理。",
+    "source": "AZAI 農業病蟲害智能管理決策系統",
+    "sourceUrl": "https://azai.tari.gov.tw/search/bug",
+    "updatedAt": "2026-07-04"
+  },
+  {
+    "id": "rice-bakanae",
+    "crop": "水稻",
+    "crops": ["水稻"],
+    "name": "徒長病",
+    "pathogenType": "真菌性病害",
+    "conditions": {
+      "tempRange": [25, 30],
+      "humidityMin": 85,
+      "rainMin": 0,
+      "sunshineMax": 6,
+      "windSensitive": false
+    },
+    "sensitiveStages": ["育苗期"],
+    "riskFactors": ["帶菌種子", "育苗環境", "高濕"],
+    "symptoms": [
+      "幼苗徒長",
+      "維管束褐變",
+      "最後整株枯死"
+    ],
+    "advice": "使用健康種子並確實種子消毒。",
+    "notes": "依 AZAI 整理。",
+    "source": "AZAI 農業病蟲害智能管理決策系統",
+    "sourceUrl": "https://azai.tari.gov.tw/search/bug",
+    "updatedAt": "2026-07-04"
+  },
+  {
+    "id": "tomato-fusarium-wilt",
+    "crop": "番茄",
+    "crops": ["番茄"],
+    "name": "萎凋病",
+    "pathogenType": "真菌性病害",
+    "conditions": {
+      "tempRange": [25, 30],
+      "humidityMin": 75,
+      "rainMin": 0,
+      "sunshineMax": 6,
+      "windSensitive": false
+    },
+    "sensitiveStages": ["營養生長期", "結果期"],
+    "riskFactors": ["病土", "連作", "厚膜孢子"],
+    "symptoms": [
+      "葉片黃化",
+      "植株萎凋",
+      "維管束褐變"
+    ],
+    "advice": "採輪作並使用健康苗，改善土壤管理。",
+    "notes": "依 AZAI 整理。",
+    "source": "AZAI 農業病蟲害智能管理決策系統",
+    "sourceUrl": "https://azai.tari.gov.tw/search/bug",
+    "updatedAt": "2026-07-04"
+  },
+  {
+    "id": "green-onion-black-rot",
+    "crop": "青蔥",
+    "crops": ["青蔥"],
+    "name": "黑腐病",
+    "pathogenType": "真菌性病害",
+    "conditions": {
+      "tempRange": [20, 28],
+      "humidityMin": 90,
+      "rainMin": 5,
+      "sunshineMax": 4,
+      "windSensitive": true
+    },
+    "sensitiveStages": ["營養生長期"],
+    "riskFactors": ["高濕", "露水", "帶菌種子", "風雨"],
+    "symptoms": [
+      "葉片黑化腐敗",
+      "高濕時快速擴散"
+    ],
+    "advice": "避免使用帶菌種子並保持田間通風。",
+    "notes": "寄主範圍尚待確認。",
+    "source": "AZAI 農業病蟲害智能管理決策系統",
+    "sourceUrl": "https://azai.tari.gov.tw/search/bug",
+    "updatedAt": "2026-07-04"
+  },
+  {
+    "id": "strawberry-anthracnose",
+    "crop": "草莓",
+    "crops": ["草莓"],
+    "name": "炭疽病",
+    "pathogenType": "真菌性病害",
+    "conditions": {
+      "tempRange": [25, 30],
+      "humidityMin": 85,
+      "rainMin": 5,
+      "sunshineMax": 4,
+      "windSensitive": true
+    },
+    "sensitiveStages": ["育苗期", "營養生長期", "結果期"],
+    "riskFactors": ["高溫多濕", "帶菌苗", "風雨傳播"],
+    "symptoms": [
+      "葉柄病斑",
+      "植株萎凋",
+      "果實腐敗"
+    ],
+    "advice": "選用健康種苗並避免雨水飛濺。",
+    "notes": "依 AZAI 整理。",
+    "source": "AZAI 農業病蟲害智能管理決策系統",
+    "sourceUrl": "https://azai.tari.gov.tw/search/bug",
+    "updatedAt": "2026-07-04"
+  },
+  {
+    "id": "cucumber-powdery-mildew",
+    "crop": "胡瓜",
+    "crops": ["胡瓜"],
+    "name": "白粉病",
+    "pathogenType": "真菌性病害",
+    "conditions": {
+      "tempRange": [18, 26],
+      "humidityMin": 70,
+      "rainMin": 0,
+      "sunshineMax": 5,
+      "windSensitive": true
+    },
+    "sensitiveStages": ["營養生長期", "開花期", "結果期"],
+    "riskFactors": ["冷涼無雨", "風媒傳播", "氣流遠距離傳播"],
+    "symptoms": ["葉片表面出現白色粉狀斑", "病斑擴大後葉片黃化", "嚴重時影響植株生長"],
+    "advice": "秋冬冷涼乾燥且通風氣流強時加強巡田，移除病葉並避免田區過密；若需用藥，請查詢合法登記藥劑。",
+    "notes": "危害徵狀與傳播方式依 AZAI 整理；環境數值為教學推估，需再查證。",
+    "source": "AZAI 農業病蟲害智能管理決策系統",
+    "sourceUrl": "https://azai.tari.gov.tw/search/bug",
+    "updatedAt": "2026-07-04"
+  },
+  {
+    "id": "rice-small-sclerotial-disease",
+    "crop": "水稻",
+    "crops": ["水稻"],
+    "name": "小粒菌核病",
+    "pathogenType": "真菌性病害",
+    "conditions": {
+      "tempRange": [24, 32],
+      "humidityMin": 85,
+      "rainMin": 0,
+      "sunshineMax": 5,
+      "windSensitive": false
+    },
+    "sensitiveStages": ["分蘗期", "孕穗期", "抽穗期"],
+    "riskFactors": ["田間菌核殘留", "稻樁殘體", "插秧期田水漂浮菌核", "有機殘體"],
+    "symptoms": ["葉鞘出現病斑", "病組織枯死", "組織內形成大量小型菌核"],
+    "advice": "整地時注意病殘體管理，降低田間菌核殘留，避免稻樁與罹病殘體成為下期作感染源。",
+    "notes": "依 AZAI 整理；環境數值為教學推估，需再查證。",
+    "source": "AZAI 農業病蟲害智能管理決策系統",
+    "sourceUrl": "https://azai.tari.gov.tw/search/bug",
+    "updatedAt": "2026-07-04"
+  },
+  {
+    "id": "dragon-fruit-canker",
+    "crop": "紅龍果",
+    "crops": ["紅龍果"],
+    "name": "潰瘍病",
+    "pathogenType": "真菌性病害",
+    "conditions": {
+      "tempRange": [24, 30],
+      "humidityMin": 85,
+      "rainMin": 5,
+      "sunshineMax": 5,
+      "windSensitive": false
+    },
+    "sensitiveStages": ["新梢期", "開花期", "結果期"],
+    "riskFactors": ["雨水飛濺", "幼嫩莖部", "幼果感染", "病斑產孢"],
+    "symptoms": ["莖部出現病斑", "果實或幼嫩組織受感染", "病斑產生大量孢子並再次傳播"],
+    "advice": "雨後加強巡園，剪除罹病莖段並降低雨水飛濺；若需用藥，請查詢合法登記藥劑。",
+    "notes": "AZAI 提及感染後約 14–30 天出現病徵；環境數值為教學推估，需再查證。",
+    "source": "AZAI 農業病蟲害智能管理決策系統",
+    "sourceUrl": "https://azai.tari.gov.tw/search/bug",
+    "updatedAt": "2026-07-04"
+  },
+  {
+    "id": "dragon-fruit-wet-rot",
+    "crop": "紅龍果",
+    "crops": ["紅龍果"],
+    "name": "濕腐病",
+    "pathogenType": "真菌性病害",
+    "conditions": {
+      "tempRange": [24, 32],
+      "humidityMin": 90,
+      "rainMin": 5,
+      "sunshineMax": 4,
+      "windSensitive": true
+    },
+    "sensitiveStages": ["新梢期", "結果期", "採收期"],
+    "riskFactors": ["風雨傳播", "高濕", "罹病組織產生大量孢囊孢子", "厚膜孢子殘存"],
+    "symptoms": ["罹病組織濕腐", "病部表面快速產生大量孢囊", "病勢於高濕環境下擴大"],
+    "advice": "避免果園過度潮濕，雨後清除罹病組織並減少風雨傳播；若需用藥，請查詢合法登記藥劑。",
+    "notes": "AZAI 提及罹病組織表面約 3–7 天內可產生大量孢囊與孢囊孢子；環境數值為教學推估，需再查證。",
+    "source": "AZAI 農業病蟲害智能管理決策系統",
+    "sourceUrl": "https://azai.tari.gov.tw/search/bug",
+    "updatedAt": "2026-07-04"
+  },
+  {
+    "id": "rice-sheath-blight",
+    "crop": "水稻",
+    "crops": ["水稻"],
+    "name": "紋枯病",
+    "pathogenType": "真菌性病害",
+    "conditions": {
+      "tempRange": [25, 32],
+      "humidityMin": 85,
+      "rainMin": 0,
+      "sunshineMax": 5,
+      "windSensitive": false
+    },
+    "sensitiveStages": ["分蘗盛期", "孕穗期", "抽穗期"],
+    "riskFactors": ["田間菌核殘留", "水面漂浮菌核", "高濕", "密植", "病組織菌絲傳播"],
+    "symptoms": ["葉鞘出現灰綠色至褐色病斑", "病斑擴大呈雲紋狀", "嚴重時葉片枯死"],
+    "advice": "降低田間菌核殘留，避免過密與偏施氮肥，分蘗盛期後加強巡田。",
+    "notes": "依 AZAI 整理；環境數值為臺灣水稻病害風險推估，需再查證。",
+    "source": "AZAI 農業病蟲害智能管理決策系統",
+    "sourceUrl": "https://azai.tari.gov.tw/search/bug",
+    "updatedAt": "2026-07-04"
+  },
+  {
+    "id": "corn-southern-rust",
+    "crop": "玉米",
+    "crops": ["玉米"],
+    "name": "南方型銹病",
+    "pathogenType": "真菌性病害",
+    "conditions": {
+      "tempRange": [24, 30],
+      "humidityMin": 85,
+      "rainMin": 0,
+      "sunshineMax": 5,
+      "windSensitive": true
+    },
+    "sensitiveStages": ["營養生長期", "抽雄期", "吐絲期", "籽粒充實期"],
+    "riskFactors": ["高濕", "風媒傳播", "夏孢子堆", "後期冬孢子堆形成"],
+    "symptoms": ["葉片形成橙褐色銹斑", "夏孢子堆散生於葉面", "嚴重時葉片早衰"],
+    "advice": "高濕季節加強巡田，發現銹斑擴散時及早管理；若需用藥，請查詢合法登記藥劑。",
+    "notes": "AZAI 說明南方型銹病病害環與普通型相似；環境數值與症狀描述部分為教學推估，需再查證。",
+    "source": "AZAI 農業病蟲害智能管理決策系統",
+    "sourceUrl": "https://azai.tari.gov.tw/search/bug",
+    "updatedAt": "2026-07-04"
+  },
+  {
+    "id": "corn-downy-mildew",
+    "crop": "玉米",
+    "crops": ["玉米"],
+    "name": "露菌病",
+    "pathogenType": "卵菌類病害",
+    "conditions": {
+      "tempRange": [20, 28],
+      "humidityMin": 90,
+      "rainMin": 5,
+      "sunshineMax": 3,
+      "windSensitive": true
+    },
+    "sensitiveStages": ["幼苗期", "營養生長期"],
+    "riskFactors": ["風雨傳播", "高濕", "胞囊傳播", "幼苗感染"],
+    "symptoms": ["幼苗受感染", "葉片可能出現黃化條斑", "高濕時葉面產生霉層"],
+    "advice": "幼苗期遇高濕或風雨後加強巡田，避免連續種植易感寄主；若需用藥，請查詢合法登記藥劑。",
+    "notes": "AZAI 提及病原在玉米植株上不產生卵胞子、不藉種子傳播；部分症狀與環境數值為教學推估，需再查證。",
+    "source": "AZAI 農業病蟲害智能管理決策系統",
+    "sourceUrl": "https://azai.tari.gov.tw/search/bug",
+    "updatedAt": "2026-07-04"
+  },
+  {
+    "id": "rice-white-tip-nematode",
+    "crop": "水稻",
+    "crops": ["水稻"],
+    "name": "白尖病",
+    "pathogenType": "線蟲危害",
+    "conditions": {
+      "tempRange": [20, 30],
+      "humidityMin": 80,
+      "rainMin": 0,
+      "sunshineMax": 6,
+      "windSensitive": false
+    },
+    "sensitiveStages": ["浸種期", "育苗期", "分蘗期", "開花期"],
+    "riskFactors": ["帶線蟲稻種", "灌溉水傳播", "稻桿殘留", "田間秕粒", "寄主範圍廣"],
+    "symptoms": ["葉尖白化", "劍葉與穗部受害", "穀粒成熟時線蟲殘存於穎部"],
+    "advice": "使用健康種子，注意種子處理與田間殘體管理，避免帶蟲材料隨灌溉水傳播。",
+    "notes": "AZAI 提及葉芽線蟲可於稻殼內休眠或脫水狀態存活 8 個月至 3 年；環境數值為教學推估，需再查證。",
+    "source": "AZAI 農業病蟲害智能管理決策系統",
+    "sourceUrl": "https://azai.tari.gov.tw/search/bug",
+    "updatedAt": "2026-07-04"
+  },
+  {
+    "id": "pineapple-basal-rot",
+    "crop": "鳳梨",
+    "crops": ["鳳梨"],
+    "name": "基腐病(苗腐病)",
+    "pathogenType": "真菌性病害",
+    "conditions": {
+      "tempRange": [24, 30],
+      "humidityMin": 80,
+      "rainMin": 5,
+      "sunshineMax": 5,
+      "windSensitive": false
+    },
+    "sensitiveStages": ["種苗期", "定植期"],
+    "riskFactors": ["種苗傷口", "帶菌種苗", "植株殘體", "土壤殘存病原"],
+    "symptoms": ["種苗基部腐敗", "種苗枯死", "傷口處感染"],
+    "advice": "選用健康種苗，避免採苗與搬運造成傷口，清除罹病殘體並保持通風乾燥。",
+    "notes": "依 AZAI 整理；環境數值為教學推估，需再查證。",
+    "source": "AZAI 農業病蟲害智能管理決策系統",
+    "sourceUrl": "https://azai.tari.gov.tw/search/bug",
+    "updatedAt": "2026-07-04"
+  },
+  {
+    "id": "green-onion-anthracnose",
+    "crop": "青蔥",
+    "crops": ["青蔥"],
+    "name": "炭疽病",
+    "pathogenType": "真菌性病害",
+    "conditions": {
+      "tempRange": [25, 32],
+      "humidityMin": 85,
+      "rainMin": 5,
+      "sunshineMax": 4,
+      "windSensitive": true
+    },
+    "sensitiveStages": ["營養生長期", "採收期"],
+    "riskFactors": ["高溫有水", "降雨頻繁", "風雨傳播", "作物殘體", "帶菌種子"],
+    "symptoms": ["葉片出現病斑", "病斑擴大後葉片枯萎", "高濕時病勢加速"],
+    "advice": "夏秋降雨頻繁時加強巡田，清除病殘體並降低葉面積水；若需用藥，請查詢合法登記藥劑。",
+    "notes": "依 AZAI 整理；環境數值為教學推估，需再查證。",
+    "source": "AZAI 農業病蟲害智能管理決策系統",
+    "sourceUrl": "https://azai.tari.gov.tw/search/bug",
+    "updatedAt": "2026-07-04"
+  },
+  {
+    "id": "guava-sooty-mold",
+    "crop": "番石榴",
+    "crops": ["番石榴"],
+    "name": "煤煙病",
+    "pathogenType": "真菌性病害",
+    "conditions": {
+      "tempRange": [22, 30],
+      "humidityMin": 75,
+      "rainMin": 0,
+      "sunshineMax": 6,
+      "windSensitive": false
+    },
+    "sensitiveStages": ["新梢期", "結果期", "採收期"],
+    "riskFactors": ["害蟲傳播", "蜜露累積", "通風不良", "寄主繁多"],
+    "symptoms": ["葉片或果實表面出現黑色煤煙狀覆蓋物", "影響光合作用", "果實外觀品質下降"],
+    "advice": "管理分泌蜜露之害蟲來源，維持果園通風並清除受污染枝葉；若需用藥，請查詢合法登記藥劑。",
+    "notes": "依使用者提供之 AZAI 摘錄整理；環境數值為教學推估，需再查證。",
+    "source": "AZAI 農業病蟲害智能管理決策系統",
+    "sourceUrl": "https://azai.tari.gov.tw/search/bug",
+    "updatedAt": "2026-07-04"
+  },
+  {
+    "id": "tomato-leaf-curl-virus",
+    "crop": "番茄",
+    "crops": ["番茄"],
+    "name": "捲葉病毒病",
+    "pathogenType": "病毒性病害",
+    "conditions": {
+      "tempRange": [22, 32],
+      "humidityMin": 60,
+      "rainMin": 0,
+      "sunshineMax": 8,
+      "windSensitive": false
+    },
+    "sensitiveStages": ["育苗期", "營養生長期", "開花期", "結果期"],
+    "riskFactors": ["粉蝨傳播", "罹病株終身帶毒", "鄰近感染株", "媒介昆蟲密度高"],
+    "symptoms": ["新葉捲曲", "植株矮化", "罹病後新生葉片約兩週可見病徵"],
+    "advice": "移除罹病株並加強粉蝨監測與防治，避免帶毒植株成為田間傳染源。",
+    "notes": "AZAI 提及病毒只能藉由粉蝨傳播，罹病株終身帶有病毒；環境數值主要反映媒介昆蟲活動風險，需再查證。",
+    "source": "AZAI 農業病蟲害智能管理決策系統",
+    "sourceUrl": "https://azai.tari.gov.tw/search/bug",
+    "updatedAt": "2026-07-04"
+  },
+  {
+    "id": "tomato-leaf-mold",
+    "crop": "番茄",
+    "crops": ["番茄"],
+    "name": "葉黴病",
+    "pathogenType": "真菌性病害",
+    "conditions": {
+      "tempRange": [20, 28],
+      "humidityMin": 85,
+      "rainMin": 0,
+      "sunshineMax": 4,
+      "windSensitive": false
+    },
+    "sensitiveStages": ["營養生長期", "開花期", "結果期"],
+    "riskFactors": ["高濕", "病葉殘體", "帶菌種子", "分生孢子傳播"],
+    "symptoms": ["葉背出現霉狀病斑", "葉片黃化", "嚴重時葉片枯萎"],
+    "advice": "降低設施內濕度、移除病葉殘體並避免使用帶菌種子；若需用藥，請查詢合法登記藥劑。",
+    "notes": "AZAI 提及病原可在病葉、果實殘體或種子上殘存達 1 年以上；環境數值為教學推估，需再查證。",
+    "source": "AZAI 農業病蟲害智能管理決策系統",
+    "sourceUrl": "https://azai.tari.gov.tw/search/bug",
+    "updatedAt": "2026-07-04"
+  },
+  {
+    "id": "strawberry-wilt",
+    "crop": "草莓",
+    "crops": ["草莓"],
+    "name": "萎凋病",
+    "pathogenType": "真菌性病害",
+    "conditions": {
+      "tempRange": [20, 28],
+      "humidityMin": 80,
+      "rainMin": 5,
+      "sunshineMax": 5,
+      "windSensitive": false
+    },
+    "sensitiveStages": ["育苗期", "定植期", "營養生長期"],
+    "riskFactors": ["帶菌種苗", "土壤殘體", "雨水傳播", "田間病菌越冬"],
+    "symptoms": ["植株萎凋", "生育衰弱", "根冠部或維管束受害"],
+    "advice": "使用健康種苗，清除病株殘體並避免雨水帶菌傳播；必要時改善排水與輪作管理。",
+    "notes": "依使用者提供之 AZAI 摘錄整理；病原分類與環境數值需再查證。",
+    "source": "AZAI 農業病蟲害智能管理決策系統",
+    "sourceUrl": "https://azai.tari.gov.tw/search/bug",
+    "updatedAt": "2026-07-04"
+  },
+  {
+    "id": "tomato-target-spot",
+    "crop": "番茄",
+    "crops": ["番茄"],
+    "name": "斑點病",
+    "pathogenType": "真菌性病害",
+    "conditions": {
+      "tempRange": [24, 30],
+      "humidityMin": 85,
+      "rainMin": 5,
+      "sunshineMax": 4,
+      "windSensitive": false
+    },
+    "sensitiveStages": ["營養生長期", "開花期", "結果期"],
+    "riskFactors": ["寄主範圍廣", "植物殘體", "周邊寄主感染源", "高濕"],
+    "symptoms": ["葉片出現斑點", "病斑擴大影響葉面", "嚴重時葉片黃化或枯萎"],
+    "advice": "清除病殘體與周邊寄主雜草，降低田間初次感染源；若需用藥，請查詢合法登記藥劑。",
+    "notes": "AZAI 提及不同寄主來源菌株之交叉感染能力仍有爭議；環境數值與部分症狀為教學推估，需再查證。",
+    "source": "AZAI 農業病蟲害智能管理決策系統",
+    "sourceUrl": "https://azai.tari.gov.tw/search/bug",
+    "updatedAt": "2026-07-04"
+  },
+  {
+    "id": "tomato-gray-leaf-spot",
+    "crop": "番茄",
+    "crops": ["番茄"],
+    "name": "灰斑病",
+    "pathogenType": "真菌性病害",
+    "conditions": {
+      "tempRange": [24, 30],
+      "humidityMin": 85,
+      "rainMin": 5,
+      "sunshineMax": 4,
+      "windSensitive": false
+    },
+    "sensitiveStages": ["營養生長期", "開花期", "結果期"],
+    "riskFactors": ["寄主範圍廣", "植物殘體", "茄科作物交叉感染", "分生孢子"],
+    "symptoms": ["葉片出現灰褐色斑點", "病斑擴大後葉片黃化", "嚴重時葉片枯死"],
+    "advice": "移除病葉與殘體，避免與其他易感茄科作物形成交叉感染；若需用藥，請查詢合法登記藥劑。",
+    "notes": "依使用者提供之 AZAI 摘錄整理；環境數值與部分症狀為教學推估，需再查證。",
+    "source": "AZAI 農業病蟲害智能管理決策系統",
+    "sourceUrl": "https://azai.tari.gov.tw/search/bug",
+    "updatedAt": "2026-07-04"
+  },
+  {
+    "id": "citrus-huanglongbing",
+    "crop": "柑橘",
+    "crops": ["柑橘"],
+    "name": "黃龍病",
+    "pathogenType": "細菌性病害",
+    "conditions": {
+      "tempRange": [20, 32],
+      "humidityMin": 60,
+      "rainMin": 0,
+      "sunshineMax": 8,
+      "windSensitive": false
+    },
+    "sensitiveStages": ["苗木期", "新梢期", "結果期"],
+    "riskFactors": ["帶病接穗", "帶病苗木", "柑橘木蝨傳播", "永續性傳播"],
+    "symptoms": ["葉片黃化斑駁", "植株衰弱", "果實品質下降"],
+    "advice": "避免使用帶病苗木或接穗，移除病株並加強柑橘木蝨監測與防治。",
+    "notes": "AZAI 提及主要傳病途徑為帶病接穗嫁接繁殖之苗木，並由柑橘木蝨永續性傳播；環境數值主要反映媒介風險，需再查證。",
+    "source": "AZAI 農業病蟲害智能管理決策系統",
+    "sourceUrl": "https://azai.tari.gov.tw/search/bug",
+    "updatedAt": "2026-07-04"
+  },
+  {
+    "id": "corn-smut",
+    "crop": "玉米",
+    "crops": ["玉米"],
+    "name": "黑穗病",
+    "pathogenType": "真菌性病害",
+    "conditions": {
+      "tempRange": [24, 32],
+      "humidityMin": 70,
+      "rainMin": 0,
+      "sunshineMax": 6,
+      "windSensitive": true
+    },
+    "sensitiveStages": ["幼苗期", "營養生長期", "抽雄期", "吐絲期"],
+    "riskFactors": ["土壤冬孢子", "植物殘體", "空氣傳播", "水飛濺", "幼嫩組織感染"],
+    "symptoms": ["穗部或莖葉形成膨大菌癭", "菌癭破裂後散出黑色孢子粉", "幼嫩組織可重複感染"],
+    "advice": "清除病殘體並避免傷口感染，田間發現菌癭時應及早移除。",
+    "notes": "依使用者提供之 AZAI 摘錄整理；環境數值為教學推估，需再查證。",
+    "source": "AZAI 農業病蟲害智能管理決策系統",
+    "sourceUrl": "https://azai.tari.gov.tw/search/bug",
+    "updatedAt": "2026-07-04"
+  },
+  {
+    "id": "corn-gray-leaf-spot",
+    "crop": "玉米",
+    "crops": ["玉米"],
+    "name": "煤紋病",
+    "pathogenType": "真菌性病害",
+    "conditions": {
+      "tempRange": [22, 30],
+      "humidityMin": 85,
+      "rainMin": 0,
+      "sunshineMax": 5,
+      "windSensitive": true
+    },
+    "sensitiveStages": ["營養生長期", "抽雄期", "吐絲期", "籽粒充實期"],
+    "riskFactors": ["感染殘株", "病葉", "分生孢子隨風飛散", "禾本科寄主"],
+    "symptoms": ["葉片出現長形灰褐色病斑", "病斑沿葉脈延伸", "嚴重時葉片早衰"],
+    "advice": "清除感染殘株，避免病葉殘留，必要時搭配輪作降低田間初次感染源。",
+    "notes": "依使用者提供之 AZAI 摘錄整理；環境數值與部分症狀為教學推估，需再查證。",
+    "source": "AZAI 農業病蟲害智能管理決策系統",
+    "sourceUrl": "https://azai.tari.gov.tw/search/bug",
+    "updatedAt": "2026-07-04"
+  },
+  {
+    "id": "grape-powdery-mildew",
+    "crop": "葡萄",
+    "crops": ["葡萄"],
+    "name": "白粉病",
+    "pathogenType": "真菌性病害",
+    "conditions": {
+      "tempRange": [20, 30],
+      "humidityMin": 70,
+      "rainMin": 0,
+      "sunshineMax": 6,
+      "windSensitive": true
+    },
+    "sensitiveStages": ["新梢期", "開花期", "結果期"],
+    "riskFactors": ["分生孢子傳播", "風媒傳播", "通風不良", "新梢幼嫩組織"],
+    "symptoms": ["葉片或果實表面出現白粉狀菌絲", "幼果受害後表皮粗糙", "嚴重時影響果實品質"],
+    "advice": "新梢與果實發育期加強巡園，維持通風並移除罹病部位；若需用藥，請查詢合法登記藥劑。",
+    "notes": "AZAI 提及主要以無性世代分生孢子傳播，台灣曾發現有性世代但數量不多；環境數值與部分症狀為教學推估，需再查證。",
+    "source": "AZAI 農業病蟲害智能管理決策系統",
+    "sourceUrl": "https://azai.tari.gov.tw/search/bug",
+    "updatedAt": "2026-07-04"
+  },
+  {
+    "id": "rice-stripe-virus",
+    "crop": "水稻",
+    "crops": ["水稻"],
+    "name": "縞葉枯病",
+    "pathogenType": "病毒性病害",
+    "conditions": {
+      "tempRange": [20, 30],
+      "humidityMin": 70,
+      "rainMin": 0,
+      "sunshineMax": 7,
+      "windSensitive": false
+    },
+    "sensitiveStages": ["秧苗期", "本田初期", "分蘗期"],
+    "riskFactors": ["斑飛蝨傳播", "帶毒越冬蟲", "發病寄主植物越冬", "禾本科雜草寄主"],
+    "symptoms": ["葉片出現縞狀黃化", "植株生育受阻", "早期感染時病勢較嚴重"],
+    "advice": "加強秧苗期與插秧後 20 至 60 日內媒介昆蟲監測，管理田間禾本科雜草與帶毒蟲源。",
+    "notes": "依使用者提供之 AZAI 摘錄整理；環境數值主要反映媒介昆蟲活動風險，需再查證。",
+    "source": "AZAI 農業病蟲害智能管理決策系統",
+    "sourceUrl": "https://azai.tari.gov.tw/search/bug",
+    "updatedAt": "2026-07-04"
+  },
+  {
+    "id": "tomato-chlorosis-virus",
+    "crop": "番茄",
+    "crops": ["番茄"],
+    "name": "褪綠病毒病",
+    "pathogenType": "病毒性病害",
+    "conditions": {
+      "tempRange": [22, 32],
+      "humidityMin": 60,
+      "rainMin": 0,
+      "sunshineMax": 8,
+      "windSensitive": false
+    },
+    "sensitiveStages": ["育苗期", "營養生長期", "開花期", "結果期"],
+    "riskFactors": ["粉蝨傳播", "帶毒種苗", "幼苗感染不顯症", "媒介昆蟲密度高"],
+    "symptoms": ["葉片褪綠", "植株生育衰弱", "感染後約 2 至 3 週出現病徵"],
+    "advice": "使用健康種苗，移除疑似罹病株並加強粉蝨監測與防治。",
+    "notes": "AZAI 提及病毒只能藉由粉蝨傳播，幼苗感染後有時不顯症狀；環境數值主要反映媒介風險，需再查證。",
+    "source": "AZAI 農業病蟲害智能管理決策系統",
+    "sourceUrl": "https://azai.tari.gov.tw/search/bug",
+    "updatedAt": "2026-07-04"
+  },
+  {
+    "id": "green-onion-rust",
+    "crop": "青蔥",
+    "crops": ["青蔥"],
+    "name": "銹病",
+    "pathogenType": "真菌性病害",
+    "conditions": {
+      "tempRange": [15, 25],
+      "humidityMin": 75,
+      "rainMin": 0,
+      "sunshineMax": 6,
+      "windSensitive": true
+    },
+    "sensitiveStages": ["營養生長期", "採收期"],
+    "riskFactors": ["夏孢子越冬", "風媒傳播", "孢子量大", "葉片氣孔侵入"],
+    "symptoms": ["葉片出現銹褐色孢子堆", "葉片黃化", "嚴重時葉片枯萎"],
+    "advice": "冷涼季節加強巡田，發現銹斑擴散時移除病葉並維持通風；若需用藥，請查詢合法登記藥劑。",
+    "notes": "AZAI 提及孢子不需有水存在即可自葉片氣孔侵入；環境數值為教學推估，需再查證。",
+    "source": "AZAI 農業病蟲害智能管理決策系統",
+    "sourceUrl": "https://azai.tari.gov.tw/search/bug",
+    "updatedAt": "2026-07-04"
+  },
+  {
+    "id": "pineapple-black-rot",
+    "crop": "鳳梨",
+    "crops": ["鳳梨"],
+    "name": "黑腐病",
+    "pathogenType": "真菌性病害",
+    "conditions": {
+      "tempRange": [24, 30],
+      "humidityMin": 85,
+      "rainMin": 5,
+      "sunshineMax": 5,
+      "windSensitive": true
+    },
+    "sensitiveStages": ["結果期", "採收期", "採後貯運期"],
+    "riskFactors": ["果實傷口", "高濕", "風媒傳播", "雨水飛濺"],
+    "symptoms": ["果實傷口處腐敗", "病組織黑化", "高濕下產生大量分生孢子"],
+    "advice": "採收與搬運時避免果實受傷，保持通風乾燥並清除罹病果；若需用藥，請查詢合法登記藥劑。",
+    "notes": "依使用者提供之 AZAI 摘錄整理；環境數值為教學推估，需再查證。",
+    "source": "AZAI 農業病蟲害智能管理決策系統",
+    "sourceUrl": "https://azai.tari.gov.tw/search/bug",
+    "updatedAt": "2026-07-04"
+  },
+  {
+    "id": "pineapple-fruitlet-brown-rot",
+    "crop": "鳳梨",
+    "crops": ["鳳梨"],
+    "name": "花樟病",
+    "pathogenType": "細菌性病害",
+    "conditions": {
+      "tempRange": [24, 32],
+      "humidityMin": 75,
+      "rainMin": 0,
+      "sunshineMax": 7,
+      "windSensitive": false
+    },
+    "sensitiveStages": ["開花期", "結果初期"],
+    "riskFactors": ["開花期訪花昆蟲", "蜜蜂", "胡蜂", "螞蟻", "花部感染"],
+    "symptoms": ["花部或小果受感染", "果實組織褐化", "果實品質受影響"],
+    "advice": "開花期加強果園衛生與訪花昆蟲活動觀察，避免傷口與污染源進入花部。",
+    "notes": "AZAI 提及田間初次感染源目前無明確文獻，訪花昆蟲可能將細菌帶入花朵；環境數值為教學推估，需再查證。",
+    "source": "AZAI 農業病蟲害智能管理決策系統",
+    "sourceUrl": "https://azai.tari.gov.tw/search/bug",
+    "updatedAt": "2026-07-04"
+  },
+  {
+    "id": "potato-virus-y",
+    "crop": "番茄",
+    "crops": ["番茄", "甜椒"],
+    "name": "馬鈴薯病毒Y病毒病",
+    "pathogenType": "病毒性病害",
+    "conditions": {
+      "tempRange": [20, 30],
+      "humidityMin": 60,
+      "rainMin": 0,
+      "sunshineMax": 8,
+      "windSensitive": false
+    },
+    "sensitiveStages": ["育苗期", "營養生長期", "開花期", "結果期"],
+    "riskFactors": ["蚜蟲傳播", "機械接觸傳播", "刀具傳播", "罹病株終身帶毒"],
+    "symptoms": ["新葉出現病徵", "葉片斑駁或畸形", "感染後約 10 至 14 天可見病徵"],
+    "advice": "加強蚜蟲防治，農事操作時避免刀具或接觸傳播，移除罹病株。",
+    "notes": "依使用者提供之 AZAI 摘錄整理；環境數值主要反映媒介昆蟲風險，需再查證。",
+    "source": "AZAI 農業病蟲害智能管理決策系統",
+    "sourceUrl": "https://azai.tari.gov.tw/search/bug",
+    "updatedAt": "2026-07-04"
+  },
+  {
+    "id": "tomato-bacterial-wilt",
+    "crop": "番茄",
+    "crops": ["番茄"],
+    "name": "青枯病",
+    "pathogenType": "細菌性病害",
+    "conditions": {
+      "tempRange": [25, 35],
+      "humidityMin": 80,
+      "rainMin": 5,
+      "sunshineMax": 6,
+      "windSensitive": false
+    },
+    "sensitiveStages": ["營養生長期", "開花期", "結果期"],
+    "riskFactors": ["病土", "高溫高濕", "灌溉水傳播", "修剪操作傳播", "根部侵入"],
+    "symptoms": ["植株急速萎凋", "維管束褐變", "莖部受害後全株枯萎"],
+    "advice": "避免連作與病土傳播，改善排水，修剪工具應清潔，罹病株需移除。",
+    "notes": "依使用者提供之 AZAI 摘錄整理；環境數值為教學推估，需再查證。",
+    "source": "AZAI 農業病蟲害智能管理決策系統",
+    "sourceUrl": "https://azai.tari.gov.tw/search/bug",
+    "updatedAt": "2026-07-04"
+  },
+  {
+    "id": "cucumber-gummy-stem-blight",
+    "crop": "胡瓜",
+    "crops": ["胡瓜"],
+    "name": "蔓枯病",
+    "pathogenType": "真菌性病害",
+    "conditions": {
+      "tempRange": [22, 30],
+      "humidityMin": 85,
+      "rainMin": 5,
+      "sunshineMax": 4,
+      "windSensitive": true
+    },
+    "sensitiveStages": ["營養生長期", "開花期", "結果期"],
+    "riskFactors": ["作物殘體", "帶菌種子", "風雨傳播", "游離水", "柄孢子釋放"],
+    "symptoms": ["莖蔓出現病斑", "病斑擴大造成蔓部枯死", "高濕時病部可形成柄子器"],
+    "advice": "清除病殘體與使用健康種子，雨後降低葉蔓潮濕時間並加強巡田；若需用藥，請查詢合法登記藥劑。",
+    "notes": "AZAI 提及柄孢子需有游離水數小時才能釋出並發芽侵染；環境數值為教學推估，需再查證。",
+    "source": "AZAI 農業病蟲害智能管理決策系統",
+    "sourceUrl": "https://azai.tari.gov.tw/search/bug",
+    "updatedAt": "2026-07-04"
+  },
+  {
+    "id": "rice-yellow-dwarf",
+    "crop": "水稻",
+    "crops": ["水稻"],
+    "name": "黃萎病",
+    "pathogenType": "其他",
+    "conditions": {
+      "tempRange": [20, 30],
+      "humidityMin": 70,
+      "rainMin": 0,
+      "sunshineMax": 7,
+      "windSensitive": false
+    },
+    "sensitiveStages": ["秧苗期", "分蘗期", "營養生長期"],
+    "riskFactors": ["黑尾葉蟬傳播", "偽黑尾葉蟬傳播", "原黑尾葉蟬傳播", "再生稻", "禾本科雜草"],
+    "symptoms": ["植株黃化", "植株矮化或萎縮", "生育不良"],
+    "advice": "管理媒介葉蟬、再生稻與禾本科雜草，降低下一期作初次感染源。",
+    "notes": "AZAI 將病原描述為菌質體；schema 無菌質體分類，暫歸為其他。環境數值主要反映媒介昆蟲風險，需再查證。",
+    "source": "AZAI 農業病蟲害智能管理決策系統",
+    "sourceUrl": "https://azai.tari.gov.tw/search/bug",
+    "updatedAt": "2026-07-04"
+  },
+  {
+    "id": "rice-yellow-leaf-virus",
+    "crop": "水稻",
+    "crops": ["水稻"],
+    "name": "黃葉病",
+    "pathogenType": "病毒性病害",
+    "conditions": {
+      "tempRange": [20, 30],
+      "humidityMin": 70,
+      "rainMin": 0,
+      "sunshineMax": 7,
+      "windSensitive": false
+    },
+    "sensitiveStages": ["秧苗期", "分蘗期", "營養生長期"],
+    "riskFactors": ["黑尾葉蟬傳播", "偽黑尾葉蟬傳播", "原黑尾葉蟬傳播", "帶毒蟲終生帶毒", "媒介昆蟲不經卵傳播"],
+    "symptoms": ["葉片黃化", "植株生育不良", "感染後經潛伏期才顯現病徵"],
+    "advice": "加強秧苗期媒介葉蟬監測，移除病株並控制田間帶毒媒介昆蟲密度。",
+    "notes": "AZAI 提及第一期作秧苗感染後約 3 至 4 週顯症，第二期作約 1 至 2 週顯症；環境數值主要反映媒介昆蟲風險，需再查證。",
+    "source": "AZAI 農業病蟲害智能管理決策系統",
+    "sourceUrl": "https://azai.tari.gov.tw/search/bug",
+    "updatedAt": "2026-07-04"
+  },
+  {
+    "id": "grape-ripe-rot",
+    "crop": "葡萄",
+    "crops": ["葡萄"],
+    "name": "晚腐病",
+    "pathogenType": "真菌性病害",
+    "conditions": {
+      "tempRange": [24, 30],
+      "humidityMin": 85,
+      "rainMin": 5,
+      "sunshineMax": 4,
+      "windSensitive": false
+    },
+    "sensitiveStages": ["萌芽期", "新梢期", "開花期", "結果期"],
+    "riskFactors": ["乾枯葉片殘留", "枝條與芽點帶菌", "降雨", "受污染果實套袋"],
+    "symptoms": ["幼嫩組織受感染", "果實成熟期腐敗", "病部產生分生孢子"],
+    "advice": "清除乾枯葉片與病枝，避免重複使用受污染套袋，降雨後加強巡園；若需用藥，請查詢合法登記藥劑。",
+    "notes": "依使用者提供之 AZAI 摘錄整理；環境數值與部分症狀為教學推估，需再查證。",
+    "source": "AZAI 農業病蟲害智能管理決策系統",
+    "sourceUrl": "https://azai.tari.gov.tw/search/bug",
+    "updatedAt": "2026-07-04"
+  },
+  {
+    "id": "grape-downy-mildew",
+    "crop": "葡萄",
+    "crops": ["葡萄"],
+    "name": "露菌病",
+    "pathogenType": "卵菌類病害",
+    "conditions": {
+      "tempRange": [18, 25],
+      "humidityMin": 90,
+      "rainMin": 5,
+      "sunshineMax": 3,
+      "windSensitive": false
+    },
+    "sensitiveStages": ["萌芽期", "新梢期", "開花期", "結果期"],
+    "riskFactors": ["梅雨季", "潛伏於休眠芽", "游走孢子", "葉面有水"],
+    "symptoms": ["幼嫩組織感染", "葉片出現黃化斑", "葉背高濕時出現白色霉層"],
+    "advice": "梅雨季前後加強巡園，降低葉面積水與園區濕度；若需用藥，請查詢合法登記藥劑。",
+    "notes": "AZAI 提及臺灣初次感染源應來自潛伏於芽中的菌體；環境數值與部分症狀為教學推估，需再查證。",
+    "source": "AZAI 農業病蟲害智能管理決策系統",
+    "sourceUrl": "https://azai.tari.gov.tw/search/bug",
+    "updatedAt": "2026-07-04"
+  },
+  {
+    "id": "strawberry-gray-mold",
+    "crop": "草莓",
+    "crops": ["草莓"],
+    "name": "灰黴病",
+    "pathogenType": "真菌性病害",
+    "conditions": {
+      "tempRange": [15, 23],
+      "humidityMin": 90,
+      "rainMin": 5,
+      "sunshineMax": 3,
+      "windSensitive": false
+    },
+    "sensitiveStages": ["開花期", "結果期", "採收期"],
+    "riskFactors": ["12月至翌年3月降雨", "連續下雨", "高冷地延後發病", "果實感染"],
+    "symptoms": ["果實腐敗", "病部產生灰色霉層", "嚴重影響商品價值與產量"],
+    "advice": "冬春降雨期加強通風與果實管理，避免果面潮濕，清除罹病果；若需用藥，請查詢合法登記藥劑。",
+    "notes": "AZAI 提及本病多於 12 月至翌年 2–3 月遇雨發生，高冷地可持續至 4–5 月初；環境數值為教學推估，需再查證。",
+    "source": "AZAI 農業病蟲害智能管理決策系統",
+    "sourceUrl": "https://azai.tari.gov.tw/search/bug",
+    "updatedAt": "2026-07-04"
+  },
+  {
+    "id": "corn-sheath-blight",
+    "crop": "玉米",
+    "crops": ["玉米"],
+    "name": "紋枯病",
+    "pathogenType": "真菌性病害",
+    "conditions": {
+      "tempRange": [25, 32],
+      "humidityMin": 85,
+      "rainMin": 0,
+      "sunshineMax": 5,
+      "windSensitive": false
+    },
+    "sensitiveStages": ["營養生長期", "抽雄期", "吐絲期", "籽粒充實期"],
+    "riskFactors": ["菌核", "種子傳播", "田間殘留菌核", "菌絲二次傳播"],
+    "symptoms": ["葉部出現病斑", "莖部或穗部受害", "病斑上形成菌核"],
+    "advice": "清除田間病殘體與菌核，避免使用帶菌種子，必要時搭配輪作降低初次感染源。",
+    "notes": "AZAI 提及菌核為最主要初次感染源，病菌亦可藉種子傳播；環境數值與部分症狀為教學推估，需再查證。",
+    "source": "AZAI 農業病蟲害智能管理決策系統",
+    "sourceUrl": "https://azai.tari.gov.tw/search/bug",
+    "updatedAt": "2026-07-04"
+  },
+  {
+    "id": "rice-bacterial-grain-rot",
+    "crop": "水稻",
+    "crops": ["水稻"],
+    "name": "細菌性榖枯病",
+    "pathogenType": "細菌性病害",
+    "conditions": {
+      "tempRange": [28, 35],
+      "humidityMin": 85,
+      "rainMin": 5,
+      "sunshineMax": 5,
+      "windSensitive": false
+    },
+    "sensitiveStages": ["分蘗後期", "抽穗期", "開花期"],
+    "riskFactors": ["帶菌稻種", "稻株表面帶菌", "抽穗期感染幼穗", "高溫高濕"],
+    "symptoms": ["幼穗受感染", "穀粒褐化或枯死", "稻穀品質下降"],
+    "advice": "使用健康種子並注意種子處理，抽穗期遇高溫高濕或降雨時加強監測。",
+    "notes": "AZAI 提及本菌可經稻種傳播，甚少經土壤傳播；環境數值與部分症狀為教學推估，需再查證。",
+    "source": "AZAI 農業病蟲害智能管理決策系統",
+    "sourceUrl": "https://azai.tari.gov.tw/search/bug",
+    "updatedAt": "2026-07-04"
+  },
+  {
+    "id": "grape-rust",
+    "crop": "葡萄",
+    "crops": ["葡萄"],
+    "name": "銹病",
+    "pathogenType": "真菌性病害",
+    "conditions": {
+      "tempRange": [24, 30],
+      "humidityMin": 75,
+      "rainMin": 0,
+      "sunshineMax": 6,
+      "windSensitive": true
+    },
+    "sensitiveStages": ["新梢期", "結果期", "採收期"],
+    "riskFactors": ["夏孢子重複感染", "風媒傳播", "7月後冬孢子出現", "無需中間寄主"],
+    "symptoms": ["葉片出現銹色孢子堆", "葉片黃化", "嚴重時葉片早落"],
+    "advice": "7月後加強葉片巡查，移除重病葉並維持園區通風；若需用藥，請查詢合法登記藥劑。",
+    "notes": "AZAI 提及臺灣主要靠夏孢子傳播，且夏孢子可重複感染；環境數值與部分症狀為教學推估，需再查證。",
+    "source": "AZAI 農業病蟲害智能管理決策系統",
+    "sourceUrl": "https://azai.tari.gov.tw/search/bug",
+    "updatedAt": "2026-07-04"
+  },
+  {
+    "id": "citrus-black-spot",
+    "crop": "柑橘",
+    "crops": ["柑橘"],
+    "name": "黑星病",
+    "pathogenType": "真菌性病害",
+    "conditions": {
+      "tempRange": [20, 28],
+      "humidityMin": 85,
+      "rainMin": 5,
+      "sunshineMax": 4,
+      "windSensitive": true
+    },
+    "sensitiveStages": ["新梢期", "幼果期", "果實成熟期"],
+    "riskFactors": ["枯葉帶菌", "春季雨水或露水", "風雨傳播", "高濕"],
+    "symptoms": ["幼果與幼葉受感染", "果實近成熟期形成深褐色或黑色斑", "落葉成為隔年感染源"],
+    "advice": "清除落葉與病葉，春季雨水或露水多時加強幼果與幼葉保護。",
+    "notes": "依使用者提供之 AZAI 摘錄整理；環境數值為教學推估，需再查證。",
+    "source": "AZAI 農業病蟲害智能管理決策系統",
+    "sourceUrl": "https://azai.tari.gov.tw/search/bug",
+    "updatedAt": "2026-07-04"
+  },
+  {
+    "id": "citrus-scab",
+    "crop": "柑橘",
+    "crops": ["柑橘"],
+    "name": "瘡痂病",
+    "pathogenType": "真菌性病害",
+    "conditions": {
+      "tempRange": [18, 26],
+      "humidityMin": 85,
+      "rainMin": 5,
+      "sunshineMax": 4,
+      "windSensitive": true
+    },
+    "sensitiveStages": ["春梢期", "幼果期"],
+    "riskFactors": ["葉片與枝條病斑越冬", "翌春降雨", "風雨飛濺", "幼嫩組織"],
+    "symptoms": ["葉片或果實形成瘡痂狀突起病斑", "新病斑可再次產孢感染", "果實外觀受損"],
+    "advice": "春季新梢與幼果期加強巡園，剪除罹病枝葉並降低風雨飛濺傳播。",
+    "notes": "AZAI 提及孢子發芽侵入後約一星期左右出現病斑；環境數值與部分症狀為教學推估，需再查證。",
+    "source": "AZAI 農業病蟲害智能管理決策系統",
+    "sourceUrl": "https://azai.tari.gov.tw/search/bug",
+    "updatedAt": "2026-07-04"
+  },
+  {
+    "id": "passion-fruit-woodiness-virus",
+    "crop": "百香果",
+    "crops": ["百香果"],
+    "name": "木質化病毒病",
+    "pathogenType": "病毒性病害",
+    "conditions": {
+      "tempRange": [20, 32],
+      "humidityMin": 60,
+      "rainMin": 0,
+      "sunshineMax": 8,
+      "windSensitive": false
+    },
+    "sensitiveStages": ["苗期", "新梢期", "開花期", "結果期"],
+    "riskFactors": ["帶毒接穗", "帶毒砧木", "嫁接傳播", "蚜蟲非永續型傳播", "野生寄主"],
+    "symptoms": ["果實木質化", "葉片斑駁或畸形", "植株生育受影響"],
+    "advice": "使用健康接穗與砧木，移除疑似帶毒植株，並加強蚜蟲監測與防治。",
+    "notes": "AZAI 提及 EAPV-AO 可經嫁接與蚜蟲非永續型傳播；環境數值主要反映媒介風險，需再查證。",
+    "source": "AZAI 農業病蟲害智能管理決策系統",
+    "sourceUrl": "https://azai.tari.gov.tw/search/bug",
+    "updatedAt": "2026-07-04"
+  },
+  {
+    "id": "tomato-bacterial-spot",
+    "crop": "番茄",
+    "crops": ["番茄"],
+    "name": "細菌性斑點病",
+    "pathogenType": "細菌性病害",
+    "conditions": {
+      "tempRange": [24, 32],
+      "humidityMin": 85,
+      "rainMin": 5,
+      "sunshineMax": 4,
+      "windSensitive": true
+    },
+    "sensitiveStages": ["育苗期", "營養生長期", "開花期", "結果期"],
+    "riskFactors": ["番茄殘株", "帶菌種子", "雜草殘存病菌", "風雨傳播", "灌溉水噴濺"],
+    "symptoms": ["葉片出現細小斑點", "果實表面形成斑點", "病斑可作為二次感染源"],
+    "advice": "使用健康種子，清除番茄殘株與雜草，避免噴灌造成病菌飛濺；若需用藥，請查詢合法登記藥劑。",
+    "notes": "依使用者提供之 AZAI 摘錄整理；環境數值與部分症狀為教學推估，需再查證。",
+    "source": "AZAI 農業病蟲害智能管理決策系統",
+    "sourceUrl": "https://azai.tari.gov.tw/search/bug",
+    "updatedAt": "2026-07-04"
+  },
+  {
+    "id": "tea-branch-blight",
+    "crop": "茶",
+    "crops": ["茶"],
+    "name": "枝枯病",
+    "pathogenType": "真菌性病害",
+    "conditions": {
+      "tempRange": [25, 35],
+      "humidityMin": 50,
+      "rainMin": 0,
+      "sunshineMax": 8,
+      "windSensitive": false
+    },
+    "sensitiveStages": ["營養生長期", "修剪後", "夏季"],
+    "riskFactors": ["夏季極度乾旱", "枝條帶菌", "分生孢子", "菌絲越冬"],
+    "symptoms": ["枝條枯萎", "枝條病部形成柄子器", "茶樹生長勢衰弱"],
+    "advice": "夏季乾旱期注意茶園水分管理，剪除枯枝並清除病殘體；若需用藥，請查詢合法登記藥劑。",
+    "notes": "AZAI 提及夏季極度乾旱會使茶園發病嚴重；環境數值為教學推估，需再查證。",
+    "source": "AZAI 農業病蟲害智能管理決策系統",
+    "sourceUrl": "https://azai.tari.gov.tw/search/bug",
+    "updatedAt": "2026-07-04"
+  },
+  {
+    "id": "tomato-mosaic-virus",
+    "crop": "番茄",
+    "crops": ["番茄"],
+    "name": "嵌紋病毒病",
+    "pathogenType": "病毒性病害",
+    "conditions": {
+      "tempRange": [20, 32],
+      "humidityMin": 60,
+      "rainMin": 0,
+      "sunshineMax": 8,
+      "windSensitive": false
+    },
+    "sensitiveStages": ["育苗期", "營養生長期", "開花期", "結果期"],
+    "riskFactors": ["機械接觸傳播", "汙染種殼", "刀具傳播", "罹病株終身帶毒"],
+    "symptoms": ["新葉出現嵌紋", "葉片畸形", "感染後約 10 天可觀察到病徵"],
+    "advice": "使用健康種子，農事操作與刀具應清潔消毒，移除罹病株避免接觸傳播。",
+    "notes": "依使用者提供之 AZAI 摘錄整理；環境數值主要反映栽培與操作傳播風險，需再查證。",
+    "source": "AZAI 農業病蟲害智能管理決策系統",
+    "sourceUrl": "https://azai.tari.gov.tw/search/bug",
+    "updatedAt": "2026-07-04"
+  },
+  {
+    "id": "papaya-powdery-mildew",
+    "crop": "木瓜",
+    "crops": ["木瓜"],
+    "name": "白粉病",
+    "pathogenType": "真菌性病害",
+    "conditions": {
+      "tempRange": [20, 30],
+      "humidityMin": 70,
+      "rainMin": 0,
+      "sunshineMax": 6,
+      "windSensitive": true
+    },
+    "sensitiveStages": ["新梢期", "開花期", "結果期"],
+    "riskFactors": ["鄰近果園感染源", "老葉帶菌", "芽體或花序潛伏", "空氣傳播"],
+    "symptoms": ["葉片或花序出現白粉狀病斑", "病斑擴大", "嚴重時影響植株生長"],
+    "advice": "清除老葉與罹病部位，保持園區通風，鄰近果園發病時加強巡園；若需用藥，請查詢合法登記藥劑。",
+    "notes": "依使用者提供之 AZAI 摘錄整理；環境數值與部分症狀為教學推估，需再查證。",
+    "source": "AZAI 農業病蟲害智能管理決策系統",
+    "sourceUrl": "https://azai.tari.gov.tw/search/bug",
+    "updatedAt": "2026-07-04"
+  },
+  {
+    "id": "cucumber-downy-mildew",
+    "crop": "胡瓜",
+    "crops": ["胡瓜"],
+    "name": "露菌病",
+    "pathogenType": "卵菌類病害",
+    "conditions": {
+      "tempRange": [18, 28],
+      "humidityMin": 90,
+      "rainMin": 5,
+      "sunshineMax": 3,
+      "windSensitive": true
+    },
+    "sensitiveStages": ["幼苗期", "營養生長期", "開花期", "結果期"],
+    "riskFactors": ["種子傳播", "卵孢子殘存土中", "風媒傳播", "降雨頻繁", "游離水"],
+    "symptoms": ["葉片出現黃化角斑", "高濕時葉背出現霉層", "嚴重時葉片枯萎"],
+    "advice": "使用健康種子，雨季避免葉面長時間潮濕並加強通風；若需用藥，請查詢合法登記藥劑。",
+    "notes": "AZAI 提及孢囊需在有游離水環境下產生游走子並自氣孔侵入；環境數值與部分症狀為教學推估，需再查證。",
+    "source": "AZAI 農業病蟲害智能管理決策系統",
+    "sourceUrl": "https://azai.tari.gov.tw/search/bug",
+    "updatedAt": "2026-07-04"
+  },
+  {
+    "id": "pineapple-mealybug-wilt-associated-virus",
+    "crop": "鳳梨",
+    "crops": ["鳳梨"],
+    "name": "介殼蟲萎凋相關病毒",
+    "pathogenType": "病毒性病害",
+    "conditions": {
+      "tempRange": [22, 32],
+      "humidityMin": 60,
+      "rainMin": 0,
+      "sunshineMax": 8,
+      "windSensitive": false
+    },
+    "sensitiveStages": ["種苗期", "營養生長期", "結果期"],
+    "riskFactors": ["受感染種苗", "粉介殼蟲傳播", "螞蟻搬運粉介殼蟲", "媒介昆蟲吸食汁液"],
+    "symptoms": ["植株萎凋", "葉片退綠或紅化", "植株生育衰弱"],
+    "advice": "使用健康種苗，管理粉介殼蟲與螞蟻，移除疑似受感染植株。",
+    "notes": "依使用者提供之 AZAI 摘錄整理；環境數值主要反映媒介昆蟲活動風險，需再查證。",
+    "source": "AZAI 農業病蟲害智能管理決策系統",
+    "sourceUrl": "https://azai.tari.gov.tw/search/bug",
+    "updatedAt": "2026-07-04"
+  },
+  {
+    "id": "green-onion-purple-blotch",
+    "crop": "青蔥",
+    "crops": ["青蔥"],
+    "name": "紫斑病",
+    "pathogenType": "真菌性病害",
+    "conditions": {
+      "tempRange": [20, 28],
+      "humidityMin": 85,
+      "rainMin": 5,
+      "sunshineMax": 4,
+      "windSensitive": true
+    },
+    "sensitiveStages": ["營養生長期", "採收期"],
+    "riskFactors": ["作物殘體", "帶菌種子", "高濕", "露水期", "風雨傳播"],
+    "symptoms": ["葉片出現紫褐色病斑", "病斑擴大後葉片枯萎", "高濕時病勢加劇"],
+    "advice": "避免使用帶菌種子，清除作物殘體，露水期與風雨後加強巡田。",
+    "notes": "AZAI 提及寄主範圍不明；環境數值與部分症狀為教學推估，需再查證。",
+    "source": "AZAI 農業病蟲害智能管理決策系統",
+    "sourceUrl": "https://azai.tari.gov.tw/search/bug",
+    "updatedAt": "2026-07-04"
+  },
+  {
+    "id": "green-onion-anthracnose-leaf-curl",
+    "crop": "青蔥",
+    "crops": ["青蔥"],
+    "name": "炭疽捲葉病",
+    "pathogenType": "真菌性病害",
+    "conditions": {
+      "tempRange": [25, 32],
+      "humidityMin": 85,
+      "rainMin": 5,
+      "sunshineMax": 4,
+      "windSensitive": true
+    },
+    "sensitiveStages": ["分苗期", "營養生長期", "採收期"],
+    "riskFactors": ["作物殘體", "種子帶菌", "分拆苗傳播", "高溫有水", "夏秋降雨頻繁"],
+    "symptoms": ["幼株出現嚴重病徵", "葉片捲曲", "葉片病斑與枯萎"],
+    "advice": "避免使用帶菌分苗，夏秋降雨後加強巡田，清除病殘體並降低葉面積水。",
+    "notes": "AZAI 提及四季蔥類成株感染帶菌可無病徵，分拆苗種植後幼株可能出現嚴重病徵；環境數值與部分症狀為教學推估，需再查證。",
+    "source": "AZAI 農業病蟲害智能管理決策系統",
+    "sourceUrl": "https://azai.tari.gov.tw/search/bug",
+    "updatedAt": "2026-07-04"
+  },
+  {
+    "id": "mango-bacterial-black-spot",
+    "crop": "檬果",
+    "crops": ["檬果"],
+    "name": "黑斑病",
+    "pathogenType": "細菌性病害",
+    "conditions": {
+      "tempRange": [20, 32],
+      "humidityMin": 85,
+      "rainMin": 5,
+      "sunshineMax": 5,
+      "windSensitive": false
+    },
+    "sensitiveStages": ["新梢期", "開花期", "幼果期", "結果期"],
+    "riskFactors": ["氣溫20℃以上", "降雨", "枯枝落葉", "老舊病斑", "種苗遠距離傳播"],
+    "symptoms": ["葉片或枝條形成黑色病斑", "幼嫩組織或傷口受感染", "侵入後約2至10天出現病徵"],
+    "advice": "清除枯枝落葉與罹病枝葉，雨季加強防護，避免使用帶病種苗。",
+    "notes": "AZAI 提及病菌可在枯枝落葉存活約9個月，在活罹病葉片、枝條及樹幹上可存活10個月以上；環境數值部分為教學推估，需再查證。",
+    "source": "AZAI 農業病蟲害智能管理決策系統",
+    "sourceUrl": "https://azai.tari.gov.tw/search/bug",
+    "updatedAt": "2026-07-04"
+  },
+  {
+    "id": "general-plant-parasitic-nematodes",
+    "crop": "多種作物",
+    "crops": ["多種作物"],
+    "name": "線蟲",
+    "pathogenType": "線蟲危害",
+    "conditions": {
+      "tempRange": [20, 32],
+      "humidityMin": 60,
+      "rainMin": 0,
+      "sunshineMax": 8,
+      "windSensitive": false
+    },
+    "sensitiveStages": ["苗期", "營養生長期"],
+    "riskFactors": ["帶線蟲土壤", "土壤傳播", "根系取食", "寄主範圍廣"],
+    "symptoms": ["根系受害", "植株生育不良", "植株黃化或萎凋"],
+    "advice": "避免帶線蟲土壤移入，採輪作、土壤處理與健康種苗管理；建議後續依作物與線蟲種類拆分資料。",
+    "notes": "AZAI 原始項目為一般性「線蟲」，未指定作物與線蟲種類；本筆為暫存通用資料，需再查證。",
+    "source": "AZAI 農業病蟲害智能管理決策系統",
+    "sourceUrl": "https://azai.tari.gov.tw/search/bug",
+    "updatedAt": "2026-07-04"
+  },
+  {
+    "id": "green-onion-downy-mildew",
+    "crop": "青蔥",
+    "crops": ["青蔥"],
+    "name": "露菌病",
+    "pathogenType": "卵菌類病害",
+    "conditions": {
+      "tempRange": [15, 24],
+      "humidityMin": 90,
+      "rainMin": 5,
+      "sunshineMax": 3,
+      "windSensitive": true
+    },
+    "sensitiveStages": ["苗期", "營養生長期", "採收期"],
+    "riskFactors": ["種苗傳播", "卵孢子殘存土中", "風媒傳播", "降雨頻繁", "游離水"],
+    "symptoms": ["葉片出現黃化或淡色病斑", "高濕時病部產生霉層", "嚴重時葉片枯萎"],
+    "advice": "使用健康種苗，雨季降低葉面潮濕時間並改善通風；若需用藥，請查詢合法登記藥劑。",
+    "notes": "AZAI 提及限青蔥，孢囊在有游離水下可產生游走子自氣孔侵入；環境數值與部分症狀為教學推估，需再查證。",
+    "source": "AZAI 農業病蟲害智能管理決策系統",
+    "sourceUrl": "https://azai.tari.gov.tw/search/bug",
+    "updatedAt": "2026-07-04"
+  },
+  {
+    "id": "tea-blister-blight",
+    "crop": "茶",
+    "crops": ["茶"],
+    "name": "餅病",
+    "pathogenType": "真菌性病害",
+    "conditions": {
+      "tempRange": [16, 20],
+      "humidityMin": 100,
+      "rainMin": 0,
+      "sunshineMax": 3,
+      "windSensitive": false
+    },
+    "sensitiveStages": ["新梢期", "嫩葉期"],
+    "riskFactors": ["高濕", "冷涼", "嫩葉感染", "擔孢子成熟後短時間具發芽能力"],
+    "symptoms": ["葉片形成透明小斑點", "病斑逐漸膨起呈餅狀", "病斑可產生擔孢子"],
+    "advice": "冷涼高濕時加強茶園巡查，維持通風並剪除罹病嫩葉；若需用藥，請查詢合法登記藥劑。",
+    "notes": "AZAI 提及 16–20°C、濕度 100% 時擔孢子可發芽並產生附著器；本筆可能與既有 tea-blister-blight 重複，合併時建議更新條件與 notes。",
+    "source": "AZAI 農業病蟲害智能管理決策系統",
+    "sourceUrl": "https://azai.tari.gov.tw/search/bug",
+    "updatedAt": "2026-07-04"
+  },
+  {
+    "id": "pineapple-heart-rot",
+    "crop": "鳳梨",
+    "crops": ["鳳梨"],
+    "name": "心腐病",
+    "pathogenType": "卵菌類病害",
+    "conditions": {
+      "tempRange": [22, 30],
+      "humidityMin": 90,
+      "rainMin": 5,
+      "sunshineMax": 4,
+      "windSensitive": false
+    },
+    "sensitiveStages": ["種苗期", "幼苗期", "營養生長期"],
+    "riskFactors": ["卵孢子殘存土壤", "厚膜孢子殘存土壤", "帶菌種苗", "雨水與灌溉水傳播", "游走子"],
+    "symptoms": ["心葉幼嫩組織腐爛", "植株心部腐敗", "吸芽可能受感染並帶菌傳播"],
+    "advice": "使用健康種苗，避免帶菌土壤與積水，雨季注意排水並避免灌溉水傳播。",
+    "notes": "依使用者提供之 AZAI 摘錄整理；環境數值為教學推估，需再查證。",
+    "source": "AZAI 農業病蟲害智能管理決策系統",
+    "sourceUrl": "https://azai.tari.gov.tw/search/bug",
+    "updatedAt": "2026-07-04"
+  },
+  {
+    "id": "tomato-phytophthora-blight",
+    "crop": "番茄",
+    "crops": ["番茄"],
+    "name": "疫病",
+    "pathogenType": "卵菌類病害",
+    "conditions": {
+      "tempRange": [20, 30],
+      "humidityMin": 90,
+      "rainMin": 5,
+      "sunshineMax": 3,
+      "windSensitive": true
+    },
+    "sensitiveStages": ["苗期", "營養生長期", "開花期", "結果期"],
+    "riskFactors": ["水分含量高", "降雨", "土壤或病組織殘存", "游走子", "溝渠水傳播", "病害週期短"],
+    "symptoms": ["侵入後兩三天可出現病斑", "莖葉或果實水浸狀腐敗", "病勢快速蔓延"],
+    "advice": "雨季與田間積水時加強巡田，改善排水並避免溝渠水傳播；若需用藥，請查詢合法登記藥劑。",
+    "notes": "AZAI 提及病害史僅需 3–5 天，傳播蔓延極快；環境數值為教學推估，需再查證。",
+    "source": "AZAI 農業病蟲害智能管理決策系統",
+    "sourceUrl": "https://azai.tari.gov.tw/search/bug",
+    "updatedAt": "2026-07-04"
+  },
+  {
+    "id": "papaya-stem-end-rot",
+    "crop": "木瓜",
+    "crops": ["木瓜"],
+    "name": "蒂腐病",
+    "pathogenType": "真菌性病害",
+    "conditions": {
+      "tempRange": [24, 30],
+      "humidityMin": 85,
+      "rainMin": 5,
+      "sunshineMax": 4,
+      "windSensitive": false
+    },
+    "sensitiveStages": ["結果期", "採收期", "採後貯運期"],
+    "riskFactors": ["葉柄帶菌", "雨水傳播", "露水傳播", "果實感染"],
+    "symptoms": ["果蒂附近腐敗", "果實腐爛", "採後貯運期病勢擴大"],
+    "advice": "清除罹病葉柄與病果，雨後與採收前後加強果實管理，採收後保持通風乾燥。",
+    "notes": "依使用者提供之 AZAI 摘錄整理；環境數值與部分症狀為教學推估，需再查證。",
+    "source": "AZAI 農業病蟲害智能管理決策系統",
+    "sourceUrl": "https://azai.tari.gov.tw/search/bug",
+    "updatedAt": "2026-07-04"
+  },
+  {
+    "id": "strawberry-angular-leaf-spot",
+    "crop": "草莓",
+    "crops": ["草莓"],
+    "name": "角斑病",
+    "pathogenType": "細菌性病害",
+    "conditions": {
+      "tempRange": [15, 25],
+      "humidityMin": 85,
+      "rainMin": 5,
+      "sunshineMax": 4,
+      "windSensitive": true
+    },
+    "sensitiveStages": ["育苗期", "營養生長期", "開花期", "結果期"],
+    "riskFactors": ["土壤越冬", "罹病殘體", "風雨傳播", "氣流傳播", "高濕"],
+    "symptoms": ["葉片形成角狀病斑", "病斑受葉脈限制", "嚴重時葉片枯萎"],
+    "advice": "清除罹病殘體，降低葉面濕度並避免風雨飛濺傳播；若需用藥，請查詢合法登記藥劑。",
+    "notes": "依使用者提供之 AZAI 摘錄整理；環境數值與部分症狀為教學推估，需再查證。",
+    "source": "AZAI 農業病蟲害智能管理決策系統",
+    "sourceUrl": "https://azai.tari.gov.tw/search/bug",
+    "updatedAt": "2026-07-04"
+  },
+  {
+    "id": "peanut-leaf-spot",
+    "crop": "花生",
+    "crops": ["花生"],
+    "name": "葉斑病",
+    "pathogenType": "真菌性病害",
+    "conditions": {
+      "tempRange": [24, 30],
+      "humidityMin": 85,
+      "rainMin": 5,
+      "sunshineMax": 5,
+      "windSensitive": false
+    },
+    "sensitiveStages": ["營養生長期", "開花期", "結莢期"],
+    "riskFactors": ["植株殘體", "分生孢子", "重複感染", "採收後殘體帶菌"],
+    "symptoms": ["葉片形成褐色斑點", "病斑擴大後葉片黃化", "嚴重時落葉"],
+    "advice": "採收後清除植株殘體，降低下期作初次感染源，雨季或高濕期加強巡田。",
+    "notes": "依使用者提供之 AZAI 摘錄整理；環境數值與部分症狀為教學推估，需再查證。",
+    "source": "AZAI 農業病蟲害智能管理決策系統",
+    "sourceUrl": "https://azai.tari.gov.tw/search/bug",
+    "updatedAt": "2026-07-04"
+  },
+  {
+    "id": "strawberry-leaf-spot",
+    "crop": "草莓",
+    "crops": ["草莓"],
+    "name": "葉斑病",
+    "pathogenType": "真菌性病害",
+    "conditions": {
+      "tempRange": [18, 26],
+      "humidityMin": 85,
+      "rainMin": 5,
+      "sunshineMax": 4,
+      "windSensitive": false
+    },
+    "sensitiveStages": ["育苗期", "營養生長期", "開花期", "結果期"],
+    "riskFactors": ["罹病殘體", "土壤越冬", "雨水傳播", "分生孢子"],
+    "symptoms": ["葉片出現斑點", "病斑擴大後葉片黃化", "嚴重時葉片枯萎"],
+    "advice": "清除罹病葉片與殘體，避免雨水飛濺造成分生孢子傳播。",
+    "notes": "依使用者提供之 AZAI 摘錄整理；環境數值與部分症狀為教學推估，需再查證。",
+    "source": "AZAI 農業病蟲害智能管理決策系統",
+    "sourceUrl": "https://azai.tari.gov.tw/search/bug",
+    "updatedAt": "2026-07-04"
+  },
+  {
+    "id": "tomato-powdery-mildew",
+    "crop": "番茄",
+    "crops": ["番茄"],
+    "name": "白粉病",
+    "pathogenType": "真菌性病害",
+    "conditions": {
+      "tempRange": [20, 28],
+      "humidityMin": 70,
+      "rainMin": 0,
+      "sunshineMax": 6,
+      "windSensitive": true
+    },
+    "sensitiveStages": ["營養生長期", "開花期", "結果期"],
+    "riskFactors": ["風媒傳播", "共同寄主雜草", "分生孢子", "二次感染源"],
+    "symptoms": ["葉片出現白色粉狀病斑", "病斑擴大", "嚴重時葉片黃化或枯萎"],
+    "advice": "清除共同寄主雜草並保持通風，發現白粉病斑時及早移除病葉。",
+    "notes": "依使用者提供之 AZAI 摘錄整理；環境數值與部分症狀為教學推估，需再查證。",
+    "source": "AZAI 農業病蟲害智能管理決策系統",
+    "sourceUrl": "https://azai.tari.gov.tw/search/bug",
+    "updatedAt": "2026-07-04"
+  },
+  {
+    "id": "tomato-gray-mold",
+    "crop": "番茄",
+    "crops": ["番茄"],
+    "name": "灰黴病",
+    "pathogenType": "真菌性病害",
+    "conditions": {
+      "tempRange": [15, 23],
+      "humidityMin": 90,
+      "rainMin": 0,
+      "sunshineMax": 3,
+      "windSensitive": false
+    },
+    "sensitiveStages": ["開花期", "結果期", "採收期"],
+    "riskFactors": ["寄主範圍廣", "腐生存活", "菌絲或菌核休眠", "高濕", "分生孢子"],
+    "symptoms": ["花器或果實腐敗", "病部出現灰色霉層", "罹病組織產生大量分生孢子"],
+    "advice": "設施栽培應降低濕度並移除罹病組織，避免灰黴孢子在田間累積。",
+    "notes": "依使用者提供之 AZAI 摘錄整理；環境數值與部分症狀為教學推估，需再查證。",
+    "source": "AZAI 農業病蟲害智能管理決策系統",
+    "sourceUrl": "https://azai.tari.gov.tw/search/bug",
+    "updatedAt": "2026-07-04"
+  },
+  {
+    "id": "mushroom-green-mold",
+    "crop": "菇類",
+    "crops": ["木耳", "香菇", "秀珍菇", "杏鮑菇", "鮑魚菇", "珊瑚菇", "蠔菇", "靈芝", "草菇", "洋菇"],
+    "name": "太空包綠黴病",
+    "pathogenType": "真菌性病害",
+    "conditions": {
+      "tempRange": [20, 30],
+      "humidityMin": 85,
+      "rainMin": 0,
+      "sunshineMax": 2,
+      "windSensitive": true
+    },
+    "sensitiveStages": ["菌絲培養期", "出菇期", "採收期"],
+    "riskFactors": ["環境中分生孢子", "木屑包或菇床污染", "高濕", "風水人畜昆蟲傳播", "菇類菌絲生長勢弱"],
+    "symptoms": ["太空包或菇床出現綠色黴層", "菇類菌絲受抑制", "子實體發育不良或腐敗"],
+    "advice": "加強太空包與菇場衛生，避免高濕與交叉污染，污染包應及早隔離移除。",
+    "notes": "依使用者提供之 AZAI 摘錄整理；本筆屬菇類栽培病害，環境數值為教學推估，需再查證。",
+    "source": "AZAI 農業病蟲害智能管理決策系統",
+    "sourceUrl": "https://azai.tari.gov.tw/search/bug",
+    "updatedAt": "2026-07-04"
+  },
+  {
+    "id": "grape-anthracnose",
+    "crop": "葡萄",
+    "crops": ["葡萄"],
+    "name": "黑痘病",
+    "pathogenType": "真菌性病害",
+    "conditions": {
+      "tempRange": [20, 28],
+      "humidityMin": 85,
+      "rainMin": 5,
+      "sunshineMax": 4,
+      "windSensitive": true
+    },
+    "sensitiveStages": ["萌芽期", "新梢期", "開花期", "幼果期"],
+    "riskFactors": ["病組織越冬", "分生孢子", "風雨飛濺", "幼嫩組織感染"],
+    "symptoms": ["葉片或新梢出現黑褐色病斑", "果實形成凹陷斑", "病斑擴大後影響果實外觀"],
+    "advice": "清除罹病枝葉與病果，雨季加強新梢與幼果期巡園，降低風雨飛濺傳播。",
+    "notes": "依使用者提供之 AZAI 摘錄整理；環境數值與部分症狀為教學推估，需再查證。",
+    "source": "AZAI 農業病蟲害智能管理決策系統",
+    "sourceUrl": "https://azai.tari.gov.tw/search/bug",
+    "updatedAt": "2026-07-04"
+  },
+  {
+    "id": "dragon-fruit-fruit-black-rot",
+    "crop": "紅龍果",
+    "crops": ["紅龍果"],
+    "name": "果實黑腐病",
+    "pathogenType": "真菌性病害",
+    "conditions": {
+      "tempRange": [24, 32],
+      "humidityMin": 85,
+      "rainMin": 5,
+      "sunshineMax": 5,
+      "windSensitive": false
+    },
+    "sensitiveStages": ["結果期", "採收期", "採後貯運期"],
+    "riskFactors": ["果實感染", "高溫高濕", "雨季", "病原資料不足"],
+    "symptoms": ["果實黑腐", "果實腐敗", "病徵資料尚待補充"],
+    "advice": "雨季與採收期加強果實巡查，移除腐敗果並保持通風乾燥。",
+    "notes": "AZAI 原文指出尚未有相關研究；本筆環境條件與症狀為暫時教學推估，需再查證。",
+    "source": "AZAI 農業病蟲害智能管理決策系統",
+    "sourceUrl": "https://azai.tari.gov.tw/search/bug",
+    "updatedAt": "2026-07-04"
+  },
+  {
+    "id": "corn-common-rust",
+    "crop": "玉米",
+    "crops": ["玉米"],
+    "name": "普通型銹病",
+    "pathogenType": "真菌性病害",
+    "conditions": {
+      "tempRange": [15, 25],
+      "humidityMin": 75,
+      "rainMin": 0,
+      "sunshineMax": 6,
+      "windSensitive": true
+    },
+    "sensitiveStages": ["營養生長期", "抽雄期", "吐絲期"],
+    "riskFactors": ["夏孢子", "風雨散佈", "春作與冬季裡作", "低溫有利存活", "黃花酢醬草中間寄主"],
+    "symptoms": ["葉片形成銹褐色孢子堆", "夏孢子可重複感染", "後期低溫形成深褐色至黑色冬孢子堆"],
+    "advice": "春作與冬季裡作加強巡田，發現銹斑擴散時及早管理，並注意周邊中間寄主。",
+    "notes": "依使用者提供之 AZAI 摘錄整理；環境數值部分為教學推估，需再查證。",
+    "source": "AZAI 農業病蟲害智能管理決策系統",
+    "sourceUrl": "https://azai.tari.gov.tw/search/bug",
+    "updatedAt": "2026-07-04"
+  },
+  {
+    "id": "corn-leaf-spot",
+    "crop": "玉米",
+    "crops": ["玉米"],
+    "name": "葉斑病",
+    "pathogenType": "真菌性病害",
+    "conditions": {
+      "tempRange": [22, 30],
+      "humidityMin": 85,
+      "rainMin": 5,
+      "sunshineMax": 5,
+      "windSensitive": true
+    },
+    "sensitiveStages": ["營養生長期", "抽雄期", "吐絲期", "籽粒充實期"],
+    "riskFactors": ["田間殘株越冬", "菌絲或分生孢子殘存", "風雨飛濺", "病葉空氣傳播"],
+    "symptoms": ["葉片形成病斑", "病斑擴大後葉片黃化", "嚴重時影響光合作用與產量"],
+    "advice": "清除田間殘株，雨季或高濕期加強巡田，必要時搭配輪作降低初次感染源。",
+    "notes": "依使用者提供之 AZAI 摘錄整理；環境數值與部分症狀為教學推估，需再查證。",
+    "source": "AZAI 農業病蟲害智能管理決策系統",
+    "sourceUrl": "https://azai.tari.gov.tw/search/bug",
+    "updatedAt": "2026-07-04"
+  },
+  {
+    "id": "rice-brown-spot",
+    "crop": "水稻",
+    "crops": ["水稻"],
+    "name": "胡麻葉枯病",
+    "pathogenType": "真菌性病害",
+    "conditions": {
+      "tempRange": [24, 30],
+      "humidityMin": 80,
+      "rainMin": 0,
+      "sunshineMax": 6,
+      "windSensitive": false
+    },
+    "sensitiveStages": ["浸種期", "育苗期", "分蘗期", "抽穗期"],
+    "riskFactors": ["帶菌稻種", "罹病稻草", "帶病秧苗", "禾本科寄主", "病組織菌絲長期存活"],
+    "symptoms": ["稻芽出現黃褐色水浸狀病變", "葉片或葉鞘形成褐色病斑", "稻穗形成墨綠轉黑褐色病斑"],
+    "advice": "使用健康稻種並處理帶菌稻草，育苗期注意病苗，降低帶病秧苗進入本田。",
+    "notes": "AZAI 提及感染稻種之分生孢子平均可存活兩年，病組織中菌絲平均可存活 3–4 年；環境數值為教學推估，需再查證。",
+    "source": "AZAI 農業病蟲害智能管理決策系統",
+    "sourceUrl": "https://azai.tari.gov.tw/search/bug",
+    "updatedAt": "2026-07-04"
+  },
+  {
+    "id": "dragon-fruit-fruit-rot",
+    "crop": "紅龍果",
+    "crops": ["紅龍果"],
+    "name": "果腐病",
+    "pathogenType": "真菌性病害",
+    "conditions": {
+      "tempRange": [24, 32],
+      "humidityMin": 85,
+      "rainMin": 5,
+      "sunshineMax": 5,
+      "windSensitive": false
+    },
+    "sensitiveStages": ["結果期", "採收期", "採後貯運期"],
+    "riskFactors": ["果實感染", "仙人掌科植物寄主", "高溫高濕", "病原資料不足"],
+    "symptoms": ["果實腐敗", "採收期或採後腐爛", "病徵資料尚待補充"],
+    "advice": "採收與貯運期加強果實管理，移除腐敗果並保持通風乾燥。",
+    "notes": "AZAI 原文指出尚未有相關研究；本筆環境條件與症狀為暫時教學推估，需再查證。",
+    "source": "AZAI 農業病蟲害智能管理決策系統",
+    "sourceUrl": "https://azai.tari.gov.tw/search/bug",
+    "updatedAt": "2026-07-04"
+  },
+  {
+    "id": "dragon-fruit-anthracnose",
+    "crop": "紅龍果",
+    "crops": ["紅龍果"],
+    "name": "炭疽病",
+    "pathogenType": "真菌性病害",
+    "conditions": {
+      "tempRange": [24, 30],
+      "humidityMin": 85,
+      "rainMin": 5,
+      "sunshineMax": 4,
+      "windSensitive": false
+    },
+    "sensitiveStages": ["結果期", "採收期", "採後貯運期"],
+    "riskFactors": ["分生孢子感染果實", "莖或殘體殘存", "寄主範圍尚未釐清", "高濕"],
+    "symptoms": ["果實出現炭疽病斑", "果實腐敗", "莖部感染力較弱"],
+    "advice": "清除殘體與病果，採收前後加強果實管理，降低高濕與雨水飛濺。",
+    "notes": "AZAI 提及病原可感染紅龍果果實，但對莖感染力不強；環境數值與部分症狀為教學推估，需再查證。",
+    "source": "AZAI 農業病蟲害智能管理決策系統",
+    "sourceUrl": "https://azai.tari.gov.tw/search/bug",
+    "updatedAt": "2026-07-04"
+  },
+  {
+    "id": "citrus-canker",
+    "crop": "柑橘",
+    "crops": ["柑橘"],
+    "name": "潰瘍病",
+    "pathogenType": "細菌性病害",
+    "conditions": {
+      "tempRange": [20, 30],
+      "humidityMin": 85,
+      "rainMin": 5,
+      "sunshineMax": 5,
+      "windSensitive": true
+    },
+    "sensitiveStages": ["春梢期", "幼葉期", "幼果期", "夏秋梢期"],
+    "riskFactors": ["病斑越冬", "雨水飛濺", "風雨傳播", "昆蟲或小動物傳播", "刀剪工具傳播", "傷口感染"],
+    "symptoms": ["葉片形成突起潰瘍狀病斑", "幼果受害形成病斑", "夏秋梢病斑可成為二次感染源"],
+    "advice": "雨季與新梢期加強防護，修剪工具保持清潔，移除重病枝葉並減少傷口感染。",
+    "notes": "依使用者提供之 AZAI 摘錄整理；環境數值與部分症狀為教學推估，需再查證。",
+    "source": "AZAI 農業病蟲害智能管理決策系統",
+    "sourceUrl": "https://azai.tari.gov.tw/search/bug",
+    "updatedAt": "2026-07-04"
+  },
+  {
+    "id": "citrus-foot-root-rot",
+    "crop": "柑橘",
+    "crops": ["柑橘"],
+    "name": "裾腐病與根腐病",
+    "pathogenType": "卵菌類病害",
+    "conditions": {
+      "tempRange": [20, 30],
+      "humidityMin": 90,
+      "rainMin": 5,
+      "sunshineMax": 4,
+      "windSensitive": false
+    },
+    "sensitiveStages": ["苗木期", "新梢期", "結果期"],
+    "riskFactors": ["陰濕環境", "風雨與灌溉水", "噴灑灌溉水", "傷口", "厚膜孢子與卵孢子存活", "人畜工具傳播"],
+    "symptoms": ["細根腐敗", "樹幹或主根傷口受感染", "裾部腐敗", "果實或新梢受害"],
+    "advice": "改善排水並避免樹幹基部長期潮濕，減少傷口與帶菌水流傳播，工具使用後清潔。",
+    "notes": "AZAI 提及疫病菌孢囊與游走子需靠水分傳播，無性世代生活史約 5–7 天；環境數值為教學推估，需再查證。",
+    "source": "AZAI 農業病蟲害智能管理決策系統",
+    "sourceUrl": "https://azai.tari.gov.tw/search/bug",
+    "updatedAt": "2026-07-04"
+  },
+  {
+    "id": "peanut-southern-blight",
+    "crop": "花生",
+    "crops": ["花生"],
+    "name": "白絹病",
+    "pathogenType": "真菌性病害",
+    "conditions": {
+      "tempRange": [25, 35],
+      "humidityMin": 80,
+      "rainMin": 0,
+      "sunshineMax": 6,
+      "windSensitive": false
+    },
+    "sensitiveStages": ["苗期", "營養生長期", "開花期", "結莢期"],
+    "riskFactors": ["土壤菌核", "有機物殘留", "高土溫高濕", "地際部感染", "菌核再形成"],
+    "symptoms": ["地際部出現白色絹絲狀菌絲", "植株萎凋", "病部形成菌核"],
+    "advice": "降低田間病殘體與菌核累積，避免高溫高濕與排水不良，可搭配輪作管理。",
+    "notes": "依使用者提供之 AZAI 摘錄整理；環境數值與部分症狀為教學推估，需再查證。",
+    "source": "AZAI 農業病蟲害智能管理決策系統",
+    "sourceUrl": "https://azai.tari.gov.tw/search/bug",
+    "updatedAt": "2026-07-04"
+  },
+  {
+    "id": "peanut-witches-broom",
+    "crop": "花生",
+    "crops": ["花生"],
+    "name": "簇葉病",
+    "pathogenType": "其他",
+    "conditions": {
+      "tempRange": [20, 32],
+      "humidityMin": 60,
+      "rainMin": 0,
+      "sunshineMax": 8,
+      "windSensitive": false
+    },
+    "sensitiveStages": ["苗期", "營養生長期", "開花期", "結莢期"],
+    "riskFactors": ["菌質體", "雜草病株周年存在", "南斑葉蟬傳播", "田間第一次感染源"],
+    "symptoms": ["植株簇生小葉", "節間縮短", "生育不良"],
+    "advice": "清除田間及周邊罹病雜草，並加強南斑葉蟬監測與防治。",
+    "notes": "AZAI 將病原描述為菌質體；schema 無菌質體分類，暫歸為其他。環境數值主要反映媒介昆蟲風險，需再查證。",
+    "source": "AZAI 農業病蟲害智能管理決策系統",
+    "sourceUrl": "https://azai.tari.gov.tw/search/bug",
+    "updatedAt": "2026-07-04"
+  },
+  {
+    "id": "peanut-root-knot-nematode",
+    "crop": "花生",
+    "crops": ["花生"],
+    "name": "根瘤線蟲",
+    "pathogenType": "線蟲危害",
+    "conditions": {
+      "tempRange": [20, 32],
+      "humidityMin": 60,
+      "rainMin": 0,
+      "sunshineMax": 8,
+      "windSensitive": false
+    },
+    "sensitiveStages": ["苗期", "營養生長期", "開花期", "結莢期"],
+    "riskFactors": ["線蟲卵殘存土壤", "幼蟲殘存土壤", "灌溉水污染", "根系侵染"],
+    "symptoms": ["根部形成根瘤", "植株黃化", "生育衰弱或萎凋"],
+    "advice": "避免帶線蟲土壤與灌溉水污染，採輪作、健康種苗與土壤管理降低線蟲密度。",
+    "notes": "依使用者提供之 AZAI 摘錄整理；環境數值為教學推估，需再查證。",
+    "source": "AZAI 農業病蟲害智能管理決策系統",
+    "sourceUrl": "https://azai.tari.gov.tw/search/bug",
+    "updatedAt": "2026-07-04"
+  },
+  {
+    "id": "passion-fruit-phytophthora-blight",
+    "crop": "百香果",
+    "crops": ["百香果"],
+    "name": "疫病",
+    "pathogenType": "卵菌類病害",
+    "conditions": {
+      "tempRange": [20, 30],
+      "humidityMin": 90,
+      "rainMin": 5,
+      "sunshineMax": 4,
+      "windSensitive": true
+    },
+    "sensitiveStages": ["新梢期", "開花期", "結果期", "採收期"],
+    "riskFactors": ["土壤濕度飽和", "降雨", "菌絲或厚膜孢子存活", "胞囊與游走子", "小動物攜帶"],
+    "symptoms": ["幼嫩組織受感染", "果實腐敗", "傷口存在時感染更容易"],
+    "advice": "雨季改善排水並避免果園積水，清除病果，降低風雨與小動物攜帶傳播。",
+    "notes": "依使用者提供之 AZAI 摘錄整理；環境數值為教學推估，需再查證。",
+    "source": "AZAI 農業病蟲害智能管理決策系統",
+    "sourceUrl": "https://azai.tari.gov.tw/search/bug",
+    "updatedAt": "2026-07-04"
+  },
+  {
+    "id": "melon-yellow-spot-virus",
+    "crop": "甜瓜",
+    "crops": ["甜瓜", "瓜類作物"],
+    "name": "黃斑病毒病",
+    "pathogenType": "病毒性病害",
+    "conditions": {
+      "tempRange": [22, 32],
+      "humidityMin": 60,
+      "rainMin": 0,
+      "sunshineMax": 8,
+      "windSensitive": false
+    },
+    "sensitiveStages": ["苗期", "營養生長期", "開花期", "結果期"],
+    "riskFactors": ["種苗帶菌", "野外罹病瓜類", "薊馬媒介", "媒介昆蟲刺吸"],
+    "symptoms": ["葉片黃斑", "葉片斑駁或畸形", "果實品質受影響"],
+    "advice": "使用健康種苗，移除罹病瓜類植株，並加強薊馬監測與防治。",
+    "notes": "依使用者提供之 AZAI 摘錄整理；環境數值主要反映媒介昆蟲風險，需再查證。",
+    "source": "AZAI 農業病蟲害智能管理決策系統",
+    "sourceUrl": "https://azai.tari.gov.tw/search/bug",
+    "updatedAt": "2026-07-04"
+  },
+  {
+    "id": "papaya-brown-spot",
+    "crop": "木瓜",
+    "crops": ["木瓜"],
+    "name": "褐斑病",
+    "pathogenType": "真菌性病害",
+    "conditions": {
+      "tempRange": [24, 30],
+      "humidityMin": 80,
+      "rainMin": 5,
+      "sunshineMax": 5,
+      "windSensitive": true
+    },
+    "sensitiveStages": ["新梢期", "開花期", "結果期"],
+    "riskFactors": ["枝枯與葉柄帶菌", "葉片殘存病原", "分生孢子", "空氣與水傳播"],
+    "symptoms": ["葉片出現褐色斑點", "病斑擴大", "嚴重時葉片黃化或落葉"],
+    "advice": "清除罹病枝葉與葉柄，雨季加強巡園並降低病原由空氣與水傳播。",
+    "notes": "AZAI 提及木瓜菌株接種試驗僅危害木瓜與敏豆；環境數值與部分症狀為教學推估，需再查證。",
+    "source": "AZAI 農業病蟲害智能管理決策系統",
+    "sourceUrl": "https://azai.tari.gov.tw/search/bug",
+    "updatedAt": "2026-07-04"
+  },
+  {
+    "id": "tomato-spotted-wilt-virus",
+    "crop": "番茄",
+    "crops": ["番茄", "甜椒"],
+    "name": "斑點萎凋病",
+    "pathogenType": "病毒性病害",
+    "conditions": {
+      "tempRange": [20, 32],
+      "humidityMin": 60,
+      "rainMin": 0,
+      "sunshineMax": 8,
+      "windSensitive": false
+    },
+    "sensitiveStages": ["苗期", "營養生長期", "開花期", "結果期"],
+    "riskFactors": ["薊馬傳播", "機械接觸傳播", "刀具傳播", "罹病株終身帶毒"],
+    "symptoms": ["新葉約7至10天出現病徵", "葉片斑點或斑駁", "植株萎凋或生育不良"],
+    "advice": "移除罹病株，控制薊馬密度，農事刀具與手部接觸需注意清潔以避免機械傳播。",
+    "notes": "使用者提供之 AZAI 摘錄內寫作「番茄嵌紋病毒」疑為原文或摘錄誤植；本筆依標題整理為番茄斑點萎凋病。環境數值主要反映媒介昆蟲風險，需再查證。",
+    "source": "AZAI 農業病蟲害智能管理決策系統",
+    "sourceUrl": "https://azai.tari.gov.tw/search/bug",
+    "updatedAt": "2026-07-04"
+  },
+  {
+    "id": "pepper-veinal-mottle-virus",
+    "crop": "番椒",
+    "crops": ["番椒", "番茄", "甜椒"],
+    "name": "葉脈斑駁病毒病",
+    "pathogenType": "病毒性病害",
+    "conditions": {
+      "tempRange": [20, 32],
+      "humidityMin": 60,
+      "rainMin": 0,
+      "sunshineMax": 8,
+      "windSensitive": false
+    },
+    "sensitiveStages": ["苗期", "營養生長期", "開花期", "結果期"],
+    "riskFactors": ["蚜蟲傳播", "機械接觸傳播", "刀具傳播", "罹病株終身帶毒"],
+    "symptoms": ["新葉約10至14天出現病徵", "葉脈斑駁", "葉片畸形或植株生育不良"],
+    "advice": "加強蚜蟲監測與防治，移除罹病株，農事操作時避免刀具與接觸傳播。",
+    "notes": "依使用者提供之 AZAI 摘錄整理；環境數值主要反映媒介昆蟲風險，需再查證。",
+    "source": "AZAI 農業病蟲害智能管理決策系統",
+    "sourceUrl": "https://azai.tari.gov.tw/search/bug",
+    "updatedAt": "2026-07-04"
+  },
+  {
+    "id": "papaya-phytophthora-blight",
+    "crop": "木瓜",
+    "crops": ["木瓜"],
+    "name": "疫病",
+    "pathogenType": "卵菌類病害",
+    "conditions": {
+      "tempRange": [20, 30],
+      "humidityMin": 90,
+      "rainMin": 5,
+      "sunshineMax": 4,
+      "windSensitive": true
+    },
+    "sensitiveStages": ["幼苗期", "新梢期", "結果期", "採收期"],
+    "riskFactors": ["連作田病土", "栽培土壤帶菌", "土壤濕度飽和", "降雨", "游走子", "蝸牛與螞蟻攜帶"],
+    "symptoms": ["幼嫩組織受感染", "果實腐敗", "傷口存在時感染更容易"],
+    "advice": "避免連作與病土，雨季改善排水並移除病果，降低風雨與小動物攜帶傳播。",
+    "notes": "依使用者提供之 AZAI 摘錄整理；環境數值為教學推估，需再查證。",
+    "source": "AZAI 農業病蟲害智能管理決策系統",
+    "sourceUrl": "https://azai.tari.gov.tw/search/bug",
+    "updatedAt": "2026-07-04"
+  },
+  {
+    "id": "cucumber-phytophthora-blight",
+    "crop": "胡瓜",
+    "crops": ["胡瓜", "瓜類作物"],
+    "name": "疫病",
+    "pathogenType": "卵菌類病害",
+    "conditions": {
+      "tempRange": [20, 25],
+      "humidityMin": 90,
+      "rainMin": 5,
+      "sunshineMax": 3,
+      "windSensitive": true
+    },
+    "sensitiveStages": ["苗期", "營養生長期", "開花期", "結果期"],
+    "riskFactors": ["土壤病原殘存數年", "種苗或介質帶菌", "降雨頻繁", "田區淹水", "颱風豪雨後爆發"],
+    "symptoms": ["植株快速萎凋", "莖葉或果實腐敗", "颱風豪雨後1至2星期可能整區枯死"],
+    "advice": "雨季與颱風後加強排水，避免田區淹水，使用健康種苗與乾淨介質。",
+    "notes": "AZAI 提供適溫高濕條件為 20–25℃、相對濕度 90% 以上；病害可快速爆發傳播。",
+    "source": "AZAI 農業病蟲害智能管理決策系統",
+    "sourceUrl": "https://azai.tari.gov.tw/search/bug",
+    "updatedAt": "2026-07-04"
+  },
+  {
+    "id": "cucumber-fusarium-wilt",
+    "crop": "胡瓜",
+    "crops": ["胡瓜"],
+    "name": "鐮刀菌萎凋病",
+    "pathogenType": "真菌性病害",
+    "conditions": {
+      "tempRange": [24, 30],
+      "humidityMin": 70,
+      "rainMin": 0,
+      "sunshineMax": 6,
+      "windSensitive": true
+    },
+    "sensitiveStages": ["苗期", "營養生長期", "開花期", "結果期"],
+    "riskFactors": ["厚膜孢子殘存土壤或介質", "種苗污染帶菌", "風吹帶入病原菌", "人為或器具傳播", "根部感染"],
+    "symptoms": ["植株萎凋", "維管束受害", "病原沿維管束蔓延至莖部後造成死亡"],
+    "advice": "使用健康種苗與乾淨介質，工具清潔，避免病土進入溫室或栽培系統。",
+    "notes": "依使用者提供之 AZAI 摘錄整理；環境數值為教學推估，需再查證。",
+    "source": "AZAI 農業病蟲害智能管理決策系統",
+    "sourceUrl": "https://azai.tari.gov.tw/search/bug",
+    "updatedAt": "2026-07-04"
+  },
+  {
+    "id": "grape-pierces-disease",
+    "crop": "葡萄",
+    "crops": ["葡萄"],
+    "name": "皮爾斯病",
+    "pathogenType": "細菌性病害",
+    "conditions": {
+      "tempRange": [20, 32],
+      "humidityMin": 60,
+      "rainMin": 0,
+      "sunshineMax": 8,
+      "windSensitive": false
+    },
+    "sensitiveStages": ["苗木期", "新梢期", "營養生長期", "結果期"],
+    "riskFactors": ["感染葡萄植株", "多年生替代寄主", "無明顯病徵寄主", "木質部取食性昆蟲傳播", "感染枝條或嫁接苗木"],
+    "symptoms": ["葉片焦枯", "枝條衰弱", "植株生育不良或枯死"],
+    "advice": "避免使用感染枝條、插穗、接穗或嫁接苗木，並監測木質部取食性媒介昆蟲與周邊多年生寄主。",
+    "notes": "依使用者提供之 AZAI 摘錄整理；環境數值主要反映媒介昆蟲活動風險，需再查證。",
+    "source": "AZAI 農業病蟲害智能管理決策系統",
+    "sourceUrl": "https://azai.tari.gov.tw/search/bug",
+    "updatedAt": "2026-07-04"
+  },
+  {
+    "id": "green-onion-phytophthora-blight",
+    "crop": "青蔥",
+    "crops": ["青蔥"],
+    "name": "疫病",
+    "pathogenType": "卵菌類病害",
+    "conditions": {
+      "tempRange": [24, 32],
+      "humidityMin": 90,
+      "rainMin": 5,
+      "sunshineMax": 3,
+      "windSensitive": false
+    },
+    "sensitiveStages": ["苗期", "營養生長期", "採收期"],
+    "riskFactors": ["土壤病原殘存數年", "種苗或介質帶菌", "24℃以上高濕", "降雨頻繁", "田區淹水"],
+    "symptoms": ["植株快速腐敗", "葉鞘或莖基部受害", "連續陰雨後病勢爆發"],
+    "advice": "使用健康種苗與乾淨介質，夏秋雨季加強排水，避免田區淹水與帶菌水流傳播。",
+    "notes": "AZAI 提及適溫高濕為 24℃以上、相對濕度 90% 以上，兩三天即可再產生大量孢囊；部分症狀為教學推估，需再查證。",
+    "source": "AZAI 農業病蟲害智能管理決策系統",
+    "sourceUrl": "https://azai.tari.gov.tw/search/bug",
+    "updatedAt": "2026-07-04"
+  },
+  {
+    "id": "green-onion-southern-blight",
+    "crop": "青蔥",
+    "crops": ["青蔥"],
+    "name": "白絹病",
+    "pathogenType": "真菌性病害",
+    "conditions": {
+      "tempRange": [25, 35],
+      "humidityMin": 75,
+      "rainMin": 0,
+      "sunshineMax": 6,
+      "windSensitive": false
+    },
+    "sensitiveStages": ["苗期", "營養生長期", "採收期"],
+    "riskFactors": ["土壤菌核", "種苗介質帶菌", "灌溉水傳播", "人為傳播", "地際部感染"],
+    "symptoms": ["莖基部近地際處腐敗", "植株萎凋", "病部可能出現白色菌絲與菌核"],
+    "advice": "避免使用帶菌介質，清除病株與土壤菌核，灌溉水與工具避免帶菌擴散。",
+    "notes": "依使用者提供之 AZAI 摘錄整理；環境數值與部分症狀為教學推估，需再查證。",
+    "source": "AZAI 農業病蟲害智能管理決策系統",
+    "sourceUrl": "https://azai.tari.gov.tw/search/bug",
+    "updatedAt": "2026-07-04"
+  },
+  {
+    "id": "lychee-brown-root-rot",
+    "crop": "荔枝",
+    "crops": ["荔枝"],
+    "name": "褐根病",
+    "pathogenType": "真菌性病害",
+    "conditions": {
+      "tempRange": [22, 32],
+      "humidityMin": 70,
+      "rainMin": 0,
+      "sunshineMax": 7,
+      "windSensitive": false
+    },
+    "sensitiveStages": ["苗木期", "營養生長期", "結果期"],
+    "riskFactors": ["帶菌種苗", "殘根帶菌", "土壤帶菌", "病根接觸傳播", "病區取苗或取土"],
+    "symptoms": ["根系褐化腐朽", "植株衰弱", "病害由中心向外形成病圈擴展"],
+    "advice": "避免從病區取苗或取土，移除病株與殘根，防止病根接觸健康根系。",
+    "notes": "AZAI 提及褐根病可由單株或零星染病逐年形成病圈擴展；環境數值為教學推估，需再查證。",
+    "source": "AZAI 農業病蟲害智能管理決策系統",
+    "sourceUrl": "https://azai.tari.gov.tw/search/bug",
+    "updatedAt": "2026-07-04"
+  },
+  {
+    "id": "strawberry-powdery-mildew",
+    "crop": "草莓",
+    "crops": ["草莓"],
+    "name": "白粉病",
+    "pathogenType": "真菌性病害",
+    "conditions": {
+      "tempRange": [12, 23],
+      "humidityMin": 80,
+      "rainMin": 0,
+      "sunshineMax": 5,
+      "windSensitive": true
+    },
+    "sensitiveStages": ["育苗期", "營養生長期", "開花期", "結果期"],
+    "riskFactors": ["分生孢子隨風散布", "12月初出現病徵", "2至3月低溫潮濕嚴重", "高冷地苗圃終年發生"],
+    "symptoms": ["葉片出現白粉狀病斑", "葉片捲曲或變形", "果實品質受影響"],
+    "advice": "冬春低溫潮濕期加強巡田，保持通風，移除罹病葉片與病果。",
+    "notes": "AZAI 提及草莓白粉病於 2–3 月低溫潮濕時最嚴重，高冷地苗圃可終年發生；環境數值部分為教學推估，需再查證。",
+    "source": "AZAI 農業病蟲害智能管理決策系統",
+    "sourceUrl": "https://azai.tari.gov.tw/search/bug",
+    "updatedAt": "2026-07-04"
+  },
+  {
+    "id": "mango-anthracnose",
+    "crop": "檬果",
+    "crops": ["檬果"],
+    "name": "炭疽病",
+    "pathogenType": "真菌性病害",
+    "conditions": {
+      "tempRange": [24, 30],
+      "humidityMin": 90,
+      "rainMin": 5,
+      "sunshineMax": 4,
+      "windSensitive": false
+    },
+    "sensitiveStages": ["新梢期", "開花期", "幼果期", "果實成熟期"],
+    "riskFactors": ["罹病枝葉", "地面枯枝落葉", "雨露傳播", "濕度飽和", "潛伏感染"],
+    "symptoms": ["幼嫩組織受感染", "葉片或枝條病斑", "果實成熟時病斑擴大腐敗"],
+    "advice": "清除罹病枝葉與落葉，開花至幼果期及雨露多時加強防護，避免潛伏感染累積。",
+    "notes": "AZAI 提及分生孢子於濕度飽和時產生，且可在果實成熟或葉片老化時再侵入誘發病害；環境數值為教學推估，需再查證。",
+    "source": "AZAI 農業病蟲害智能管理決策系統",
+    "sourceUrl": "https://azai.tari.gov.tw/search/bug",
+    "updatedAt": "2026-07-04"
+  },
+  {
+    "id": "rice-bacterial-leaf-blight",
+    "crop": "水稻",
+    "crops": ["水稻"],
+    "name": "白葉枯病",
+    "pathogenType": "細菌性病害",
+    "conditions": {
+      "tempRange": [25, 32],
+      "humidityMin": 85,
+      "rainMin": 5,
+      "sunshineMax": 5,
+      "windSensitive": true
+    },
+    "sensitiveStages": ["分蘗期", "分蘗盛期", "孕穗期", "抽穗期"],
+    "riskFactors": ["稻樁與稻草越冬", "灌溉水傳播", "雜草寄主", "水孔與傷口侵入", "大風雨擴散"],
+    "symptoms": ["葉緣或葉尖出現黃白色枯斑", "病斑沿葉脈擴展", "嚴重時造成流行性病害"],
+    "advice": "清除稻樁與病稻草，管理灌溉水與田間雜草，大風雨後加強巡田。",
+    "notes": "AZAI 提及病菌可由灌溉水形成第一次感染源，並在大風雨下隨雨滴遠距離擴散；環境數值為教學推估，需再查證。",
+    "source": "AZAI 農業病蟲害智能管理決策系統",
+    "sourceUrl": "https://azai.tari.gov.tw/search/bug",
+    "updatedAt": "2026-07-04"
+  },
+  {
+    "id": "lychee-anthracnose",
+    "crop": "荔枝",
+    "crops": ["荔枝"],
+    "name": "炭疽病",
+    "pathogenType": "真菌性病害",
+    "conditions": {
+      "tempRange": [24, 30],
+      "humidityMin": 90,
+      "rainMin": 5,
+      "sunshineMax": 4,
+      "windSensitive": false
+    },
+    "sensitiveStages": ["新梢期", "開花期", "結果期", "果實成熟期"],
+    "riskFactors": ["罹病枝葉", "地面枯枝落葉", "雨露傳播", "濕度飽和", "潛伏感染"],
+    "symptoms": ["幼嫩葉片受感染", "果實病斑或腐敗", "成熟或衰弱組織病害誘發"],
+    "advice": "清除罹病枝葉與落葉，雨露多時加強幼果與新梢管理，降低潛伏感染。",
+    "notes": "依使用者提供之 AZAI 摘錄整理；環境數值為教學推估，需再查證。",
+    "source": "AZAI 農業病蟲害智能管理決策系統",
+    "sourceUrl": "https://azai.tari.gov.tw/search/bug",
+    "updatedAt": "2026-07-04"
+  },
+  {
+    "id": "lychee-downy-blight",
+    "crop": "荔枝",
+    "crops": ["荔枝", "龍眼"],
+    "name": "露疫病",
+    "pathogenType": "卵菌類病害",
+    "conditions": {
+      "tempRange": [20, 28],
+      "humidityMin": 90,
+      "rainMin": 5,
+      "sunshineMax": 3,
+      "windSensitive": false
+    },
+    "sensitiveStages": ["幼苗期", "開花期", "結果期", "採收期"],
+    "riskFactors": ["菌絲或卵胞子存活", "根系或土壤感染源", "降雨", "果實與幼苗感染"],
+    "symptoms": ["果實腐敗", "幼苗受害", "高濕時病勢加快"],
+    "advice": "雨季改善排水並清除病果，避免果園濕度過高與病果殘留。",
+    "notes": "AZAI 提及露疫病菌寄主範圍限於荔枝與龍眼幼苗，且在一般田土中菌絲、胞囊、游走子約可存活 15–30 天；環境數值為教學推估，需再查證。",
+    "source": "AZAI 農業病蟲害智能管理決策系統",
+    "sourceUrl": "https://azai.tari.gov.tw/search/bug",
+    "updatedAt": "2026-07-04"
+  },
+  {
+    "id": "mango-fruit-phytophthora-rot",
+    "crop": "檬果",
+    "crops": ["檬果"],
+    "name": "果實疫病",
+    "pathogenType": "卵菌類病害",
+    "conditions": {
+      "tempRange": [20, 30],
+      "humidityMin": 90,
+      "rainMin": 5,
+      "sunshineMax": 4,
+      "windSensitive": false
+    },
+    "sensitiveStages": ["結果期", "採收期", "採後貯運期"],
+    "riskFactors": ["鄰近柑橘果園感染源", "降雨潮濕", "胞囊與游走子", "雨水攜帶至果實"],
+    "symptoms": ["果實出現水浸狀病斑", "果實腐敗", "高濕下病勢擴大"],
+    "advice": "降雨潮濕時加強果實巡查，避免病果殘留，注意鄰近果園可能感染源。",
+    "notes": "依使用者提供之 AZAI 摘錄整理；環境數值與部分症狀為教學推估，需再查證。",
+    "source": "AZAI 農業病蟲害智能管理決策系統",
+    "sourceUrl": "https://azai.tari.gov.tw/search/bug",
+    "updatedAt": "2026-07-04"
+  },
+  {
+    "id": "rice-root-knot-nematode",
+    "crop": "水稻",
+    "crops": ["水稻"],
+    "name": "根瘤線蟲",
+    "pathogenType": "線蟲危害",
+    "conditions": {
+      "tempRange": [20, 32],
+      "humidityMin": 60,
+      "rainMin": 0,
+      "sunshineMax": 8,
+      "windSensitive": false
+    },
+    "sensitiveStages": ["育苗期", "分蘗期", "營養生長期"],
+    "riskFactors": ["卵殘存於土壤或介質", "幼蟲殘存", "灌溉水傳播", "人為攜帶傳播", "罹病母株帶線蟲"],
+    "symptoms": ["根部形成瘤狀", "根系受害", "植株生育不良"],
+    "advice": "避免帶線蟲土壤或介質進入田區，注意灌溉水與人為搬運傳播，必要時採輪作與健康苗管理。",
+    "notes": "依使用者提供之 AZAI 摘錄整理；環境數值為教學推估，需再查證。",
+    "source": "AZAI 農業病蟲害智能管理決策系統",
+    "sourceUrl": "https://azai.tari.gov.tw/search/bug",
+    "updatedAt": "2026-07-04"
+  },
+  {
+    "id": "passion-fruit-anthracnose",
+    "crop": "百香果",
+    "crops": ["百香果"],
+    "name": "炭疽病",
+    "pathogenType": "真菌性病害",
+    "conditions": {
+      "tempRange": [24, 30],
+      "humidityMin": 85,
+      "rainMin": 5,
+      "sunshineMax": 4,
+      "windSensitive": true
+    },
+    "sensitiveStages": ["新梢期", "開花期", "結果期", "採收期"],
+    "riskFactors": ["罹病殘體", "枯枝落葉", "雜草帶菌", "風雨傳播", "昆蟲傳播"],
+    "symptoms": ["葉片出現病斑", "果實出現炭疽病斑", "病斑上產生大量分生孢子"],
+    "advice": "清除罹病殘體、枯枝落葉與雜草，雨季加強巡園並降低風雨飛濺傳播。",
+    "notes": "依使用者提供之 AZAI 摘錄整理；環境數值與部分症狀為教學推估，需再查證。",
+    "source": "AZAI 農業病蟲害智能管理決策系統",
+    "sourceUrl": "https://azai.tari.gov.tw/search/bug",
+    "updatedAt": "2026-07-04"
+  },
+  {
+    "id": "pineapple-fruitlet-core-rot",
+    "crop": "鳳梨",
+    "crops": ["鳳梨"],
+    "name": "小果腐敗病",
+    "pathogenType": "真菌性病害",
+    "conditions": {
+      "tempRange": [24, 32],
+      "humidityMin": 75,
+      "rainMin": 0,
+      "sunshineMax": 7,
+      "windSensitive": true
+    },
+    "sensitiveStages": ["開花期", "結果初期"],
+    "riskFactors": ["腐生性強", "環境中廣泛存在", "分生孢子隨風飄散", "開花期感染"],
+    "symptoms": ["小果腐敗", "果實內部腐爛", "果實品質下降"],
+    "advice": "開花期加強果園衛生與通風，避免花部受污染並降低環境中分生孢子來源。",
+    "notes": "AZAI 提及田間初次感染源目前無明確文獻，可能由環境中分生孢子於開花期感染；環境數值與症狀為教學推估，需再查證。",
+    "source": "AZAI 農業病蟲害智能管理決策系統",
+    "sourceUrl": "https://azai.tari.gov.tw/search/bug",
+    "updatedAt": "2026-07-04"
+  },
+  {
+    "id": "lychee-leaf-blight",
+    "crop": "荔枝",
+    "crops": ["荔枝"],
+    "name": "葉枯病",
+    "pathogenType": "真菌性病害",
+    "conditions": {
+      "tempRange": [24, 30],
+      "humidityMin": 80,
+      "rainMin": 5,
+      "sunshineMax": 5,
+      "windSensitive": true
+    },
+    "sensitiveStages": ["新梢期", "營養生長期", "結果期"],
+    "riskFactors": ["分生孢子", "越冬方式不明", "葉片感染", "風雨傳播"],
+    "symptoms": ["葉片葉枯", "葉片病斑擴大", "嚴重時落葉"],
+    "advice": "清除罹病葉片並加強雨季巡園，降低分生孢子造成葉片感染。",
+    "notes": "AZAI 提及病原菌存活及越冬尚不明瞭；環境數值與部分症狀為教學推估，需再查證。",
+    "source": "AZAI 農業病蟲害智能管理決策系統",
+    "sourceUrl": "https://azai.tari.gov.tw/search/bug",
+    "updatedAt": "2026-07-04"
+  },
+  {
+    "id": "guava-fruit-rot",
+    "crop": "番石榴",
+    "crops": ["番石榴"],
+    "name": "果腐病",
+    "pathogenType": "真菌性病害",
+    "conditions": {
+      "tempRange": [24, 32],
+      "humidityMin": 85,
+      "rainMin": 5,
+      "sunshineMax": 5,
+      "windSensitive": false
+    },
+    "sensitiveStages": ["結果期", "採收期", "採後貯運期"],
+    "riskFactors": ["病菌種類多", "高溫高濕", "雨季", "成熟果實"],
+    "symptoms": ["果實腐敗", "果皮出現病斑", "採後貯運期腐爛"],
+    "advice": "採收前後加強果實管理，清除腐敗果並保持通風乾燥；建議後續依病原種類拆分。",
+    "notes": "AZAI 原文指出病菌種類多，無法一一說明；本筆為暫存通用資料，環境條件與症狀為教學推估，需再查證。",
+    "source": "AZAI 農業病蟲害智能管理決策系統",
+    "sourceUrl": "https://azai.tari.gov.tw/search/bug",
+    "updatedAt": "2026-07-04"
+  },
+  {
+    "id": "guava-black-spot",
+    "crop": "番石榴",
+    "crops": ["番石榴"],
+    "name": "黑星病",
+    "pathogenType": "真菌性病害",
+    "conditions": {
+      "tempRange": [24, 30],
+      "humidityMin": 85,
+      "rainMin": 5,
+      "sunshineMax": 4,
+      "windSensitive": true
+    },
+    "sensitiveStages": ["開花期", "幼果期", "果實成熟期"],
+    "riskFactors": ["病果殘存", "柄子殼與偽子囊殼", "子囊孢子", "風雨飛濺", "未套袋小果"],
+    "symptoms": ["果實成熟後出現黑色病斑", "果實腐爛後期乾萎收縮", "病果可再形成病原繁殖構造"],
+    "advice": "開花期與小果套袋前加強防護，清除病果並避免成熟病果殘留田間。",
+    "notes": "AZAI 提及子囊孢子為田間黑星病最重要的傳播來源；環境數值與部分症狀為教學推估，需再查證。",
+    "source": "AZAI 農業病蟲害智能管理決策系統",
+    "sourceUrl": "https://azai.tari.gov.tw/search/bug",
+    "updatedAt": "2026-07-04"
+  },
+  {
+    "id": "papaya-pythium-root-rot",
+    "crop": "木瓜",
+    "crops": ["木瓜"],
+    "name": "根腐病",
+    "pathogenType": "卵菌類病害",
+    "conditions": {
+      "tempRange": [22, 30],
+      "humidityMin": 90,
+      "rainMin": 5,
+      "sunshineMax": 4,
+      "windSensitive": true
+    },
+    "sensitiveStages": ["幼苗期", "營養生長期", "結果期"],
+    "riskFactors": ["土壤帶菌", "土壤濕度飽和", "降雨", "游走子水中游泳", "根系感染"],
+    "symptoms": ["根系腐敗", "植株萎凋", "生育衰弱"],
+    "advice": "改善排水，避免土壤長期飽和積水，雨季加強根系與植株萎凋監測。",
+    "notes": "依使用者提供之 AZAI 摘錄整理；環境數值為教學推估，需再查證。",
+    "source": "AZAI 農業病蟲害智能管理決策系統",
+    "sourceUrl": "https://azai.tari.gov.tw/search/bug",
+    "updatedAt": "2026-07-04"
+  },
+  {
+    "id": "papaya-anthracnose",
+    "crop": "木瓜",
+    "crops": ["木瓜"],
+    "name": "炭疽病",
+    "pathogenType": "真菌性病害",
+    "conditions": {
+      "tempRange": [24, 30],
+      "humidityMin": 85,
+      "rainMin": 5,
+      "sunshineMax": 4,
+      "windSensitive": true
+    },
+    "sensitiveStages": ["新梢期", "結果期", "採收期", "採後貯運期"],
+    "riskFactors": ["罹病葉片與葉柄", "病株殘體越冬", "風雨傳播", "昆蟲傳播", "鄰近果園感染源"],
+    "symptoms": ["果實出現炭疽病斑", "葉片或葉柄受感染", "成熟組織病斑可產生大量分生孢子"],
+    "advice": "清除罹病葉片、葉柄與病株殘體，雨季與採收期加強果實管理。",
+    "notes": "本筆可能與既有 papaya-anthracnose 重複；合併時建議保留較完整的症狀與感染源描述。",
+    "source": "AZAI 農業病蟲害智能管理決策系統",
+    "sourceUrl": "https://azai.tari.gov.tw/search/bug",
+    "updatedAt": "2026-07-04"
+  },
+  {
+    "id": "papaya-ringspot-virus",
+    "crop": "木瓜",
+    "crops": ["木瓜"],
+    "name": "輪點病",
+    "pathogenType": "病毒性病害",
+    "conditions": {
+      "tempRange": [20, 32],
+      "humidityMin": 60,
+      "rainMin": 0,
+      "sunshineMax": 8,
+      "windSensitive": false
+    },
+    "sensitiveStages": ["苗期", "新梢期", "開花期", "結果期"],
+    "riskFactors": ["汁液傳播", "人手與刀械傳播", "蚜蟲非永續性傳播", "帶病毒蚜蟲30分鐘內傳播"],
+    "symptoms": ["葉片嵌紋或畸形", "果實出現輪點斑紋", "植株生育衰弱"],
+    "advice": "移除病株時避免汁液污染工具與手部，加強蚜蟲監測，避免帶毒蚜蟲快速傳播。",
+    "notes": "AZAI 提及病毒可經汁液與蚜蟲非永續性傳播；環境數值主要反映媒介昆蟲活動風險，需再查證。",
+    "source": "AZAI 農業病蟲害智能管理決策系統",
+    "sourceUrl": "https://azai.tari.gov.tw/search/bug",
+    "updatedAt": "2026-07-04"
+  },
+  {
+    "id": "cucurbit-chlorotic-yellows-virus",
+    "crop": "瓜類作物",
+    "crops": ["瓜類作物"],
+    "name": "褪綠黃化病",
+    "pathogenType": "病毒性病害",
+    "conditions": {
+      "tempRange": [22, 32],
+      "humidityMin": 60,
+      "rainMin": 0,
+      "sunshineMax": 8,
+      "windSensitive": false
+    },
+    "sensitiveStages": ["苗期", "營養生長期", "開花期", "結果期"],
+    "riskFactors": ["種苗帶菌", "野外罹病瓜類", "銀葉粉蝨傳播", "菸草粉蝨傳播", "媒介昆蟲刺吸"],
+    "symptoms": ["葉片褪綠黃化", "植株生育衰弱", "果實品質或產量下降"],
+    "advice": "使用健康種苗，清除野外罹病瓜類植株，並加強銀葉粉蝨與菸草粉蝨監測防治。",
+    "notes": "依使用者提供之 AZAI 摘錄整理；環境數值主要反映媒介昆蟲風險，需再查證。",
+    "source": "AZAI 農業病蟲害智能管理決策系統",
+    "sourceUrl": "https://azai.tari.gov.tw/search/bug",
+    "updatedAt": "2026-07-04"
+  },
+  {
+    "id": "cucurbit-other-virus-diseases",
+    "crop": "瓜類作物",
+    "crops": ["瓜類作物"],
+    "name": "其他病毒病害",
+    "pathogenType": "病毒性病害",
+    "conditions": {
+      "tempRange": [22, 32],
+      "humidityMin": 60,
+      "rainMin": 0,
+      "sunshineMax": 8,
+      "windSensitive": false
+    },
+    "sensitiveStages": ["苗期", "營養生長期", "開花期", "結果期"],
+    "riskFactors": [
+      "種苗帶菌",
+      "野外罹病瓜類",
+      "蚜蟲傳播",
+      "媒介昆蟲刺吸"
+    ],
+    "symptoms": [
+      "葉片嵌紋",
+      "黃化",
+      "植株生育不良"
+    ],
+    "advice": "使用健康種苗，清除田間病株，並加強蚜蟲監測與防治。",
+    "notes": "AZAI 為瓜類病毒病統整項目，未指定病毒種類；症狀為常見病毒病綜合描述。",
+    "source": "AZAI 農業病蟲害智能管理決策系統",
+    "sourceUrl": "https://azai.tari.gov.tw/search/bug",
+    "updatedAt": "2026-07-04"
+  },
+  {
+    "id": "asparagus-stem-blight",
+    "crop": "蘆筍",
+    "crops": ["蘆筍"],
+    "name": "莖枯病",
+    "pathogenType": "真菌性病害",
+    "conditions": {
+      "tempRange": [22, 30],
+      "humidityMin": 80,
+      "rainMin": 5,
+      "sunshineMax": 5,
+      "windSensitive": true
+    },
+    "sensitiveStages": ["營養生長期", "採收期"],
+    "riskFactors": [
+      "病株殘體",
+      "田埂堆放病株",
+      "病原殘存土壤達九個月"
+    ],
+    "symptoms": [
+      "莖部病斑",
+      "莖枯萎",
+      "植株衰弱"
+    ],
+    "advice": "移除病株及田間殘體，避免將病株堆放於田埂，以降低初次感染源。",
+    "notes": "依 AZAI 整理；環境數值為教學推估，需再查證。",
+    "source": "AZAI 農業病蟲害智能管理決策系統",
+    "sourceUrl": "https://azai.tari.gov.tw/search/bug",
+    "updatedAt": "2026-07-04"
+  },
+  {
+    "id": "tea-red-leaf-blight",
+    "crop": "茶",
+    "crops": ["茶"],
+    "name": "赤葉枯病",
+    "pathogenType": "真菌性病害",
+    "conditions": {
+      "tempRange": [18, 30],
+      "humidityMin": 80,
+      "rainMin": 5,
+      "sunshineMax": 5,
+      "windSensitive": true
+    },
+    "sensitiveStages": ["新梢期", "營養生長期"],
+    "riskFactors": [
+      "病原普遍存在茶園",
+      "全年發病",
+      "傷口侵入"
+    ],
+    "symptoms": [
+      "葉片枯斑",
+      "葉片乾枯",
+      "枝葉衰弱"
+    ],
+    "advice": "避免修剪造成大量傷口，保持茶園通風，清除病枝葉。",
+    "notes": "AZAI 未提供完整病害循環；環境條件需再查證。",
+    "source": "AZAI 農業病蟲害智能管理決策系統",
+    "sourceUrl": "https://azai.tari.gov.tw/search/bug",
+    "updatedAt": "2026-07-04"
+  },
+  {
+    "id": "citrus-gummosis",
+    "crop": "柑橘",
+    "crops": ["柑橘"],
+    "name": "流膠病",
+    "pathogenType": "真菌性病害",
+    "conditions": {
+      "tempRange": [24, 32],
+      "humidityMin": 75,
+      "rainMin": 5,
+      "sunshineMax": 6,
+      "windSensitive": false
+    },
+    "sensitiveStages": ["營養生長期", "結果期"],
+    "riskFactors": [
+      "植株衰弱",
+      "樹皮傷口",
+      "死亡樹皮",
+      "枯木感染"
+    ],
+    "symptoms": [
+      "樹幹流膠",
+      "樹皮壞死",
+      "枝條衰弱"
+    ],
+    "advice": "維持樹勢健康，避免樹幹受傷，及時移除枯枝與死亡木材。",
+    "notes": "AZAI 指出 Botryosphaeria 為次生侵入菌；環境數值為教學推估。",
+    "source": "AZAI 農業病蟲害智能管理決策系統",
+    "sourceUrl": "https://azai.tari.gov.tw/search/bug",
+    "updatedAt": "2026-07-04"
+  },
+  {
+    "id": "button-mushroom-brown-blotch",
+    "crop": "洋菇",
+    "crops": ["洋菇"],
+    "name": "褐痘病",
+    "pathogenType": "真菌性病害",
+    "conditions": {
+      "tempRange": [18, 24],
+      "humidityMin": 90,
+      "rainMin": 0,
+      "sunshineMax": 2,
+      "windSensitive": false
+    },
+    "sensitiveStages": ["子實體形成期"],
+    "riskFactors": [
+      "厚膜孢子",
+      "土壤殘存多年",
+      "子實體刺激發芽"
+    ],
+    "symptoms": [
+      "菇體褐色病斑",
+      "商品價值下降"
+    ],
+    "advice": "保持栽培介質清潔，避免污染土壤再次進入菇房。",
+    "notes": "依 AZAI 整理；環境條件需再查證。",
+    "source": "AZAI 農業病蟲害智能管理決策系統",
+    "sourceUrl": "https://azai.tari.gov.tw/search/bug",
+    "updatedAt": "2026-07-04"
+  },
+  {
+    "id": "citrus-black-dot",
+    "crop": "柑橘",
+    "crops": ["柑橘"],
+    "name": "黑點病",
+    "pathogenType": "真菌性病害",
+    "conditions": {
+      "tempRange": [24, 27],
+      "humidityMin": 90,
+      "rainMin": 5,
+      "sunshineMax": 4,
+      "windSensitive": true
+    },
+    "sensitiveStages": ["幼果期", "新葉期"],
+    "riskFactors": [
+      "枯枝病斑",
+      "柄孢子",
+      "雨水傳播",
+      "25℃高濕"
+    ],
+    "symptoms": [
+      "果實黑點",
+      "葉片病斑"
+    ],
+    "advice": "修除枯枝並降低雨季病原來源，幼果期加強巡園。",
+    "notes": "AZAI 指出僅枯枝病斑具再感染能力。",
+    "source": "AZAI 農業病蟲害智能管理決策系統",
+    "sourceUrl": "https://azai.tari.gov.tw/search/bug",
+    "updatedAt": "2026-07-04"
+  },
+  {
+    "id": "dragon-fruit-fusarium-fruit-rot",
+    "crop": "紅龍果",
+    "crops": ["紅龍果"],
+    "name": "鐮孢果腐病",
+    "pathogenType": "真菌性病害",
+    "conditions": {
+      "tempRange": [24, 32],
+      "humidityMin": 80,
+      "rainMin": 5,
+      "sunshineMax": 5,
+      "windSensitive": false
+    },
+    "sensitiveStages": ["結果期", "採收期"],
+    "riskFactors": [
+      "厚膜孢子",
+      "植物殘體"
+    ],
+    "symptoms": [
+      "果實腐敗"
+    ],
+    "advice": "清除病果及植物殘體，避免病原累積。",
+    "notes": "AZAI 註明尚未有完整研究，目前推測可藉厚膜孢子殘存。",
+    "source": "AZAI 農業病蟲害智能管理決策系統",
+    "sourceUrl": "https://azai.tari.gov.tw/search/bug",
+    "updatedAt": "2026-07-04"
+  },
+  {
+    "id": "dragon-fruit-brown-rot",
+    "crop": "紅龍果",
+    "crops": ["紅龍果"],
+    "name": "褐腐病",
+    "pathogenType": "真菌性病害",
+    "conditions": {
+      "tempRange": [24, 32],
+      "humidityMin": 85,
+      "rainMin": 5,
+      "sunshineMax": 5,
+      "windSensitive": false
+    },
+    "sensitiveStages": ["結果期"],
+    "riskFactors": [
+      "研究不足"
+    ],
+    "symptoms": [
+      "果實褐腐"
+    ],
+    "advice": "保持果園衛生並持續監測病果。",
+    "notes": "AZAI 尚無病害循環研究，資料待補充。",
+    "source": "AZAI 農業病蟲害智能管理決策系統",
+    "sourceUrl": "https://azai.tari.gov.tw/search/bug",
+    "updatedAt": "2026-07-04"
+  },
+  {
+    "id": "dragon-fruit-brown-spot",
+    "crop": "紅龍果",
+    "crops": ["紅龍果"],
+    "name": "褐斑病",
+    "pathogenType": "真菌性病害",
+    "conditions": {
+      "tempRange": [22, 30],
+      "humidityMin": 85,
+      "rainMin": 5,
+      "sunshineMax": 5,
+      "windSensitive": true
+    },
+    "sensitiveStages": ["結果期"],
+    "riskFactors": [
+      "雨水傳播",
+      "分生孢子",
+      "冬季殘體"
+    ],
+    "symptoms": [
+      "果實褐色病斑",
+      "枝條病斑"
+    ],
+    "advice": "雨季及冬季加強病枝清除，降低殘體感染源。",
+    "notes": "AZAI 推測病原可能於冬季凍傷枝條殘存渡冬。",
+    "source": "AZAI 農業病蟲害智能管理決策系統",
+    "sourceUrl": "https://azai.tari.gov.tw/search/bug",
+    "updatedAt": "2026-07-04"
+  },
+  {
+    "id": "dragon-fruit-blue-mold",
+    "crop": "紅龍果",
+    "crops": ["紅龍果"],
+    "name": "青黴病",
+    "pathogenType": "真菌性病害",
+    "conditions": {
+      "tempRange": [20, 28],
+      "humidityMin": 85,
+      "rainMin": 0,
+      "sunshineMax": 5,
+      "windSensitive": false
+    },
+    "sensitiveStages": ["採收期", "採後貯運期"],
+    "riskFactors": [
+      "研究不足"
+    ],
+    "symptoms": [
+      "果實青黴腐敗"
+    ],
+    "advice": "採收及貯運期間避免果實受傷並維持清潔。",
+    "notes": "AZAI 尚無相關病害循環研究，環境條件為教學推估，需再查證。",
+    "source": "AZAI 農業病蟲害智能管理決策系統",
+    "sourceUrl": "https://azai.tari.gov.tw/search/bug",
+    "updatedAt": "2026-07-04"
+  },
+  {
+    "id": "king-oyster-bacterial-soft-rot",
+    "crop": "杏鮑菇",
+    "crops": ["杏鮑菇"],
+    "name": "細菌性腐敗病",
+    "pathogenType": "細菌性病害",
+    "conditions": {
+      "tempRange": [18, 28],
+      "humidityMin": 90,
+      "rainMin": 0,
+      "sunshineMax": 2,
+      "windSensitive": false
+    },
+    "sensitiveStages": ["子實體形成期", "採收期"],
+    "riskFactors": ["環境細菌", "高濕環境", "子實體受潮", "子實體污染"],
+    "symptoms": ["子實體腐敗", "軟腐", "異味"],
+    "advice": "降低栽培空間濕度，避免子實體積水與污染，採收時保持器具清潔。",
+    "notes": "依 AZAI 整理；環境數值為教學推估，需再查證。",
+    "source": "AZAI 農業病蟲害智能管理決策系統",
+    "sourceUrl": "https://azai.tari.gov.tw/search/bug",
+    "updatedAt": "2026-07-04"
+  },
+  {
+    "id": "dragon-fruit-virus-disease",
+    "crop": "紅龍果",
+    "crops": ["紅龍果"],
+    "name": "病毒病",
+    "pathogenType": "病毒性病害",
+    "conditions": {
+      "tempRange": [20, 35],
+      "humidityMin": 50,
+      "rainMin": 0,
+      "sunshineMax": 8,
+      "windSensitive": false
+    },
+    "sensitiveStages": ["苗期", "營養生長期", "結果期"],
+    "riskFactors": ["病毒感染"],
+    "symptoms": ["病毒病徵尚未明確"],
+    "advice": "使用健康種苗並持續監測植株異常症狀。",
+    "notes": "AZAI 註明尚無相關研究，後續可依病毒種類拆分。",
+    "source": "AZAI 農業病蟲害智能管理決策系統",
+    "sourceUrl": "https://azai.tari.gov.tw/search/bug",
+    "updatedAt": "2026-07-04"
+  },
+  {
+    "id": "rice-sheath-rot",
+    "crop": "水稻",
+    "crops": ["水稻"],
+    "name": "葉鞘腐敗病",
+    "pathogenType": "真菌性病害",
+    "conditions": {
+      "tempRange": [24, 32],
+      "humidityMin": 85,
+      "rainMin": 5,
+      "sunshineMax": 5,
+      "windSensitive": true
+    },
+    "sensitiveStages": ["孕穗期", "抽穗期"],
+    "riskFactors": ["田間病殘體", "帶菌稻穀", "高濕環境", "氣孔或傷口感染"],
+    "symptoms": ["葉鞘腐敗", "白粉紅色分生孢子", "穀粒受害"],
+    "advice": "清除病殘體並使用健康種子，避免抽穗期長時間高濕。",
+    "notes": "依 AZAI 整理。",
+    "source": "AZAI 農業病蟲害智能管理決策系統",
+    "sourceUrl": "https://azai.tari.gov.tw/search/bug",
+    "updatedAt": "2026-07-04"
+  },
+  {
+    "id": "rice-bacterial-leaf-streak",
+    "crop": "水稻",
+    "crops": ["水稻"],
+    "name": "細菌性條斑病",
+    "pathogenType": "細菌性病害",
+    "conditions": {
+      "tempRange": [25, 32],
+      "humidityMin": 85,
+      "rainMin": 5,
+      "sunshineMax": 5,
+      "windSensitive": true
+    },
+    "sensitiveStages": ["分蘗期", "孕穗期"],
+    "riskFactors": ["病種子", "病殘體", "露水", "灌溉水", "風吹"],
+    "symptoms": ["葉片條狀病斑", "菌泥形成"],
+    "advice": "使用健康種子，避免灌溉水交互污染，雨季加強巡田。",
+    "notes": "依 AZAI 整理。",
+    "source": "AZAI 農業病蟲害智能管理決策系統",
+    "sourceUrl": "https://azai.tari.gov.tw/search/bug",
+    "updatedAt": "2026-07-04"
+  },
+  {
+    "id": "rice-brown-stripe-leaf-blight",
+    "crop": "水稻",
+    "crops": ["水稻"],
+    "name": "褐條葉枯病",
+    "pathogenType": "真菌性病害",
+    "conditions": {
+      "tempRange": [24, 30],
+      "humidityMin": 85,
+      "rainMin": 5,
+      "sunshineMax": 5,
+      "windSensitive": true
+    },
+    "sensitiveStages": ["分蘗期", "孕穗期"],
+    "riskFactors": ["氣孔感染", "分生孢子"],
+    "symptoms": ["葉片條狀褐斑", "葉枯"],
+    "advice": "降低田間濕度並移除病葉，避免病斑持續產生分生孢子。",
+    "notes": "依 AZAI 整理。",
+    "source": "AZAI 農業病蟲害智能管理決策系統",
+    "sourceUrl": "https://azai.tari.gov.tw/search/bug",
+    "updatedAt": "2026-07-04"
+  },
+  {
+    "id": "strawberry-wet-rot",
+    "crop": "草莓",
+    "crops": ["草莓"],
+    "name": "濕腐病",
+    "pathogenType": "真菌性病害",
+    "conditions": {
+      "tempRange": [25, 32],
+      "humidityMin": 90,
+      "rainMin": 5,
+      "sunshineMax": 4,
+      "windSensitive": false
+    },
+    "sensitiveStages": ["結果期", "採收期"],
+    "riskFactors": ["高溫", "降雨", "田間腐生病菌"],
+    "symptoms": ["成熟果濕腐", "大量孢子形成"],
+    "advice": "雨季保持果園通風，及時移除病果，避免成熟果長時間潮濕。",
+    "notes": "依 AZAI 整理。",
+    "source": "AZAI 農業病蟲害智能管理決策系統",
+    "sourceUrl": "https://azai.tari.gov.tw/search/bug",
+    "updatedAt": "2026-07-04"
+  },
+  {
+    "id": "strawberry-phytophthora-fruit-rot",
+    "crop": "草莓",
+    "crops": ["草莓"],
+    "name": "果腐病",
+    "pathogenType": "卵菌類病害",
+    "conditions": {
+      "tempRange": [20, 28],
+      "humidityMin": 90,
+      "rainMin": 5,
+      "sunshineMax": 4,
+      "windSensitive": false
+    },
+    "sensitiveStages": ["結果期", "採收期"],
+    "riskFactors": ["卵孢子", "游走子", "土壤殘體", "灌溉水"],
+    "symptoms": ["果實腐敗", "近成熟果受害"],
+    "advice": "改善排水並避免灌溉水潑濺果實，清除病株殘體。",
+    "notes": "依 AZAI 整理。",
+    "source": "AZAI 農業病蟲害智能管理決策系統",
+    "sourceUrl": "https://azai.tari.gov.tw/search/bug",
+    "updatedAt": "2026-07-04"
+  },
+  {
+    "id": "citrus-stem-end-rot",
+    "crop": "柑橘",
+    "crops": ["柑橘"],
+    "name": "蒂腐病",
+    "pathogenType": "真菌性病害",
+    "conditions": {
+      "tempRange": [24, 30],
+      "humidityMin": 85,
+      "rainMin": 5,
+      "sunshineMax": 5,
+      "windSensitive": true
+    },
+    "sensitiveStages": ["幼果期", "成熟期"],
+    "riskFactors": ["枯枝", "柄孢子", "子囊孢子", "雨水傳播"],
+    "symptoms": ["蒂部腐敗", "果實腐爛"],
+    "advice": "修除枯枝並降低果園病原來源，雨季注意幼果保護。",
+    "notes": "依 AZAI 整理。",
+    "source": "AZAI 農業病蟲害智能管理決策系統",
+    "sourceUrl": "https://azai.tari.gov.tw/search/bug",
+    "updatedAt": "2026-07-04"
+  },
+  {
+    "id": "citrus-brown-fruit-rot",
+    "crop": "柑橘",
+    "crops": ["柑橘"],
+    "name": "果實褐腐病",
+    "pathogenType": "卵菌類病害",
+    "conditions": {
+      "tempRange": [20, 28],
+      "humidityMin": 90,
+      "rainMin": 5,
+      "sunshineMax": 4,
+      "windSensitive": true
+    },
+    "sensitiveStages": ["近成熟期", "採收期"],
+    "riskFactors": ["土壤疫病菌", "胞囊", "游走子", "風雨傳播"],
+    "symptoms": ["近地面果實褐腐", "果面快速腐敗"],
+    "advice": "改善排水並避免灑水造成泥水飛濺，及時清除病果。",
+    "notes": "依 AZAI 整理。",
+    "source": "AZAI 農業病蟲害智能管理決策系統",
+    "sourceUrl": "https://azai.tari.gov.tw/search/bug",
+    "updatedAt": "2026-07-04"
+  },
+  {
+    "id": "citrus-psorosis",
+    "crop": "柑橘",
+    "crops": ["柑橘"],
+    "name": "鱗砧病",
+    "pathogenType": "病毒性病害",
+    "conditions": {
+      "tempRange": [18, 32],
+      "humidityMin": 50,
+      "rainMin": 0,
+      "sunshineMax": 8,
+      "windSensitive": false
+    },
+    "sensitiveStages": ["苗木期", "營養生長期"],
+    "riskFactors": ["嫁接帶病接穗", "工具機械傳播"],
+    "symptoms": ["樹皮鱗片狀病徵", "樹勢衰弱"],
+    "advice": "使用健康接穗並落實嫁接工具消毒，避免病株繁殖。",
+    "notes": "AZAI 指出目前尚未發現昆蟲媒介，主要為嫁接及機械傳播。",
+    "source": "AZAI 農業病蟲害智能管理決策系統",
+    "sourceUrl": "https://azai.tari.gov.tw/search/bug",
+    "updatedAt": "2026-07-04"
+  },
+  {
+    "id": "citrus-nematode",
+    "crop": "柑橘",
+    "crops": ["柑橘"],
+    "name": "線蟲",
+    "pathogenType": "線蟲危害",
+    "conditions": {
+      "tempRange": [20, 30],
+      "humidityMin": 60,
+      "rainMin": 0,
+      "sunshineMax": 8,
+      "windSensitive": false
+    },
+    "sensitiveStages": ["苗木期", "營養生長期", "結果期"],
+    "riskFactors": ["根部寄生", "營養根受害", "3月至6月族群上升", "土壤傳播"],
+    "symptoms": ["根系受害", "植株生育衰弱", "吸收能力下降"],
+    "advice": "避免帶線蟲苗木與土壤移入，注意3月至6月族群高峰期監測，並採健康苗與土壤管理。",
+    "notes": "依使用者提供之 AZAI 摘錄整理；環境數值為教學推估，需再查證。",
+    "source": "AZAI 農業病蟲害智能管理決策系統",
+    "sourceUrl": "https://azai.tari.gov.tw/search/bug",
+    "updatedAt": "2026-07-04"
+  },
+  {
+    "id": "tea-gray-blight",
+    "crop": "茶",
+    "crops": ["茶"],
+    "name": "輪斑病",
+    "pathogenType": "真菌性病害",
+    "conditions": {
+      "tempRange": [20, 30],
+      "humidityMin": 80,
+      "rainMin": 5,
+      "sunshineMax": 5,
+      "windSensitive": true
+    },
+    "sensitiveStages": ["育苗期", "新梢期", "修剪後"],
+    "riskFactors": ["機械損傷", "修剪殘留物", "污染育苗工具", "水滴飛濺", "空氣孢子傳播"],
+    "symptoms": ["葉片出現輪紋狀病斑", "病斑擴大", "嚴重時葉片枯萎"],
+    "advice": "修剪後注意傷口管理，清除修剪殘體，並保持育苗工具與農機具清潔。",
+    "notes": "AZAI 提及病原菌可能在土壤中存活數年；環境數值與部分症狀為教學推估，需再查證。",
+    "source": "AZAI 農業病蟲害智能管理決策系統",
+    "sourceUrl": "https://azai.tari.gov.tw/search/bug",
+    "updatedAt": "2026-07-04"
+  },
+  {
+    "id": "tea-ring-spot-leaf-blight",
+    "crop": "茶",
+    "crops": ["茶"],
+    "name": "輪紋葉枯病",
+    "pathogenType": "真菌性病害",
+    "conditions": {
+      "tempRange": [18, 28],
+      "humidityMin": 80,
+      "rainMin": 5,
+      "sunshineMax": 5,
+      "windSensitive": true
+    },
+    "sensitiveStages": ["新梢期", "營養生長期"],
+    "riskFactors": ["繁殖體越冬", "孢子傳染", "田間發病生態尚待釐清"],
+    "symptoms": ["葉片出現輪紋狀病斑", "葉片枯萎", "病斑擴大後影響葉片品質"],
+    "advice": "清除罹病葉片並維持茶園通風，後續應補充田間初次感染源資料。",
+    "notes": "AZAI 提及臺灣與日本尚未發現有性繁殖現象，田間發病生態仍需釐清；環境數值為教學推估，需再查證。",
+    "source": "AZAI 農業病蟲害智能管理決策系統",
+    "sourceUrl": "https://azai.tari.gov.tw/search/bug",
+    "updatedAt": "2026-07-04"
+  },
+  {
+    "id": "cucumber-bacterial-spot",
+    "crop": "胡瓜",
+    "crops": ["胡瓜", "瓜類作物"],
+    "name": "細菌性斑點病",
+    "pathogenType": "細菌性病害",
+    "conditions": {
+      "tempRange": [20, 30],
+      "humidityMin": 85,
+      "rainMin": 5,
+      "sunshineMax": 5,
+      "windSensitive": true
+    },
+    "sensitiveStages": ["苗期", "營養生長期", "開花期", "結果期"],
+    "riskFactors": ["作物殘體", "帶菌種子", "噴灌水", "風雨傳播", "傷口感染"],
+    "symptoms": ["葉片出現斑點", "病斑受水分影響擴大", "果實或莖葉可能受害"],
+    "advice": "使用健康種子，避免噴灌造成病菌飛濺，清除作物殘體並降低葉面潮濕時間。",
+    "notes": "依使用者提供之 AZAI 摘錄整理；環境數值與部分症狀為教學推估，需再查證。",
+    "source": "AZAI 農業病蟲害智能管理決策系統",
+    "sourceUrl": "https://azai.tari.gov.tw/search/bug",
+    "updatedAt": "2026-07-04"
+  },
+  {
+    "id": "peanut-crown-rot",
+    "crop": "花生",
+    "crops": ["花生"],
+    "name": "冠腐病",
+    "pathogenType": "真菌性病害",
+    "conditions": {
+      "tempRange": [24, 32],
+      "humidityMin": 75,
+      "rainMin": 0,
+      "sunshineMax": 6,
+      "windSensitive": false
+    },
+    "sensitiveStages": ["種子期", "苗期", "營養生長期"],
+    "riskFactors": ["種子傳播", "土壤傳播", "花生殼感染", "貯藏溫濕度適合", "病殘株"],
+    "symptoms": ["幼苗受害", "冠部腐敗", "植株萎凋或生育衰弱"],
+    "advice": "使用健康種子並注意貯藏環境，清除罹病殘株，降低土壤與種子感染源。",
+    "notes": "依使用者提供之 AZAI 摘錄整理；環境數值與部分症狀為教學推估，需再查證。",
+    "source": "AZAI 農業病蟲害智能管理決策系統",
+    "sourceUrl": "https://azai.tari.gov.tw/search/bug",
+    "updatedAt": "2026-07-04"
+  },
+  {
+    "id": "peanut-leaf-scorch",
+    "crop": "花生",
+    "crops": ["花生"],
+    "name": "葉燒病",
+    "pathogenType": "真菌性病害",
+    "conditions": {
+      "tempRange": [20, 30],
+      "humidityMin": 80,
+      "rainMin": 5,
+      "sunshineMax": 5,
+      "windSensitive": false
+    },
+    "sensitiveStages": ["營養生長期", "開花期", "結莢期"],
+    "riskFactors": ["老葉越冬", "假囊殼殘存", "罹病種子", "前期作殘留物", "氣孔或傷口侵入"],
+    "symptoms": ["葉片出現燒灼狀病斑", "葉面粗糙黑點", "嚴重時葉片枯萎或落葉"],
+    "advice": "清除前期作殘留葉片，避免罹病種子作為初次感染源，雨季加強田間巡查。",
+    "notes": "AZAI 提及病原菌可在12月至翌年1月罹病老葉上以假囊殼殘存越冬；環境數值為教學推估，需再查證。",
+    "source": "AZAI 農業病蟲害智能管理決策系統",
+    "sourceUrl": "https://azai.tari.gov.tw/search/bug",
+    "updatedAt": "2026-07-04"
+  },
+  {
+    "id": "passion-fruit-brown-spot",
+    "crop": "百香果",
+    "crops": ["百香果"],
+    "name": "褐斑病",
+    "pathogenType": "真菌性病害",
+    "conditions": {
+      "tempRange": [22, 30],
+      "humidityMin": 85,
+      "rainMin": 5,
+      "sunshineMax": 5,
+      "windSensitive": true
+    },
+    "sensitiveStages": ["新梢期", "開花期", "結果期"],
+    "riskFactors": ["分生孢子", "空氣傳播", "風雨飛濺", "病株殘體"],
+    "symptoms": ["葉片出現褐色斑點", "病斑擴大", "嚴重時葉片黃化或落葉"],
+    "advice": "清除病株殘體，雨後加強巡園並降低風雨飛濺傳播。",
+    "notes": "依使用者提供之 AZAI 摘錄整理；環境數值與部分症狀為教學推估，需再查證。",
+    "source": "AZAI 農業病蟲害智能管理決策系統",
+    "sourceUrl": "https://azai.tari.gov.tw/search/bug",
+    "updatedAt": "2026-07-04"
+  },
+  {
+    "id": "papaya-black-rot",
+    "crop": "木瓜",
+    "crops": ["木瓜"],
+    "name": "黑腐病",
+    "pathogenType": "細菌性病害",
+    "conditions": {
+      "tempRange": [22, 32],
+      "humidityMin": 85,
+      "rainMin": 5,
+      "sunshineMax": 5,
+      "windSensitive": false
+    },
+    "sensitiveStages": ["新梢期", "開花期", "結果期"],
+    "riskFactors": ["鄰近發病果園", "成熟莖部組織帶菌", "春秋季", "颱風後", "雨水傳播"],
+    "symptoms": ["幼嫩組織受害", "莖部或果實黑腐", "病勢於颱風雨後加劇"],
+    "advice": "颱風後及春秋季加強巡園，移除罹病部位並降低雨水飛濺傳播。",
+    "notes": "依使用者提供之 AZAI 摘錄整理；環境數值與部分症狀為教學推估，需再查證。",
+    "source": "AZAI 農業病蟲害智能管理決策系統",
+    "sourceUrl": "https://azai.tari.gov.tw/search/bug",
+    "updatedAt": "2026-07-04"
+  },
+  {
+    "id": "tomato-black-leaf-mold",
+    "crop": "番茄",
+    "crops": ["番茄"],
+    "name": "黑黴病",
+    "pathogenType": "真菌性病害",
+    "conditions": {
+      "tempRange": [20, 28],
+      "humidityMin": 85,
+      "rainMin": 0,
+      "sunshineMax": 4,
+      "windSensitive": true
+    },
+    "sensitiveStages": ["營養生長期", "開花期", "結果期"],
+    "riskFactors": ["空氣傳播", "雨水", "風", "人員衣物", "昆蟲媒介", "上期殘體"],
+    "symptoms": ["葉片表面出現黑色黴狀病斑", "葉片黃化", "嚴重時葉片枯萎"],
+    "advice": "清除上期殘體，保持設施通風並降低葉面潮濕，避免人員與昆蟲造成傳播。",
+    "notes": "AZAI 提及本病不會藉番茄種子傳播；環境數值與部分症狀為教學推估，需再查證。",
+    "source": "AZAI 農業病蟲害智能管理決策系統",
+    "sourceUrl": "https://azai.tari.gov.tw/search/bug",
+    "updatedAt": "2026-07-04"
+  },
+  {
+    "id": "guava-scab",
+    "crop": "番石榴",
+    "crops": ["番石榴"],
+    "name": "瘡痂病",
+    "pathogenType": "真菌性病害",
+    "conditions": {
+      "tempRange": [22, 30],
+      "humidityMin": 80,
+      "rainMin": 5,
+      "sunshineMax": 5,
+      "windSensitive": false
+    },
+    "sensitiveStages": ["開花期", "幼果期", "結果期"],
+    "riskFactors": ["分生孢子", "果實感染", "果園內病原存在", "單一病害環"],
+    "symptoms": ["果實表面出現瘡痂狀病斑", "果皮粗糙", "果實外觀品質下降"],
+    "advice": "開花與幼果期加強果實保護，清除病果並降低園內病原累積。",
+    "notes": "依使用者提供之 AZAI 摘錄整理；環境數值與部分症狀為教學推估，需再查證。",
+    "source": "AZAI 農業病蟲害智能管理決策系統",
+    "sourceUrl": "https://azai.tari.gov.tw/search/bug",
+    "updatedAt": "2026-07-04"
+  },
+  {
+    "id": "guava-algal-spot",
+    "crop": "番石榴",
+    "crops": ["番石榴"],
+    "name": "藻斑病",
+    "pathogenType": "其他",
+    "conditions": {
+      "tempRange": [22, 30],
+      "humidityMin": 85,
+      "rainMin": 5,
+      "sunshineMax": 5,
+      "windSensitive": false
+    },
+    "sensitiveStages": ["新梢期", "營養生長期", "結果期"],
+    "riskFactors": ["游走孢子", "葉表水膜", "雨水沖打", "高濕"],
+    "symptoms": ["葉片出現藻斑", "葉表形成藻絲", "病斑可產生孢子囊"],
+    "advice": "雨季加強果園通風，降低葉面長時間潮濕，清除重病葉片。",
+    "notes": "AZAI 原始分類為藻類；schema 無藻類分類，暫歸為其他。環境數值為教學推估，需再查證。",
+    "source": "AZAI 農業病蟲害智能管理決策系統",
+    "sourceUrl": "https://azai.tari.gov.tw/search/bug",
+    "updatedAt": "2026-07-04"
+  },
+  {
+    "id": "cucumber-anthracnose",
+    "crop": "胡瓜",
+    "crops": ["胡瓜"],
+    "name": "炭疽病",
+    "pathogenType": "真菌性病害",
+    "conditions": {
+      "tempRange": [25, 32],
+      "humidityMin": 85,
+      "rainMin": 5,
+      "sunshineMax": 4,
+      "windSensitive": true
+    },
+    "sensitiveStages": ["苗期", "營養生長期", "開花期", "結果期"],
+    "riskFactors": ["作物殘體", "多年生枝條", "帶菌種子", "風雨傳播", "游離水"],
+    "symptoms": ["葉片或果實出現炭疽病斑", "病斑擴大", "高濕時病勢加劇"],
+    "advice": "使用健康種子，清除作物殘體，夏秋降雨頻繁時加強巡田。",
+    "notes": "依使用者提供之 AZAI 摘錄整理；環境數值為教學推估，需再查證。",
+    "source": "AZAI 農業病蟲害智能管理決策系統",
+    "sourceUrl": "https://azai.tari.gov.tw/search/bug",
+    "updatedAt": "2026-07-04"
+  },
+  {
+    "id": "cucumber-brown-spot",
+    "crop": "胡瓜",
+    "crops": ["胡瓜"],
+    "name": "褐斑病",
+    "pathogenType": "真菌性病害",
+    "conditions": {
+      "tempRange": [24, 32],
+      "humidityMin": 80,
+      "rainMin": 5,
+      "sunshineMax": 5,
+      "windSensitive": true
+    },
+    "sensitiveStages": ["營養生長期", "開花期", "結果期"],
+    "riskFactors": ["作物殘體", "多年生枝條", "風媒傳播", "雨水促進傳播", "夏秋時節"],
+    "symptoms": ["葉片出現褐色病斑", "病斑擴大", "嚴重時葉片枯萎"],
+    "advice": "清除作物殘體，夏秋高濕或降雨後加強巡田，保持田間通風。",
+    "notes": "依使用者提供之 AZAI 摘錄整理；環境數值為教學推估，需再查證。",
+    "source": "AZAI 農業病蟲害智能管理決策系統",
+    "sourceUrl": "https://azai.tari.gov.tw/search/bug",
+    "updatedAt": "2026-07-04"
+  },
+  {
+    "id": "sweet-potato-feathery-mottle-virus",
+    "crop": "甘藷",
+    "crops": ["甘藷"],
+    "name": "羽狀斑駁病毒",
+    "pathogenType": "病毒性病害",
+    "conditions": {
+      "tempRange": [20, 32],
+      "humidityMin": 60,
+      "rainMin": 0,
+      "sunshineMax": 8,
+      "windSensitive": false
+    },
+    "sensitiveStages": ["種苗期", "營養生長期"],
+    "riskFactors": ["帶病種苗", "病藷留作種原", "機械操作傳播", "田間病原累積"],
+    "symptoms": ["葉片出現羽狀斑駁", "葉片斑駁或黃化", "植株生育不良"],
+    "advice": "使用健康種苗，避免病藷留作種原，農事操作時降低機械傳播風險。",
+    "notes": "依使用者提供之 AZAI 摘錄整理；環境數值主要反映栽培管理與媒介風險，需再查證。",
+    "source": "AZAI 農業病蟲害智能管理決策系統",
+    "sourceUrl": "https://azai.tari.gov.tw/search/bug",
+    "updatedAt": "2026-07-04"
+  },
+  {
+    "id": "sweet-potato-stem-rot",
+    "crop": "甘藷",
+    "crops": ["甘藷"],
+    "name": "基腐病",
+    "pathogenType": "真菌性病害",
+    "conditions": {
+      "tempRange": [24, 32],
+      "humidityMin": 75,
+      "rainMin": 0,
+      "sunshineMax": 6,
+      "windSensitive": false
+    },
+    "sensitiveStages": ["種苗期", "營養生長期", "塊根形成期"],
+    "riskFactors": ["植物殘體", "田間殘存病原", "連作", "病株殘留"],
+    "symptoms": ["莖基部腐敗", "植株萎凋", "嚴重時全株枯死"],
+    "advice": "清除病株與植物殘體，避免連作並使用健康種苗。",
+    "notes": "AZAI 僅提供病原可藉植物殘體殘存在田間；環境數值與症狀為教學推估，需再查證。",
+    "source": "AZAI 農業病蟲害智能管理決策系統",
+    "sourceUrl": "https://azai.tari.gov.tw/search/bug",
+    "updatedAt": "2026-07-04"
+  },
+  {
+    "id": "sweet-potato-southern-blight",
+    "crop": "甘藷",
+    "crops": ["甘藷"],
+    "name": "白絹病",
+    "pathogenType": "真菌性病害",
+    "conditions": {
+      "tempRange": [25, 35],
+      "humidityMin": 80,
+      "rainMin": 0,
+      "sunshineMax": 6,
+      "windSensitive": false
+    },
+    "sensitiveStages": ["苗期", "營養生長期", "塊根形成期"],
+    "riskFactors": ["菌核殘存", "植物殘體", "腐生生活", "高溫高濕"],
+    "symptoms": ["地際部出現白色絹絲狀菌絲", "植株萎凋", "病部形成菌核"],
+    "advice": "清除植物殘體，降低土壤菌核密度，避免高溫高濕與排水不良。",
+    "notes": "依使用者提供之 AZAI 摘錄整理；環境數值與部分症狀為教學推估，需再查證。",
+    "source": "AZAI 農業病蟲害智能管理決策系統",
+    "sourceUrl": "https://azai.tari.gov.tw/search/bug",
+    "updatedAt": "2026-07-04"
+  },
+  {
+    "id": "green-onion-soft-rot",
+    "crop": "青蔥",
+    "crops": ["青蔥"],
+    "name": "軟腐病",
+    "pathogenType": "細菌性病害",
+    "conditions": {
+      "tempRange": [24, 32],
+      "humidityMin": 85,
+      "rainMin": 5,
+      "sunshineMax": 5,
+      "windSensitive": true
+    },
+    "sensitiveStages": ["苗期", "營養生長期", "採收期"],
+    "riskFactors": ["作物殘體", "帶菌種子", "噴灌水", "風雨傳播", "傷口感染"],
+    "symptoms": ["葉鞘或莖基部軟腐", "組織水浸狀腐敗", "高濕有水時病勢加劇"],
+    "advice": "避免噴灌造成病菌飛濺，清除作物殘體，減少傷口並改善排水。",
+    "notes": "依使用者提供之 AZAI 摘錄整理；環境數值為教學推估，需再查證。",
+    "source": "AZAI 農業病蟲害智能管理決策系統",
+    "sourceUrl": "https://azai.tari.gov.tw/search/bug",
+    "updatedAt": "2026-07-04"
+  },
+  {
+    "id": "green-onion-virus-disease",
+    "crop": "青蔥",
+    "crops": ["青蔥", "蔥科作物"],
+    "name": "病毒病",
+    "pathogenType": "病毒性病害",
+    "conditions": {
+      "tempRange": [18, 30],
+      "humidityMin": 60,
+      "rainMin": 0,
+      "sunshineMax": 8,
+      "windSensitive": false
+    },
+    "sensitiveStages": ["種苗期", "營養生長期", "採收期"],
+    "riskFactors": ["種苗帶菌", "冬蔥瘤蚜傳播", "媒介昆蟲刺吸"],
+    "symptoms": ["葉片黃化或斑駁", "植株生育不良", "葉片畸形"],
+    "advice": "使用健康種苗，移除疑似罹病株，並加強冬蔥瘤蚜監測與防治。",
+    "notes": "依使用者提供之 AZAI 摘錄整理；環境數值主要反映媒介昆蟲活動風險，需再查證。",
+    "source": "AZAI 農業病蟲害智能管理決策系統",
+    "sourceUrl": "https://azai.tari.gov.tw/search/bug",
+    "updatedAt": "2026-07-04"
+  },
+  {
+    "id": "lychee-sour-rot",
+    "crop": "荔枝",
+    "crops": ["荔枝"],
+    "name": "酸腐病",
+    "pathogenType": "真菌性病害",
+    "conditions": {
+      "tempRange": [25, 35],
+      "humidityMin": 85,
+      "rainMin": 5,
+      "sunshineMax": 5,
+      "windSensitive": true
+    },
+    "sensitiveStages": ["果實成熟期", "採收期"],
+    "riskFactors": ["地上落果", "土壤病原", "果蠅與蜜蜂攜帶", "裂果", "高溫多濕"],
+    "symptoms": ["成熟果實酸腐", "裂果處快速腐敗", "侵入後1至2天出現病徵"],
+    "advice": "清除落果與裂果，成熟期加強果實管理並降低昆蟲攜帶病原。",
+    "notes": "AZAI 提及高溫多濕會加速病害，病原侵入僅需1至2天果實即出現病徵；環境數值為教學推估，需再查證。",
+    "source": "AZAI 農業病蟲害智能管理決策系統",
+    "sourceUrl": "https://azai.tari.gov.tw/search/bug",
+    "updatedAt": "2026-07-04"
+  },
+  {
+    "id": "mango-stem-end-rot",
+    "crop": "檬果",
+    "crops": ["檬果"],
+    "name": "蒂腐病",
+    "pathogenType": "真菌性病害",
+    "conditions": {
+      "tempRange": [20, 28],
+      "humidityMin": 80,
+      "rainMin": 5,
+      "sunshineMax": 5,
+      "windSensitive": false
+    },
+    "sensitiveStages": ["開花期", "結果期", "果實成熟期", "採收期"],
+    "riskFactors": ["成熟莖部組織潛伏菌絲", "花序與果梗感染", "採收傷口", "雨水噴濺", "自然開口或傷口"],
+    "symptoms": ["果蒂附近腐敗", "果實成熟後發病", "採收傷口處感染"],
+    "advice": "降低採收傷口，果實成熟期加強管理，雨後注意枝條與果梗感染風險。",
+    "notes": "AZAI 提及分生孢子產生需在28℃以下，感染須經自然開口或傷口；環境數值部分依原文與教學推估整理，需再查證。",
+    "source": "AZAI 農業病蟲害智能管理決策系統",
+    "sourceUrl": "https://azai.tari.gov.tw/search/bug",
+    "updatedAt": "2026-07-04"
+  },
+  {
+    "id": "mango-powdery-mildew",
+    "crop": "檬果",
+    "crops": ["檬果"],
+    "name": "白粉病",
+    "pathogenType": "真菌性病害",
+    "conditions": {
+      "tempRange": [18, 28],
+      "humidityMin": 70,
+      "rainMin": 0,
+      "sunshineMax": 6,
+      "windSensitive": true
+    },
+    "sensitiveStages": ["開花期", "幼果期", "新梢期"],
+    "riskFactors": ["春季開花期", "地面病組織", "子囊孢子", "分生孢子空氣傳播"],
+    "symptoms": ["花穗受感染", "幼嫩枝葉出現白粉狀病斑", "感染組織壞疽死亡"],
+    "advice": "春季開花期加強巡園，清除地面病組織與落葉，降低初次感染源。",
+    "notes": "依使用者提供之 AZAI 摘錄整理；環境數值為教學推估，需再查證。",
+    "source": "AZAI 農業病蟲害智能管理決策系統",
+    "sourceUrl": "https://azai.tari.gov.tw/search/bug",
+    "updatedAt": "2026-07-04"
+  },
+  {
+    "id": "mango-sooty-mold",
+    "crop": "檬果",
+    "crops": ["檬果"],
+    "name": "煤煙病",
+    "pathogenType": "真菌性病害",
+    "conditions": {
+      "tempRange": [22, 32],
+      "humidityMin": 70,
+      "rainMin": 0,
+      "sunshineMax": 6,
+      "windSensitive": true
+    },
+    "sensitiveStages": ["新梢期", "結果期", "採收期"],
+    "riskFactors": ["蜜露", "昆蟲攜帶分生孢子", "空氣中分生孢子", "腐生真菌"],
+    "symptoms": ["葉片或果實表面形成黑色煤煙狀塊斑", "影響光合作用", "果實外觀品質下降"],
+    "advice": "管理分泌蜜露之害蟲，維持樹冠通風，清除嚴重覆蓋煤煙之枝葉。",
+    "notes": "AZAI 提及煤煙病菌不侵入檬果組織，而是利用昆蟲蜜露生長；環境數值為教學推估，需再查證。",
+    "source": "AZAI 農業病蟲害智能管理決策系統",
+    "sourceUrl": "https://azai.tari.gov.tw/search/bug",
+    "updatedAt": "2026-07-04"
+  },
+  {
+    "id": "mango-algal-spot-and-lichen",
+    "crop": "檬果",
+    "crops": ["檬果"],
+    "name": "藻斑病與地衣",
+    "pathogenType": "其他",
+    "conditions": {
+      "tempRange": [22, 30],
+      "humidityMin": 80,
+      "rainMin": 5,
+      "sunshineMax": 5,
+      "windSensitive": true
+    },
+    "sensitiveStages": ["新梢期", "營養生長期", "結果期"],
+    "riskFactors": ["藻類胞囊", "游走子", "水滴噴濺", "風力傳播", "地衣菌絲塊"],
+    "symptoms": ["葉片或枝條出現藻斑", "地衣附生", "植株表面覆蓋斑塊"],
+    "advice": "維持果園通風與透光，修剪過密枝條，降低枝葉表面長時間潮濕。",
+    "notes": "AZAI 原始分類為複合；schema 無複合分類，暫歸為其他。環境數值與症狀為教學推估，需再查證。",
+    "source": "AZAI 農業病蟲害智能管理決策系統",
+    "sourceUrl": "https://azai.tari.gov.tw/search/bug",
+    "updatedAt": "2026-07-04"
+  },
+  {
+    "id": "lychee-sooty-mold",
+    "crop": "荔枝",
+    "crops": ["荔枝"],
+    "name": "煤煙病",
+    "pathogenType": "真菌性病害",
+    "conditions": {
+      "tempRange": [22, 32],
+      "humidityMin": 70,
+      "rainMin": 0,
+      "sunshineMax": 6,
+      "windSensitive": true
+    },
+    "sensitiveStages": ["新梢期", "結果期", "採收期"],
+    "riskFactors": ["蜜露", "昆蟲攜帶分生孢子", "空氣中分生孢子", "寄主範圍廣"],
+    "symptoms": ["葉片或果實表面形成黑色煤煙狀塊斑", "影響光合作用", "果實外觀品質下降"],
+    "advice": "管理分泌蜜露之害蟲，維持果園通風並減少煤煙病菌附生條件。",
+    "notes": "依使用者提供之 AZAI 摘錄整理；原文疑有檬果文字沿用，已依標題整理為荔枝煤煙病。",
+    "source": "AZAI 農業病蟲害智能管理決策系統",
+    "sourceUrl": "https://azai.tari.gov.tw/search/bug",
+    "updatedAt": "2026-07-04"
+  },
+  {
+    "id": "lychee-pink-disease",
+    "crop": "荔枝",
+    "crops": ["荔枝"],
+    "name": "赤衣病",
+    "pathogenType": "真菌性病害",
+    "conditions": {
+      "tempRange": [24, 32],
+      "humidityMin": 85,
+      "rainMin": 5,
+      "sunshineMax": 4,
+      "windSensitive": true
+    },
+    "sensitiveStages": ["營養生長期", "結果期", "修剪後"],
+    "riskFactors": ["枝條裂縫", "傷口感染", "陰暗高濕", "連續降雨", "擔孢子風雨傳播"],
+    "symptoms": ["枝條表面出現粉紅至赤色菌層", "枝條衰弱", "受害枝條枯死"],
+    "advice": "修剪罹病枝條，改善樹冠通風透光，連續降雨後加強枝條與傷口檢查。",
+    "notes": "依使用者提供之 AZAI 摘錄整理；環境數值與部分症狀為教學推估，需再查證。",
+    "source": "AZAI 農業病蟲害智能管理決策系統",
+    "sourceUrl": "https://azai.tari.gov.tw/search/bug",
+    "updatedAt": "2026-07-04"
+  },
+  {
+    "id": "lychee-fruit-rot",
+    "crop": "荔枝",
+    "crops": ["荔枝"],
+    "name": "果腐病",
+    "pathogenType": "真菌性病害",
+    "conditions": {
+      "tempRange": [24, 32],
+      "humidityMin": 85,
+      "rainMin": 5,
+      "sunshineMax": 5,
+      "windSensitive": true
+    },
+    "sensitiveStages": ["結果期", "果實成熟期", "採收期", "採後貯運期"],
+    "riskFactors": ["枯枝落葉", "樹皮越冬", "柄孢子空氣傳播", "降雨潮濕", "健康果與病果接觸"],
+    "symptoms": ["果實快速腐敗", "無傷口果實亦可被感染", "48小時內可能快速腐敗"],
+    "advice": "清除枯枝落葉與病果，採收與貯運期避免健康果接觸病果，保持通風乾燥。",
+    "notes": "AZAI 提及以菌絲塊接種無傷口黑葉荔枝果實可於48小時內快速腐敗；環境數值為教學推估，需再查證。",
+    "source": "AZAI 農業病蟲害智能管理決策系統",
+    "sourceUrl": "https://azai.tari.gov.tw/search/bug",
+    "updatedAt": "2026-07-04"
+  },
+  {
+    "id": "tea-net-blister-blight",
+    "crop": "茶",
+    "crops": ["茶"],
+    "name": "網餅病",
+    "pathogenType": "真菌性病害",
+    "conditions": {
+      "tempRange": [16, 22],
+      "humidityMin": 90,
+      "rainMin": 0,
+      "sunshineMax": 3,
+      "windSensitive": false
+    },
+    "sensitiveStages": ["新梢期", "嫩葉期"],
+    "riskFactors": ["冷涼高濕", "病害環類似茶餅病", "嫩葉感染"],
+    "symptoms": ["嫩葉形成網狀或餅狀病斑", "病斑影響茶葉品質"],
+    "advice": "冷涼高濕期加強新梢巡查，維持茶園通風並移除罹病嫩葉。",
+    "notes": "AZAI 僅註明病害環與茶餅病菌類似；環境條件依茶餅病類型推估，需再查證。",
+    "source": "AZAI 農業病蟲害智能管理決策系統",
+    "sourceUrl": "https://azai.tari.gov.tw/search/bug",
+    "updatedAt": "2026-07-04"
+  },
+  {
+    "id": "tea-algal-spot",
+    "crop": "茶",
+    "crops": ["茶"],
+    "name": "藻斑病",
+    "pathogenType": "其他",
+    "conditions": {
+      "tempRange": [22, 30],
+      "humidityMin": 85,
+      "rainMin": 5,
+      "sunshineMax": 5,
+      "windSensitive": false
+    },
+    "sensitiveStages": ["新梢期", "營養生長期"],
+    "riskFactors": ["藻類游走子", "高濕", "多犯性病原", "低海拔寄主"],
+    "symptoms": ["葉片出現藻斑", "病斑表面可能形成藻體", "嚴重時影響葉片品質"],
+    "advice": "降低茶園濕度，改善通風透光，清除嚴重罹病葉片。",
+    "notes": "AZAI 原始分類為藻類；schema 無藻類分類，暫歸為其他。環境數值為教學推估，需再查證。",
+    "source": "AZAI 農業病蟲害智能管理決策系統",
+    "sourceUrl": "https://azai.tari.gov.tw/search/bug",
+    "updatedAt": "2026-07-04"
+  },
+  {
+    "id": "sweet-potato-soft-rot",
+    "crop": "甘藷",
+    "crops": ["甘藷"],
+    "name": "軟腐病",
+    "pathogenType": "真菌性病害",
+    "conditions": {
+      "tempRange": [25, 32],
+      "humidityMin": 85,
+      "rainMin": 5,
+      "sunshineMax": 5,
+      "windSensitive": false
+    },
+    "sensitiveStages": ["生育期", "採收期", "採後貯運期"],
+    "riskFactors": ["植物殘體", "接合子越冬", "雨水傳播", "分生孢子囊", "生長季重複傳播"],
+    "symptoms": ["塊根或組織軟腐", "受害部位水浸狀腐敗", "採後腐敗擴大"],
+    "advice": "清除植物殘體，採收與貯藏時避免受傷並保持通風乾燥。",
+    "notes": "本筆可能與既有 sweet-potato-soft-rot 重複；合併時建議保留 AZAI 關於接合子越冬與雨水傳播描述。",
+    "source": "AZAI 農業病蟲害智能管理決策系統",
+    "sourceUrl": "https://azai.tari.gov.tw/search/bug",
+    "updatedAt": "2026-07-04"
+  },
+  {
+    "id": "sweet-potato-black-rot",
+    "crop": "甘藷",
+    "crops": ["甘藷"],
+    "name": "黑腐病",
+    "pathogenType": "真菌性病害",
+    "conditions": {
+      "tempRange": [22, 30],
+      "humidityMin": 75,
+      "rainMin": 0,
+      "sunshineMax": 6,
+      "windSensitive": false
+    },
+    "sensitiveStages": ["種苗期", "生育期", "採收期", "採後貯運期"],
+    "riskFactors": ["土壤傳播", "植物殘體", "昆蟲攜帶孢子", "寄主範圍廣"],
+    "symptoms": ["塊根或莖部出現黑腐病斑", "組織腐敗", "採後腐敗"],
+    "advice": "避免病土與病殘體累積，採收後保持清潔，注意田間昆蟲可能攜帶病原。",
+    "notes": "依使用者提供之 AZAI 摘錄整理；環境數值與部分症狀為教學推估，需再查證。",
+    "source": "AZAI 農業病蟲害智能管理決策系統",
+    "sourceUrl": "https://azai.tari.gov.tw/search/bug",
+    "updatedAt": "2026-07-04"
+  },
+  {
+    "id": "sweet-potato-charcoal-rot",
+    "crop": "甘藷",
+    "crops": ["甘藷"],
+    "name": "炭腐病",
+    "pathogenType": "真菌性病害",
+    "conditions": {
+      "tempRange": [25, 35],
+      "humidityMin": 60,
+      "rainMin": 0,
+      "sunshineMax": 8,
+      "windSensitive": false
+    },
+    "sensitiveStages": ["苗期", "營養生長期", "塊根形成期"],
+    "riskFactors": ["微菌核", "土壤殘存", "天氣回暖", "根部感染"],
+    "symptoms": ["根部受害", "植株萎凋", "組織乾腐或炭化"],
+    "advice": "避免連作，清除病殘體並改善土壤健康，降低微菌核殘存密度。",
+    "notes": "依 AZAI 整理；環境數值為教學推估，需再查證。",
+    "source": "AZAI 農業病蟲害智能管理決策系統",
+    "sourceUrl": "https://azai.tari.gov.tw/search/bug",
+    "updatedAt": "2026-07-04"
+  },
+  {
+    "id": "sweet-potato-leaf-curl-virus",
+    "crop": "甘藷",
+    "crops": ["甘藷"],
+    "name": "捲葉病毒病",
+    "pathogenType": "病毒性病害",
+    "conditions": {
+      "tempRange": [22, 32],
+      "humidityMin": 60,
+      "rainMin": 0,
+      "sunshineMax": 8,
+      "windSensitive": false
+    },
+    "sensitiveStages": ["種苗期", "營養生長期"],
+    "riskFactors": ["粉蝨傳播", "帶病植株", "帶毒粉蝨", "健康植株吸汁傳毒"],
+    "symptoms": ["葉片捲曲", "葉片黃化", "植株生育不良"],
+    "advice": "使用健康種苗，移除帶病植株並加強粉蝨監測與防治。",
+    "notes": "AZAI 提及粉蝨吸食帶病植株4小時後，病毒可在體內存在約7天；環境數值主要反映媒介昆蟲風險，需再查證。",
+    "source": "AZAI 農業病蟲害智能管理決策系統",
+    "sourceUrl": "https://azai.tari.gov.tw/search/bug",
+    "updatedAt": "2026-07-04"
+  },
+  {
+    "id": "tea-white-root-rot",
+    "crop": "茶",
+    "crops": ["茶"],
+    "name": "白紋羽病",
+    "pathogenType": "真菌性病害",
+    "conditions": {
+      "tempRange": [18, 28],
+      "humidityMin": 80,
+      "rainMin": 5,
+      "sunshineMax": 5,
+      "windSensitive": false
+    },
+    "sensitiveStages": ["苗木期", "營養生長期"],
+    "riskFactors": ["病根接觸", "土壤中有機質帶菌", "潮濕環境", "根部感染"],
+    "symptoms": ["根部腐敗", "根表白色菌絲", "植株衰弱或枯死"],
+    "advice": "避免病根與健康根系接觸，清除病株與帶菌有機質，改善排水。",
+    "notes": "依 AZAI 整理；環境數值為教學推估，需再查證。",
+    "source": "AZAI 農業病蟲害智能管理決策系統",
+    "sourceUrl": "https://azai.tari.gov.tw/search/bug",
+    "updatedAt": "2026-07-04"
+  },
+  {
+    "id": "lychee-algal-spot",
+    "crop": "荔枝",
+    "crops": ["荔枝"],
+    "name": "藻斑病",
+    "pathogenType": "其他",
+    "conditions": {
+      "tempRange": [22, 30],
+      "humidityMin": 85,
+      "rainMin": 5,
+      "sunshineMax": 5,
+      "windSensitive": false
+    },
+    "sensitiveStages": ["新梢期", "營養生長期"],
+    "riskFactors": ["藻類游走子", "高濕", "寄主範圍廣", "雨水傳播"],
+    "symptoms": ["葉片出現藻斑", "枝葉表面形成斑塊", "嚴重時影響葉片品質"],
+    "advice": "改善果園通風透光，降低葉面長時間潮濕，清除嚴重病葉。",
+    "notes": "AZAI 原始分類為藻類；schema 無藻類分類，暫歸為其他。環境數值為教學推估，需再查證。",
+    "source": "AZAI 農業病蟲害智能管理決策系統",
+    "sourceUrl": "https://azai.tari.gov.tw/search/bug",
+    "updatedAt": "2026-07-04"
+  },
+  {
+    "id": "lychee-rough-skin-disorder",
+    "crop": "荔枝",
+    "crops": ["荔枝"],
+    "name": "粗皮病",
+    "pathogenType": "生理障礙",
+    "conditions": {
+      "tempRange": [20, 32],
+      "humidityMin": 60,
+      "rainMin": 0,
+      "sunshineMax": 8,
+      "windSensitive": false
+    },
+    "sensitiveStages": ["結果期", "果實成熟期"],
+    "riskFactors": ["生理障礙", "成因未明"],
+    "symptoms": ["果皮粗糙", "果實外觀品質下降"],
+    "advice": "加強果園水分與養分管理，記錄發生時期與環境條件，供後續診斷比對。",
+    "notes": "AZAI 原文危害徵狀為無；本筆依名稱暫列為生理障礙，症狀與環境條件需再查證。",
+    "source": "AZAI 農業病蟲害智能管理決策系統",
+    "sourceUrl": "https://azai.tari.gov.tw/search/bug",
+    "updatedAt": "2026-07-04"
+  },
+  {
+    "id": "cucumber-southern-root-knot-nematode",
+    "crop": "胡瓜",
+    "crops": ["胡瓜"],
+    "name": "南方根瘤線蟲",
+    "pathogenType": "線蟲危害",
+    "conditions": {
+      "tempRange": [20, 32],
+      "humidityMin": 60,
+      "rainMin": 0,
+      "sunshineMax": 8,
+      "windSensitive": false
+    },
+    "sensitiveStages": ["苗期", "營養生長期", "開花期", "結果期"],
+    "riskFactors": ["卵殘存土壤或介質", "種苗帶線蟲", "灌溉水傳播", "人為攜帶傳播"],
+    "symptoms": ["根部形成根瘤", "植株黃化", "生育衰弱"],
+    "advice": "使用健康種苗與乾淨介質，避免帶線蟲土壤移入，並採輪作或土壤管理降低線蟲密度。",
+    "notes": "依 AZAI 整理；環境數值為教學推估，需再查證。",
+    "source": "AZAI 農業病蟲害智能管理決策系統",
+    "sourceUrl": "https://azai.tari.gov.tw/search/bug",
+    "updatedAt": "2026-07-04"
+  },
+  {
+    "id": "guava-root-nematode-disease",
+    "crop": "番石榴",
+    "crops": ["番石榴"],
+    "name": "根部線蟲病害",
+    "pathogenType": "線蟲危害",
+    "conditions": {
+      "tempRange": [20, 32],
+      "humidityMin": 60,
+      "rainMin": 0,
+      "sunshineMax": 8,
+      "windSensitive": false
+    },
+    "sensitiveStages": ["苗期", "定植期", "營養生長期", "結果期"],
+    "riskFactors": ["培育土帶線蟲", "種苗期感染", "本田定植後逐漸感染", "週年性危害"],
+    "symptoms": ["根系受害", "植株生育衰弱", "種植時間愈久發病率升高"],
+    "advice": "使用無線蟲苗木與培育土，定植前注意土壤檢測，避免病土與帶線蟲苗木進入果園。",
+    "notes": "依 AZAI 整理；環境數值為教學推估，需再查證。",
+    "source": "AZAI 農業病蟲害智能管理決策系統",
+    "sourceUrl": "https://azai.tari.gov.tw/search/bug",
+    "updatedAt": "2026-07-04"
+  },
+  {
+    "id": "cucumber-root-rot",
+    "crop": "胡瓜",
+    "crops": ["胡瓜"],
+    "name": "根腐病",
+    "pathogenType": "卵菌類病害",
+    "conditions": {
+      "tempRange": [22, 30],
+      "humidityMin": 90,
+      "rainMin": 10,
+      "sunshineMax": 4,
+      "windSensitive": false
+    },
+    "sensitiveStages": ["苗期", "營養生長期"],
+    "riskFactors": ["土壤帶菌", "介質帶菌", "高濕", "積水", "灌溉水傳播"],
+    "symptoms": ["根部腐敗", "植株萎凋", "生育停滯"],
+    "advice": "改善排水、避免積水，使用健康種苗並避免污染介質。",
+    "notes": "環境條件依卵菌類病害推估，需再查證。",
+    "source": "AZAI",
+    "sourceUrl": "https://azai.tari.gov.tw/search/bug",
+    "updatedAt": "2026-07-04"
+  },
+  {
+    "id": "guava-dieback",
+    "crop": "番石榴",
+    "crops": ["番石榴"],
+    "name": "枝枯病",
+    "pathogenType": "真菌性病害",
+    "conditions": {
+      "tempRange": [24, 32],
+      "humidityMin": 80,
+      "rainMin": 5,
+      "sunshineMax": 5,
+      "windSensitive": false
+    },
+    "sensitiveStages": ["新梢期", "營養生長期"],
+    "riskFactors": ["病殘體", "土壤帶菌", "高濕", "厚膜孢子"],
+    "symptoms": ["枝條枯死", "葉片萎凋", "枝梢乾枯"],
+    "advice": "修除病枝並清除病殘體，降低果園濕度。",
+    "notes": "不同病原菌病害環略有差異。",
+    "source": "AZAI",
+    "sourceUrl": "https://azai.tari.gov.tw/search/bug",
+    "updatedAt": "2026-07-04"
+  },
+  {
+    "id": "peanut-rust",
+    "crop": "花生",
+    "crops": ["花生"],
+    "name": "銹病",
+    "pathogenType": "真菌性病害",
+    "conditions": {
+      "tempRange": [20, 28],
+      "humidityMin": 85,
+      "rainMin": 3,
+      "sunshineMax": 4,
+      "windSensitive": true
+    },
+    "sensitiveStages": ["營養生長期", "開花期", "結果期"],
+    "riskFactors": ["高濕", "夏孢子", "連續降雨"],
+    "symptoms": ["葉片銹斑", "葉片黃化", "提早落葉"],
+    "advice": "加強田間通風，發病初期即進行防治。",
+    "notes": "AZAI指出夏孢子為主要感染源。",
+    "source": "AZAI",
+    "sourceUrl": "https://azai.tari.gov.tw/search/bug",
+    "updatedAt": "2026-07-04"
+  },
+  {
+    "id": "peanut-pod-black-spot",
+    "crop": "花生",
+    "crops": ["花生"],
+    "name": "果莢黑斑病",
+    "pathogenType": "真菌性病害",
+    "conditions": {
+      "tempRange": [24, 30],
+      "humidityMin": 85,
+      "rainMin": 5,
+      "sunshineMax": 5,
+      "windSensitive": false
+    },
+    "sensitiveStages": ["結果期"],
+    "riskFactors": ["土壤帶菌", "高濕", "病殘體", "連作"],
+    "symptoms": ["果莢黑斑", "果莢腐敗"],
+    "advice": "避免連作並改善排水，降低土壤病原菌密度。",
+    "notes": "包含腐霉菌、鐮孢菌及Rhizoctonia等複合病原。",
+    "source": "AZAI",
+    "sourceUrl": "https://azai.tari.gov.tw/search/bug",
+    "updatedAt": "2026-07-04"
+  },
+  {
+    "id": "passionfruit-collar-rot",
+    "crop": "百香果",
+    "crops": ["百香果"],
+    "name": "頸腐病",
+    "pathogenType": "真菌性病害",
+    "conditions": {
+      "tempRange": [25, 32],
+      "humidityMin": 85,
+      "rainMin": 5,
+      "sunshineMax": 5,
+      "windSensitive": false
+    },
+    "sensitiveStages": ["苗期", "營養生長期"],
+    "riskFactors": ["土壤帶菌", "厚膜孢子", "高溫高濕", "連作"],
+    "symptoms": ["莖基部腐敗", "植株萎凋"],
+    "advice": "避免連作，改善排水並使用健康苗木。",
+    "notes": "土棲病原，可長期存活於土壤。",
+    "source": "AZAI",
+    "sourceUrl": "https://azai.tari.gov.tw/search/bug",
+    "updatedAt": "2026-07-04"
+  },
+  {
+    "id": "passionfruit-begomovirus",
+    "crop": "百香果",
+    "crops": ["百香果"],
+    "name": "雙生病毒病",
+    "pathogenType": "病毒性病害",
+    "conditions": {
+      "tempRange": [22, 32],
+      "humidityMin": 60,
+      "rainMin": 0,
+      "sunshineMax": 8,
+      "windSensitive": false
+    },
+    "sensitiveStages": ["苗期", "營養生長期"],
+    "riskFactors": ["粉蝨", "接穗帶毒", "野生寄主"],
+    "symptoms": ["葉片黃化", "葉片捲曲", "植株矮化"],
+    "advice": "使用健康苗木並控制粉蝨族群。",
+    "notes": "病原為雙生病毒群。",
+    "source": "AZAI",
+    "sourceUrl": "https://azai.tari.gov.tw/search/bug",
+    "updatedAt": "2026-07-04"
+  },
+  {
+    "id": "tea-hair-disease",
+    "crop": "茶",
+    "crops": ["茶"],
+    "name": "髮狀病",
+    "pathogenType": "真菌性病害",
+    "conditions": {
+      "tempRange": [20, 28],
+      "humidityMin": 85,
+      "rainMin": 5,
+      "sunshineMax": 5,
+      "windSensitive": false
+    },
+    "sensitiveStages": ["營養生長期"],
+    "riskFactors": ["高濕", "病害環未明"],
+    "symptoms": ["枝葉產生髮絲狀菌絲"],
+    "advice": "保持通風並持續監測。",
+    "notes": "AZAI指出病害環尚未釐清。",
+    "source": "AZAI",
+    "sourceUrl": "https://azai.tari.gov.tw/search/bug",
+    "updatedAt": "2026-07-04"
+  },
+  {
+    "id": "tomato-bacterial-stem-rot",
+    "crop": "番茄",
+    "crops": ["番茄"],
+    "name": "細菌性莖腐病",
+    "pathogenType": "細菌性病害",
+    "conditions": {
+      "tempRange": [25, 32],
+      "humidityMin": 90,
+      "rainMin": 5,
+      "sunshineMax": 4,
+      "windSensitive": false
+    },
+    "sensitiveStages": ["營養生長期", "結果期"],
+    "riskFactors": ["土壤帶菌", "灌溉水", "傷口感染", "高濕"],
+    "symptoms": ["莖部腐敗", "植株萎凋"],
+    "advice": "避免傷口感染，消毒工具並改善排水。",
+    "notes": "可經植株、土壤及工具殘存。",
+    "source": "AZAI",
+    "sourceUrl": "https://azai.tari.gov.tw/search/bug",
+    "updatedAt": "2026-07-04"
+  },
+  {
+    "id": "asparagus-damping-off",
+    "crop": "蘆筍",
+    "crops": ["蘆筍"],
+    "name": "立枯病",
+    "pathogenType": "真菌性病害",
+    "conditions": {
+      "tempRange": [22, 30],
+      "humidityMin": 85,
+      "rainMin": 5,
+      "sunshineMax": 5,
+      "windSensitive": false
+    },
+    "sensitiveStages": ["苗期"],
+    "riskFactors": ["種子帶菌", "砂質土壤"],
+    "symptoms": ["幼苗立枯", "根腐", "苗株死亡"],
+    "advice": "使用健康種子並避免連作。",
+    "notes": "病徵常於種植多年後才明顯。",
+    "source": "AZAI",
+    "sourceUrl": "https://azai.tari.gov.tw/search/bug",
+    "updatedAt": "2026-07-04"
+  },
+  {
+    "id": "asparagus-crown-rot",
+    "crop": "蘆筍",
+    "crops": ["蘆筍"],
+    "name": "冠腐病",
+    "pathogenType": "真菌性病害",
+    "conditions": {
+      "tempRange": [24, 30],
+      "humidityMin": 80,
+      "rainMin": 5,
+      "sunshineMax": 5,
+      "windSensitive": false
+    },
+    "sensitiveStages": ["營養生長期"],
+    "riskFactors": ["厚膜孢子", "土壤帶菌", "種子傳播"],
+    "symptoms": ["根冠腐敗", "植株衰弱", "生長不良"],
+    "advice": "避免連作，使用健康種苗並改善排水。",
+    "notes": "厚膜孢子可於土壤中存活多年。",
+    "source": "AZAI",
+    "sourceUrl": "https://azai.tari.gov.tw/search/bug",
+    "updatedAt": "2026-07-04"
+  },
+  {
+    "id": "asparagus-stem-rot",
+    "crop": "蘆筍",
+    "crops": ["蘆筍"],
+    "name": "莖腐病",
+    "pathogenType": "卵菌類病害",
+    "conditions": {
+      "tempRange": [22, 30],
+      "humidityMin": 90,
+      "rainMin": 10,
+      "sunshineMax": 4,
+      "windSensitive": false
+    },
+    "sensitiveStages": ["苗期", "營養生長期"],
+    "riskFactors": ["高濕", "積水", "土壤帶菌"],
+    "symptoms": ["莖部腐敗", "植株萎凋"],
+    "advice": "避免積水，改善排水並使用健康種苗。",
+    "notes": "AZAI未提供危害徵狀，環境條件依卵菌類病害推估，需再查證。",
+    "source": "AZAI",
+    "sourceUrl": "https://azai.tari.gov.tw/search/bug",
+    "updatedAt": "2026-07-04"
+  },
+  {
+    "id": "asparagus-brown-spot",
+    "crop": "蘆筍",
+    "crops": ["蘆筍"],
+    "name": "褐斑病",
+    "pathogenType": "真菌性病害",
+    "conditions": {
+      "tempRange": [20, 28],
+      "humidityMin": 85,
+      "rainMin": 5,
+      "sunshineMax": 5,
+      "windSensitive": false
+    },
+    "sensitiveStages": ["營養生長期"],
+    "riskFactors": ["高濕", "病殘體"],
+    "symptoms": ["葉片褐色病斑"],
+    "advice": "保持通風並清除病殘體。",
+    "notes": "AZAI未提供危害徵狀，症狀依病名推估，需再查證。",
+    "source": "AZAI",
+    "sourceUrl": "https://azai.tari.gov.tw/search/bug",
+    "updatedAt": "2026-07-04"
+  },
+  {
+    "id": "tea-brown-round-spot",
+    "crop": "茶",
+    "crops": ["茶"],
+    "name": "褐色圓星病",
+    "pathogenType": "真菌性病害",
+    "conditions": {
+      "tempRange": [18, 26],
+      "humidityMin": 85,
+      "rainMin": 5,
+      "sunshineMax": 5,
+      "windSensitive": false
+    },
+    "sensitiveStages": ["新梢期", "營養生長期"],
+    "riskFactors": ["病斑越冬", "高濕"],
+    "symptoms": ["葉片圓形褐色病斑"],
+    "advice": "修除病葉並改善茶園通風。",
+    "notes": "病原菌潛伏期約20–30日，生活史尚未完全釐清。",
+    "source": "AZAI",
+    "sourceUrl": "https://azai.tari.gov.tw/search/bug",
+    "updatedAt": "2026-07-04"
+  },
+  {
+    "id": "rice-false-smut",
+    "crop": "水稻",
+    "crops": ["水稻"],
+    "name": "稻麴病",
+    "pathogenType": "真菌性病害",
+    "conditions": {
+      "tempRange": [24, 30],
+      "humidityMin": 90,
+      "rainMin": 5,
+      "sunshineMax": 4,
+      "windSensitive": false
+    },
+    "sensitiveStages": ["抽穗期", "開花期"],
+    "riskFactors": ["帶菌穀粒", "高濕", "病殘體"],
+    "symptoms": ["穀粒形成稻麴"],
+    "advice": "採用健康種子並清除病殘體。",
+    "notes": "臺灣主要感染源仍待研究。",
+    "source": "AZAI",
+    "sourceUrl": "https://azai.tari.gov.tw/search/bug",
+    "updatedAt": "2026-07-04"
+  },
+  {
+    "id": "citrus-algae-and-lichen",
+    "crop": "柑橘",
+    "crops": ["柑橘"],
+    "name": "藻類與地衣",
+    "pathogenType": "其他",
+    "conditions": {
+      "tempRange": [22, 30],
+      "humidityMin": 90,
+      "rainMin": 5,
+      "sunshineMax": 4,
+      "windSensitive": false
+    },
+    "sensitiveStages": ["全年"],
+    "riskFactors": ["高濕", "雨水", "昆蟲", "通風不良"],
+    "symptoms": ["枝幹附生藻類或地衣"],
+    "advice": "改善通風透光並降低枝幹長時間潮濕。",
+    "notes": "原始資料屬藻類與地衣複合問題，schema暫歸類為其他。",
+    "source": "AZAI",
+    "sourceUrl": "https://azai.tari.gov.tw/search/bug",
+    "updatedAt": "2026-07-04"
+  },
+  {
+    "id": "button-mushroom-diehliomyces-disease",
+    "crop": "洋菇",
+    "crops": ["洋菇"],
+    "name": "腦菌病",
+    "pathogenType": "真菌性病害",
+    "conditions": {
+      "tempRange": [18, 24],
+      "humidityMin": 90,
+      "rainMin": 0,
+      "sunshineMax": 0,
+      "windSensitive": false
+    },
+    "sensitiveStages": ["子實體形成期"],
+    "riskFactors": ["覆土污染", "堆肥污染", "菇舍污染"],
+    "symptoms": ["子實體畸形"],
+    "advice": "菇舍及木板應徹底高溫消毒，避免污染覆土。",
+    "notes": "依AZAI整理。",
+    "source": "AZAI",
+    "sourceUrl": "https://azai.tari.gov.tw/search/bug",
+    "updatedAt": "2026-07-04"
+  },
+  {
+    "id": "button-mushroom-bacterial-brown-blotch",
+    "crop": "洋菇",
+    "crops": ["洋菇", "杏鮑菇", "金針菇"],
+    "name": "細菌性褐枯病",
+    "pathogenType": "細菌性病害",
+    "conditions": {
+      "tempRange": [18, 25],
+      "humidityMin": 95,
+      "rainMin": 0,
+      "sunshineMax": 0,
+      "windSensitive": false
+    },
+    "sensitiveStages": ["子實體形成期"],
+    "riskFactors": ["高濕", "水膜", "污染水源"],
+    "symptoms": ["菇體褐化", "腐敗"],
+    "advice": "降低濕度並避免菇體表面積水。",
+    "notes": "高濕時病菌快速增殖。",
+    "source": "AZAI",
+    "sourceUrl": "https://azai.tari.gov.tw/search/bug",
+    "updatedAt": "2026-07-04"
+  },
+  {
+    "id": "button-mushroom-dry-bubble",
+    "crop": "洋菇",
+    "crops": ["洋菇"],
+    "name": "褐斑病",
+    "pathogenType": "真菌性病害",
+    "conditions": {
+      "tempRange": [18, 24],
+      "humidityMin": 90,
+      "rainMin": 0,
+      "sunshineMax": 0,
+      "windSensitive": false
+    },
+    "sensitiveStages": ["子實體形成期"],
+    "riskFactors": ["工作人員", "器材", "蟎", "跳蟲", "菇蠅"],
+    "symptoms": ["菇體褐斑", "畸形"],
+    "advice": "加強菇舍衛生及媒介昆蟲管理。",
+    "notes": "孢子主要藉水及工作器具傳播。",
+    "source": "AZAI",
+    "sourceUrl": "https://azai.tari.gov.tw/search/bug",
+    "updatedAt": "2026-07-04"
+  },
+  {
+    "id": "citrus-pink-disease",
+    "crop": "柑橘",
+    "crops": ["柑橘"],
+    "name": "赤衣病",
+    "pathogenType": "真菌性病害",
+    "conditions": {
+      "tempRange": [24, 30],
+      "humidityMin": 90,
+      "rainMin": 5,
+      "sunshineMax": 5,
+      "windSensitive": true
+    },
+    "sensitiveStages": ["新梢期"],
+    "riskFactors": ["高濕", "擔孢子", "枝條裂縫"],
+    "symptoms": ["枝條感染", "枝梢枯死"],
+    "advice": "修除病枝並保持果園通風。",
+    "notes": "以菌絲及擔孢子傳播。",
+    "source": "AZAI",
+    "sourceUrl": "https://azai.tari.gov.tw/search/bug",
+    "updatedAt": "2026-07-04"
+  },
+  {
+    "id": "citrus-root-decay",
+    "crop": "柑橘",
+    "crops": ["柑橘"],
+    "name": "根腐敗病",
+    "pathogenType": "真菌性病害",
+    "conditions": {
+      "tempRange": [22, 30],
+      "humidityMin": 85,
+      "rainMin": 5,
+      "sunshineMax": 5,
+      "windSensitive": false
+    },
+    "sensitiveStages": ["全年"],
+    "riskFactors": ["根部傷口", "病土", "靈芝菌"],
+    "symptoms": ["根腐敗", "樹勢衰弱", "植株死亡"],
+    "advice": "避免根部受傷並移除嚴重罹病植株。",
+    "notes": "病原複雜，AZAI以 Ganoderma tropicum 為例說明。",
+    "source": "AZAI",
+    "sourceUrl": "https://azai.tari.gov.tw/search/bug",
+    "updatedAt": "2026-07-04"
+  },
+  {
+    "id": "citrus-tristeza",
+    "crop": "柑橘",
+    "crops": ["柑橘"],
+    "name": "南美立枯病",
+    "pathogenType": "病毒性病害",
+    "conditions": {
+      "tempRange": [20, 32],
+      "humidityMin": 60,
+      "rainMin": 0,
+      "sunshineMax": 8,
+      "windSensitive": false
+    },
+    "sensitiveStages": ["苗木期", "營養生長期"],
+    "riskFactors": [
+      "帶毒接穗",
+      "嫁接苗",
+      "蚜蟲媒介",
+      "帶病枝條"
+    ],
+    "symptoms": [
+      "樹勢衰弱",
+      "枝梢衰退",
+      "植株逐漸衰敗"
+    ],
+    "advice": "使用健康無病毒苗木，避免帶毒接穗，並持續監測及防治蚜蟲。",
+    "notes": "即 Citrus tristeza virus (CTV)。主要靠嫁接及蚜蟲半永續性傳播，不經種子傳播。",
+    "source": "AZAI",
+    "sourceUrl": "https://azai.tari.gov.tw/search/bug",
+    "updatedAt": "2026-07-04"
+  },
+  {
+    "id": "citrus-greasy-spot",
+    "crop": "柑橘",
+    "crops": ["柑橘"],
+    "name": "油斑病",
+    "pathogenType": "真菌性病害",
+    "conditions": {
+      "tempRange": [22, 30],
+      "humidityMin": 85,
+      "rainMin": 5,
+      "sunshineMax": 5,
+      "windSensitive": false
+    },
+    "sensitiveStages": ["新梢期", "幼果期"],
+    "riskFactors": [
+      "落葉殘體",
+      "高濕",
+      "連續降雨"
+    ],
+    "symptoms": [
+      "葉片油浸狀病斑",
+      "葉片黃化",
+      "提早落葉"
+    ],
+    "advice": "清除落葉並改善果園通風，降低落葉病原累積。",
+    "notes": "病原主要於落葉形成子囊孢子作為初次感染源。",
+    "source": "AZAI",
+    "sourceUrl": "https://azai.tari.gov.tw/search/bug",
+    "updatedAt": "2026-07-04"
+  },
+  {
+    "id": "citrus-sooty-mold",
+    "crop": "柑橘",
+    "crops": ["柑橘"],
+    "name": "煤煙病",
+    "pathogenType": "真菌性病害",
+    "conditions": {
+      "tempRange": [22, 32],
+      "humidityMin": 80,
+      "rainMin": 2,
+      "sunshineMax": 6,
+      "windSensitive": true
+    },
+    "sensitiveStages": ["全年"],
+    "riskFactors": [
+      "蚜蟲",
+      "介殼蟲",
+      "粉蝨",
+      "蜜露",
+      "通風不良"
+    ],
+    "symptoms": [
+      "葉片黑色煤煙狀菌層",
+      "果實表面污染",
+      "光合作用下降"
+    ],
+    "advice": "優先防治分泌蜜露害蟲，改善通風，可降低煤煙病發生。",
+    "notes": "病菌主要利用昆蟲蜜露生長，屬表生性病害。",
+    "source": "AZAI",
+    "sourceUrl": "https://azai.tari.gov.tw/search/bug",
+    "updatedAt": "2026-07-04"
+  },
+  {
+    "id": "citrus-blue-mold",
+    "crop": "柑橘",
+    "crops": ["柑橘"],
+    "name": "青黴病",
+    "pathogenType": "真菌性病害",
+    "conditions": {
+      "tempRange": [20, 28],
+      "humidityMin": 90,
+      "rainMin": 0,
+      "sunshineMax": 4,
+      "windSensitive": true
+    },
+    "sensitiveStages": ["採收期", "採後貯藏"],
+    "riskFactors": [
+      "果實傷口",
+      "高濕",
+      "空氣孢子"
+    ],
+    "symptoms": [
+      "果實青綠色黴層",
+      "果實腐爛"
+    ],
+    "advice": "避免採收造成傷口，保持貯藏環境清潔與低濕。",
+    "notes": "Penicillium 病害，生活史短，可快速重複感染。",
+    "source": "AZAI",
+    "sourceUrl": "https://azai.tari.gov.tw/search/bug",
+    "updatedAt": "2026-07-04"
+  },
+  {
+    "id": "citrus-green-mold",
+    "crop": "柑橘",
+    "crops": ["柑橘"],
+    "name": "綠黴病",
+    "pathogenType": "真菌性病害",
+    "conditions": {
+      "tempRange": [20, 28],
+      "humidityMin": 90,
+      "rainMin": 0,
+      "sunshineMax": 4,
+      "windSensitive": true
+    },
+    "sensitiveStages": ["採收期", "採後貯藏"],
+    "riskFactors": [
+      "果實傷口",
+      "高濕",
+      "空氣孢子"
+    ],
+    "symptoms": [
+      "果實綠色黴層",
+      "果實腐敗"
+    ],
+    "advice": "採收及搬運避免果皮受傷，降低採後感染。",
+    "notes": "Penicillium digitatum 為主要病原。",
+    "source": "AZAI",
+    "sourceUrl": "https://azai.tari.gov.tw/search/bug",
+    "updatedAt": "2026-07-04"
+  },
+  {
+    "id": "citrus-anthracnose",
+    "crop": "柑橘",
+    "crops": ["柑橘"],
+    "name": "炭疽病",
+    "pathogenType": "真菌性病害",
+    "conditions": {
+      "tempRange": [24, 30],
+      "humidityMin": 90,
+      "rainMin": 5,
+      "sunshineMax": 4,
+      "windSensitive": false
+    },
+    "sensitiveStages": [
+      "新梢期",
+      "幼果期",
+      "成熟期"
+    ],
+    "riskFactors": [
+      "病枝",
+      "落葉",
+      "高濕",
+      "降雨"
+    ],
+    "symptoms": [
+      "葉片褐斑",
+      "枝梢枯死",
+      "果實腐敗"
+    ],
+    "advice": "修除病枝並清除落葉，雨季前加強巡園。",
+    "notes": "可潛伏感染，待果實成熟或組織老化後發病。",
+    "source": "AZAI",
+    "sourceUrl": "https://azai.tari.gov.tw/search/bug",
+    "updatedAt": "2026-07-04"
+  },
+  {
+    "id": "citrus-powdery-mildew",
+    "crop": "柑橘",
+    "crops": ["柑橘"],
+    "name": "白粉病",
+    "pathogenType": "真菌性病害",
+    "conditions": {
+      "tempRange": [20, 28],
+      "humidityMin": 70,
+      "rainMin": 0,
+      "sunshineMax": 6,
+      "windSensitive": true
+    },
+    "sensitiveStages": [
+      "新梢期",
+      "幼果期"
+    ],
+    "riskFactors": [
+      "乾燥少雨",
+      "高溫",
+      "病枝殘留"
+    ],
+    "symptoms": [
+      "葉片白色粉狀菌絲",
+      "嫩葉捲曲",
+      "幼果受害"
+    ],
+    "advice": "修除病枝並保持樹冠通風，新梢期加強監測。",
+    "notes": "乾燥少雨且溫暖時較易流行。",
+    "source": "AZAI",
+    "sourceUrl": "https://azai.tari.gov.tw/search/bug",
+    "updatedAt": "2026-07-04"
+  },
+  {
+    "id": "citrus-shoot-phytophthora-blight",
+    "crop": "柑橘",
+    "crops": ["柑橘"],
+    "name": "芽葉疫病",
+    "pathogenType": "卵菌類病害",
+    "conditions": {
+      "tempRange": [22, 28],
+      "humidityMin": 90,
+      "rainMin": 10,
+      "sunshineMax": 4,
+      "windSensitive": false
+    },
+    "sensitiveStages": [
+      "萌芽期",
+      "新梢期"
+    ],
+    "riskFactors": [
+      "土壤疫病菌",
+      "積水",
+      "雨水飛濺",
+      "灌溉水"
+    ],
+    "symptoms": [
+      "嫩芽腐敗",
+      "新梢枯萎",
+      "葉片水浸狀病斑"
+    ],
+    "advice": "改善排水，避免灑水濺濕新梢，降低疫病菌傳播。",
+    "notes": "主要由土壤疫病菌產生游走子經水傳播。",
+    "source": "AZAI",
+    "sourceUrl": "https://azai.tari.gov.tw/search/bug",
+    "updatedAt": "2026-07-04"
+  }
+
+
+
+
+
+
+
+
+
+]
